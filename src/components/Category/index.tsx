@@ -17,6 +17,7 @@ function Category() {
     <S.Wrapper>
       <Swiper
         initialSlide={2}
+        rewind={true}
         effect={"coverflow"}
         grabCursor={true}
         centeredSlides={true}
@@ -32,11 +33,11 @@ function Category() {
         modules={[EffectCoverflow, Pagination]}
         className="mySwiper"
       >
-        <S.Slide><S.image src={Card1} alt="Card 1"></S.image> </S.Slide>
-        <S.Slide><S.image src={Card2} alt="Card 2"></S.image></S.Slide>
-        <S.Slide><S.image src={Card3} alt="Card 3"></S.image></S.Slide>
-        <S.Slide><S.image src={Card4} alt="Card 4"></S.image></S.Slide>
-        <S.Slide><S.image src={Card5} alt="Card 5"></S.image></S.Slide>
+        <S.Slide><S.image src={Card1} alt="Card 1"/> </S.Slide>
+        <S.Slide><S.image src={Card2} alt="Card 2"/></S.Slide>
+        <S.Slide><S.image src={Card3} alt="Card 3"/></S.Slide>
+        <S.Slide><S.image src={Card4} alt="Card 4"/></S.Slide>
+        <S.Slide><S.image src={Card5} alt="Card 5"/></S.Slide>
       </Swiper>
     </S.Wrapper>
   );

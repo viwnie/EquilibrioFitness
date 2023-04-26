@@ -8,7 +8,7 @@ export const Wapper = styled.div`
   align-items: center;
   h2 {
     color: var(--title);
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--mont);
     font-size: 3rem;
     font-weight: 700;
     line-height: 4rem;
@@ -19,25 +19,35 @@ export const Wapper = styled.div`
 `
 
 export const Container = styled.div`
-  width: 70%;
+  max-width: 90vw;
   padding: 10px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  @media (max-width: 550px) {
+    flex-direction:column;
+}
   div {
-    width: 20%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    @media (max-width: 550px) {
+      width: 90%;
+      span{
+        margin-bottom:5rem;
+      }
+}
     span {
       text-align: center;
-      margin-top: 10px;
+      max-width:20rem;
+      margin-top: 1rem;
       font-family: var(--inter);
       font-size: 2rem;
       font-weight: 400;
-      line-height: 25px;
-      letter-spacing: 0em;
+      line-height: 2.5rem;
       text-align: center;
     }
   }

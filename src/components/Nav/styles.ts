@@ -11,7 +11,7 @@ export const Wrapper = styled.nav`
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 10;
+  z-index: 2;
     @media (max-width: 700px) {
     background: transparent;
   }
@@ -49,9 +49,47 @@ export const BtnLogin = styled(Link)`
 
 export const Mobile = styled.div`
   display: none;
+  
   @media (max-width: 700px) {
     display: flex;
     align-items:center;
     justify-content:space-between;
   }
+`
+
+export const MobileContent = styled.div`
+    width:100%;
+    height:100vh;
+
+    position:fixed;
+    
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:center;
+    z-index:2;
+
+    background-color: rgba(217, 0, 0, 0.16);
+    backdrop-filter: blur(5px); 
+
+    svg {
+    position: absolute;
+    top: 4.5rem;
+    right: 3rem;
+   }
+
+    ul{
+      list-style: none;
+      font-size: 2rem;
+      font-weight: 700;
+
+      li{
+        margin-top:2rem;
+      }
+    }
+    a{
+      text-decoration: none;
+      color: var(--red);
+    }
+
 `
