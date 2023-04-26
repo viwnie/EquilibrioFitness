@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Nav from '../components/Nav'
 import CarroselBg from '../components/CarroselBg'
 import Advantage from '../components/Advantage'

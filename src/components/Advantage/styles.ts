@@ -30,10 +30,10 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    h3 {
+    span {
       text-align: center;
       margin-top: 10px;
-      font-family: Inter;
+      font-family: var(--inter);
       font-size: 2rem;
       font-weight: 400;
       line-height: 25px;

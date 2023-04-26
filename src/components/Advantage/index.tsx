@@ -15,7 +15,7 @@ const Advantage = () => (
           width={100}
           height={100}
         />
-        <h3>Profesionales dispuestos a ayudarte.</h3>
+        <span>Profesionales dispuestos a ayudarte.</span>
       </div>
       <div>
         <Image
@@ -24,10 +24,9 @@ const Advantage = () => (
           width={100}
           height={100}
         />
-
-        <h3>
+        <span>
           Un plan nutricional personalizado para tu evolucion fisica y mental.
-        </h3>
+        </span>
       </div>
       <div>
         <Image
@@ -36,7 +35,7 @@ const Advantage = () => (
           width={100}
           height={100}
         />
-        <h3>Tenemos un ambiente amigable y acogedor.</h3>
+        <span>Tenemos un ambiente amigable y acogedor.</span>
       </div>
     </S.Container>
   </S.Wapper>

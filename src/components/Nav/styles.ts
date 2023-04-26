@@ -1,8 +1,9 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 import Link from 'next/link'
 
 export const Wrapper = styled.nav`
   width: 90%;
+  max-width:120rem;
   height: 8rem;
   background: #000000b2;
   border-radius: 50px;
@@ -10,9 +11,13 @@ export const Wrapper = styled.nav`
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1;
+  z-index: 10;
+    @media (max-width: 700px) {
+    background: transparent;
+  }
 `
-export const Lista = styled.ul`
+
+export const Desktop = styled.ul`
   height: 8rem;
   display: flex;
   align-items: center;
@@ -20,16 +25,18 @@ export const Lista = styled.ul`
   list-style: none;
 
   li {
+    :hover {
+    color: var(--red);
+  }
     font-size: 1.5rem;
     font-weight: bold;
     cursor: pointer;
   }
-
-  li:hover {
-    color: var(--red);
+  @media (max-width: 700px) {
+    display: none;
   }
 `
-export const web = styled(Link)`
+export const BtnLogin = styled(Link)`
   padding: 0.7rem;
   text-decoration: none;
   background-color: white;
@@ -37,5 +44,14 @@ export const web = styled(Link)`
   border-radius: 2rem;
   :hover{
     color:var(--red);
+  }
+`
+
+export const Mobile = styled.div`
+  display: none;
+  @media (max-width: 700px) {
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
   }
 `

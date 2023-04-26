@@ -6,8 +6,8 @@ const GlobalStyles = createGlobalStyle`
     --white: #eeeeee;
     --red: #CD141F;
     --title: #C4C4C4;;
-
-
+    --inter: 'Inter', sans-serif;
+    --mont: 'Montserrat', sans-serif;
 
     --container: 100rem;
 
@@ -25,14 +25,13 @@ const GlobalStyles = createGlobalStyle`
   html {
     font-size: 62.5%;
   }
-  /* font-family: 'Montserrat', sans-serif; */
+
   body {
 
     color: var(--white);
-    font-family: 'Inter', sans-serif;
+    font-family: var(--inter);
 
     background-size:500% 100%;
-    /* padding: 0px 112px; */
     position:relative;
   }
   .globalBg{
