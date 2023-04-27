@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   h2{
+
     font-size: 4rem;
   }
 `
@@ -23,20 +24,23 @@ export const Title = styled.h2`
 `
 
 export const DayList = styled.div`
-  width: 50%;
-  padding: 10rem;
+  min-width: 50%;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 3rem;
   button {
     all: unset;
+    display:flex;
+    align-items:center;
+    justify-content:center;
     color: rgba(222, 222, 222, 1);
     font-weight: bold;
+    width:10%;
     font-size: 1.7rem;
     background: #CC0301;
     padding: 1.2rem;
-    border-radius: 20px;
-
+    border-radius: 10px;
   }
   button:hover{
     cursor: pointer;
@@ -56,7 +60,7 @@ export const Content = styled.div`
     border-collapse: collapse;
     height: 98%;
     width: 100%;
-    background-color: white;
+    background: transparent;
     color: #454545;
     margin-top: 10px;
     font-family: Inter;
@@ -68,7 +72,7 @@ export const Content = styled.div`
 
 
 export const Container = styled.div`
-  background-color: white;
+  background: #000000b2;
   max-width: 125rem;
   width: 90%;
   height: 48rem;
@@ -79,28 +83,30 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #000;
+    color: var(--title);
   }
 `
 
 export const Lista = styled.li<ImageProps>`
-${({ src }) =>
+  ${({ src }) =>
     css`
-    background-image: url(${src});
-  `}
-  color: #FFF;
+      background-image: url(${src});
+      background-blend-mode: overlay;
+    `}
+  background-color: rgba(0, 0, 0, 0.5); /* adicione a cor cinza semi-transparente */
+  opacity: 1; /* ajuste a opacidade para permitir que a imagem de fundo seja vista */
+  color: #fff;
   background-position: 45% top;
   background-repeat: no-repeat;
   background-position: center;
-  background-size:cover;
+  background-size: cover;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   height: 10rem;
-  border-top: 1px solid #CACACA ;
-  border-right: 1px solid #CACACA;
+  border-top: 1px solid #cacaca;
+  border-right: 1px solid #cacaca;
   font-size: 1.5rem;
   padding-left: 5px;
-  opacity: 2;
- 
-`
+`;
+

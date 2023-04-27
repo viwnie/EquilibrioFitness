@@ -20,6 +20,7 @@ export const Wapper = styled.div`
 
 export const Container = styled.div`
   max-width: 90vw;
+  min-width: 65vw;
   padding: 10px;
   display: flex;
   justify-content: space-around;
@@ -42,7 +43,7 @@ export const Container = styled.div`
 }
     span {
       text-align: center;
-      max-width:20rem;
+      max-width:25rem;
       margin-top: 1rem;
       font-family: var(--inter);
       font-size: 2rem;

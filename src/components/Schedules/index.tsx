@@ -77,7 +77,7 @@ function Schedules() {
                         {title == 'Lunes' && 'Balance  10:15 - 11:00' || title == 'Miercoles' && 'Balance  10:15 - 11:00'}
                         {title == 'Martes' && 'Balance  18:00 - 18:45' || title == 'Jueves' && 'Balance  18:00 - 18:45'}
                     </S.Lista>
-                    <S.Lista src={title !== 'Sabado' && title !== 'Viernes' ? DanceMix.src : ''}>
+                    <S.Lista  src={title !== 'Sabado' && title !== 'Viernes' ? DanceMix.src : ''}>
                         {title == 'Lunes' && 'Dance Mix 19:15 - 20:00' || title == 'Miercoles' && 'Dance Mix 19:15 - 20:00'}
                         {title == 'Martes' && 'Dance Mix 09:15 - 10:00' || title == 'Jueves' && 'Dance Mix 09:15 - 10:00'}
                     </S.Lista>

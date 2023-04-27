@@ -25,6 +25,9 @@ export const Desktop = styled.ul`
   list-style: none;
 
   li {
+    a{
+     text-decoration: none;
+    }
     :hover {
     color: var(--red);
   }
@@ -89,7 +92,7 @@ export const MobileContent = styled.div`
     }
     a{
       text-decoration: none;
-      color: var(--red);
+      color: var(--white);
     }
 
 `

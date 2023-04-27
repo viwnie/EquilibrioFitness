@@ -17,9 +17,9 @@ function Nav() {
     <>
       <S.Wrapper>
         <S.Desktop>
-          <li>Precio</li>
-          <li>Modalides</li>
-          <li>Horarios</li>
+          <li><Link href='/'>Precio</Link></li>
+          <li><Link href='/'>Modalides</Link></li>
+          <li><Link href='/'>Horarios</Link></li>
           <li>
             <Image
               src={Logo}
@@ -28,8 +28,8 @@ function Nav() {
               height={100}
             />
           </li>
-          <li>Gimnsaio</li>
-          <li>Horarios</li>
+          <li><Link href='/'>Gimnsaio</Link></li>
+          <li><Link href='/'>Horarios</Link></li>
           <li>
             <S.BtnLogin href="https://easy.trainingym.com/equilibriofitness/login">
               Login
@@ -50,11 +50,11 @@ function Nav() {
         <S.MobileContent>
           <IoClose size={45} onClick={() => setVisible(false)} />
           <ul>
-            <li>Precio</li>
-            <li>Modalides</li>
-            <li>Horarios</li>
-            <li>Gimnsaio</li>
-            <li>Horarios</li>
+            <li><Link href='/'>Precio</Link></li>
+            <li><Link href='/'>Modalides</Link></li>
+            <li><Link href='/'>Horarios</Link></li>
+            <li><Link href='/'>Gimnsaio</Link></li>
+            <li><Link href='/'>Horarios</Link></li>
             <li>
               <Link href="https://easy.trainingym.com/equilibriofitness/login">Login</Link>
             </li>

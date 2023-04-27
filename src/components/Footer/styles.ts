@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   background-color: #f0eff4;
   h2 {
     color: red;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--mont);
     font-size: 3.5rem;
     font-weight: 700;
     line-height: 4rem;
@@ -14,16 +14,23 @@ export const Wrapper = styled.div`
     text-align: center;
     text-align: start;
   }
-  @media (max-width: 1024px) {
-    padding: 1rem 3rem;
-    margin: 0;
+  @media (max-width: 1063px) {
+    padding: 2rem;
+    h2 {
+      font-size: 3rem;
+    }
+}
+`
+export const Container = styled.div`
+display: flex;
+justify-content: space-between;
+@media (max-width: 670px) {
+  flex-direction:column;
+  iframe{
+    width:100%;
+    height:15%;
   }
-
-  @media (max-width: 1024px) {
-    padding: 1rem 6rem;
-    margin-top: 6rem;
-  }
-  
+}
 `
 
 export const Lista = styled.ul`
@@ -37,25 +44,7 @@ export const Lista = styled.ul`
     }
     padding-top: 1.2rem;
   }
-  @media (max-width: 1024px) {
-    font-size: 1rem;
-    padding-top: 1rem;
-  }
-
-`
-
-export const Container = styled.div`
-display: flex;
-justify-content: space-between;
-
-@media (max-width: 768px) {
-    padding: 1rem;
-    margin: 0;
-    iframe{
-      width: 240px;
-      height: 200px;
+  @media (max-width: 670px) {
+    margin-bottom: 5rem;
     }
-  }
- 
 `
-

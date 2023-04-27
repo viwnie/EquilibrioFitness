@@ -30,6 +30,7 @@ export const Slide = styled(SwiperSlide) <ImageProps>`
   align-items:center;
   justify-content:center;
   
+  
  @keyframes typing {
   from {
     width: 0
@@ -53,18 +54,31 @@ ${({ groupTextSize }) =>
   overflow: hidden;
   border-right: 3px solid;
   font-family: monospace;
-  font-size: 3vw;
+  font-size: 2.5rem;
+  margin-bottom: 5rem;
+  @media (max-width: 550px) {
+    font-size: 1.7rem;
+    margin-bottom: 20rem;
+  }
 `;
 
 export const Button = styled.button`
-  margin-top: 10rem;
-  background-color: var(--red);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
   border-radius: 5rem;
-  width: 20rem;
-  height: 4rem;
-  text-align: center;
+  width:20rem;
+
+  background-color: var(--red);
+  font-family: var(--mont);
   a{
     font-weight: 200;
+    font-size: 1.5rem;
     text-decoration: none;
+  }
+  @media (max-width: 550px) {
+    font-size: 2rem;
+    width:12rem;
   }
 `

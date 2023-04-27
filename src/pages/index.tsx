@@ -16,7 +16,7 @@ export default function Home() {
         <Advantage />
         <Prices />
         <Category />
-        <Schedules />
+        {/* <Schedules /> */}
         <Footer />
       </div>
     </>

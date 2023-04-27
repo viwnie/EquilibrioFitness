@@ -10,36 +10,42 @@ import { Swiper } from "swiper/react";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-import { EffectCoverflow, Pagination } from "swiper";
+import { Autoplay, EffectCoverflow, Pagination } from "swiper";
+
+const cards = [Card1, Card2, Card3, Card4, Card5]
 
 function Category() {
   return (
-    <S.Wrapper>
-      <Swiper
-        initialSlide={2}
-        rewind={true}
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={"auto"}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        pagination={true}
-        modules={[EffectCoverflow, Pagination]}
-        className="mySwiper"
-      >
-        <S.Slide><S.image src={Card1} alt="Card 1"/> </S.Slide>
-        <S.Slide><S.image src={Card2} alt="Card 2"/></S.Slide>
-        <S.Slide><S.image src={Card3} alt="Card 3"/></S.Slide>
-        <S.Slide><S.image src={Card4} alt="Card 4"/></S.Slide>
-        <S.Slide><S.image src={Card5} alt="Card 5"/></S.Slide>
-      </Swiper>
-    </S.Wrapper>
+
+      <S.Wrapper>
+        <h2>Clases  Personalizadas</h2>
+        <Swiper
+          initialSlide={2}
+          rewind={true}
+          autoplay={{
+            delay: 5500,
+            disableOnInteraction: false,
+          }}
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={"auto"}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          pagination={true}
+          modules={[Autoplay, EffectCoverflow, Pagination]}
+          className="mySwiper"
+        >
+          {cards.map((card) => (
+            <S.Slide key={card.src}><S.image src={card} alt="Card 1" /> </S.Slide>
+          ))}
+        </Swiper>
+      </S.Wrapper>
   );
 }
 export default Category;
