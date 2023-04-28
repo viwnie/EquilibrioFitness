@@ -1,4 +1,14 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import Image from 'next/image'
+
+interface CardProps {
+  color: string,
+  shadow: string
+}
+interface LogoMobile {
+  top: string,
+  right: string
+}
 
 export const Wrapper = styled.div`
   padding-top: 10rem;
@@ -29,7 +39,7 @@ export const Title = styled.h2`
 export const webPrices = styled.div`
   background-color: white;
   max-width: 125rem;
-  width: 90%;
+  width: 55%;
   height: 50rem;
   border-radius: 2rem;
   padding: 1rem 1rem;
@@ -80,7 +90,7 @@ export const webPrices = styled.div`
     }
   }
   box-shadow: 0px 4px 40px 21px rgba(255, 0, 0, 0.26);
-  @media (max-width: 500px) {
+  @media (max-width: 830px) {
     display:none;
   }
 `
@@ -90,18 +100,27 @@ export const Premium = styled.h3`
 
 export const mobileWrap = styled.div`
   height: 90rem;
-  width: 90%;
+  max-width: 100%;
   display:flex;
   align-items:center;
   justify-content:center;
   display: grid;
-  width:90%;
-  @media (min-width: 500px) {
+  position:relative;
+  @media (min-width: 831px) {
     display:none;
   }
 `
-export const mobilePrices = styled.div`
-  box-shadow: 0px 4px 40px 21px rgba(255, 0, 0, 0.26);
+export const mobilePrices = styled.div <CardProps>`
+  ${({ color, shadow }) =>
+    css`
+      box-shadow: 0px 4px 40px 21px ${shadow};
+      svg, h2{
+      color: ${color};
+    }
+    a{
+      background-color: ${color};
+    }
+    `}
   width: 30rem;
   padding-left: 2rem;
   height: 40rem;
@@ -113,20 +132,27 @@ export const mobilePrices = styled.div`
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     list-style: none;
-    svg{
-      color: #CD141F;
-    }
     li{
       padding-top: 1rem;
     }
   }
 `
 export const mobileTitle = styled.div`
-  margin: 1rem 0 1rem 0;
-  color: red;
+  padding: 1rem 1rem 0rem 0rem;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
   font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
-
+`
+export const mobileLogo = styled(Image) <LogoMobile>`
+ position:absolute;
+ ${({ top, right }) =>
+    css`
+      top: ${top};
+      right: ${right};
+    }
+    `}
 `
 export const mobileBuy = styled.div`
   margin-top: 6rem;
@@ -138,9 +164,8 @@ export const mobileBuy = styled.div`
   
 
   a{
-    color: var(--title);
+    color: white;
     height: 100%;
-    background-color: var(--red);
     text-decoration: none;
     height: 2.8rem;
     width: 10rem;

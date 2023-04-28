@@ -9,7 +9,7 @@ const Footer = () => (
         <li><FaCalendarWeek size={15} /> Luenes e Viernes de 7:00 a 22:200</li>
         <li><FaCalendarWeek size={15} /> Sabado de 8:00 a 13:00</li>
         <li><FaPhone size={15} /> Telefono +34 613 413 279</li>
-        <li><FaMapMarkedAlt size={15} /> Direccion: C/ Estacion, 27 (Milina del Segura)</li>
+        <li><FaMapMarkedAlt size={15} /> Direccion: C/ Estacion, 27 (Molina de Segura)</li>
         <li><FaArrowRight size={15} /> @equilibriofitness.com</li>
         <li><FaArrowRight size={15} /> Aviso Legal</li>
         <li><FaArrowRight size={15} /> Condiciones Genereles</li>

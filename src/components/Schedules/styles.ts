@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
 export const Wrapper = styled.div`
-  padding-top: 100px;
+  padding-top: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,7 +72,7 @@ export const Content = styled.div`
 
 
 export const Container = styled.div`
-  background: #000000b2;
+  
   max-width: 125rem;
   width: 90%;
   height: 48rem;

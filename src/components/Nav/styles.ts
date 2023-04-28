@@ -31,7 +31,7 @@ export const Desktop = styled.ul`
     :hover {
     color: var(--red);
   }
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     font-weight: bold;
     cursor: pointer;
   }

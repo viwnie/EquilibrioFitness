@@ -12,27 +12,32 @@ import mobileLogo01 from '../../../public/img/prices/mobilePrices/logo01.svg'
 import mobileLogo02 from '../../../public/img/prices/mobilePrices/logo02.svg'
 
 import { FaCheck } from 'react-icons/fa'
+import { AiOutlineClose } from 'react-icons/ai'
 
 import Link from 'next/link'
-
-const info = []
 
 const cards = [
   {
     id: 'card1',
     title: 'Premium',
-    logo: { mobileLogo01 },
+    logo: mobileLogo01.src,
     price: '55€',
     color: '#D00000',
-    verified: { mobileVerified01 }
+    shadow: 'rgba(255, 0, 0, 0.3)',
+    verified: { mobileVerified01 },
+    top: '0',
+    right: '0'
   },
   {
     id: 'card2',
     title: 'Economy',
-    logo: { mobileLogo02 },
+    logo: mobileLogo02.src,
     price: '45€',
     color: '#7F28ED',
-    verified: { mobileVerified02 }
+    shadow: 'rgba(255, 0, 157, 0.3)',
+    verified: { mobileVerified02 },
+    top: '-1',
+    right: '0'
   },
 ];
 
@@ -223,20 +228,19 @@ const Prices = () => (
     </S.webPrices>
     <S.mobileWrap>
       {cards.map((card) => (
-        <S.mobilePrices key={card.id}>
+        <S.mobilePrices color={card.color} shadow={card.shadow} key={card.id}>
           <S.mobileTitle>
             <h2>{card.title}</h2>
-            {/* <Image src='../../../public/img/prices/mobilePrices/logo02.svg' alt={card.title} /> */}
           </S.mobileTitle>
           <ul>
             <li><FaCheck size={12} /> Acesso ilimitado</li>
             <li><FaCheck size={12} /> Valorazion Inicial</li>
             <li><FaCheck size={12} /> Plan Nutricional</li>
             <li><FaCheck size={12} /> Programa Personalizado</li>
-            <li><FaCheck size={12} /> Musculacion/Cardio</li>
-            <li><FaCheck size={12} /> Balance</li>
-            <li><FaCheck size={12} /> Dance Mix</li>
-            <li><FaCheck size={12} /> Funcional/HIIT</li>
+            <li>{card.title === 'Economy' ? <Image src={mobileUnVerified.src} alt='X' width={12} height={12} /> : <FaCheck size={12} />} Musculacion/Cardio</li>
+            <li>{card.title === 'Economy' ? <Image src={mobileUnVerified.src} alt='X' width={12} height={12} /> : <FaCheck size={12} />} Balance</li>
+            <li>{card.title === 'Economy' ? <Image src={mobileUnVerified.src} alt='X' width={12} height={12} /> : <FaCheck size={12} />} Dance Mix</li>
+            <li>{card.title === 'Economy' ? <Image src={mobileUnVerified.src} alt='X' width={12} height={12} /> : <FaCheck size={12} />} Funcional/HIIT</li>
           </ul>
           <S.mobileBuy>
             <span>{card.price}</span>

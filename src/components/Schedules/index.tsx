@@ -5,7 +5,7 @@ import Musculacion from '../../../public/img/cards/musculacion-cardio.jpg'
 import FuncionalHit from '../../../public/img/cards/functional-training.jpg'
 import DanceMix from '../../../public/img/cards/dance-mix.jpg'
 import Balance from '../../../public/img/cards/cross-training.jpg'
-import DanceMix2 from '../../../public/Schedules/danceMix.jpg'
+import DanceMix2 from '../../../public/Schedules/danceMix.png'
 import Balanco from '../../../public/Schedules/Balance.png'
 
 
