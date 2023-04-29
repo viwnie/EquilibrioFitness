@@ -18,7 +18,7 @@ function Schedules() {
         setTitle((event.target as HTMLElement).innerText);
     }
 
-    return (<S.Wrapper>
+    return (<S.Wrapper id='Times'>
         <S.Title>Horarios</S.Title>
         <S.DayList>
             {days.map((day) => (
@@ -27,61 +27,64 @@ function Schedules() {
         </S.DayList>
         <S.Container>
             <h1>{title}</h1>
-            <S.Content  >
-                <ul>
-                    <S.Lista src={DanceMix2.src} >
-                        {title !== 'Sabado' && 'Musculacion 07:00 - 8:15'}
-                        {title == 'Sabado' && 'Musculacion 8:00 - 9:15'}
-                    </S.Lista>
-                    <S.Lista src={title !== 'Sabado' ? DanceMix2.src : Balanco.src} >{title !== 'Sabado' ? 'Musculacion 14:30 - 15:45' : 'Funcional Hit 10:00 - 10:45'}
-                    </S.Lista>
-                    <S.Lista src={title !== 'Sabado' ? Balanco.src : ''}>{title !== 'Sabado' && 'Funcional Hit 07:00 - 07:45'}</S.Lista>
-                    <S.Lista src={title !== 'Sabado' ? Balanco.src : ''}>{title !== 'Sabado' && 'Funcional Hit 17:00 - 17:45'} </S.Lista>
-                </ul>
-                <ul>
-                    <S.Lista src={title !== 'Sabado' ? DanceMix2.src : DanceMix2.src}>{title !== 'Sabado' && 'Musculacion 8:15 - 9:30'}
-                        {title == 'Sabado' && 'Musculacion 9:15 - 10:30'}
-                    </S.Lista>
-                    <S.Lista src={title !== 'Sabado' ? DanceMix2.src : Balanco.src}>{title !== 'Sabado' && 'Musculacion 15:45 - 17:00'}
-                        {title == 'Sabado' && 'Funcional Hit 11:00 - 11:45'}
-                    </S.Lista>
-                    <S.Lista src={title !== 'Sabado' ? Balanco.src : ''}>{title !== 'Sabado' && 'Funcional Hit 08:00 - 08:45'} </S.Lista>
-                    <S.Lista src={title !== 'Sabado' ? Balanco.src : ''}>{title !== 'Sabado' && 'Funcional Hit 18:00 - 18:45'} </S.Lista>
-                </ul>
-                <ul>
-                    <S.Lista src={title !== 'Sabado' ? DanceMix2.src : DanceMix2.src}>{title !== 'Sabado' && 'Musculacion 9:30 - 10:45'}
-                        {title == 'Sabado' && 'Musculacion 10:30 - 11:45'}
-                    </S.Lista>
-                    <S.Lista src={title !== 'Sabado' ? DanceMix2.src : ''}>{title !== 'Sabado' && 'Musculacion 17:00 - 18:15'}</S.Lista>
-                    <S.Lista src={title !== 'Sabado' ? Balanco.src : ''}>{title !== 'Sabado' && 'Funcional Hit 09:00 - 09:45'}</S.Lista>
-                    <S.Lista src={title !== 'Sabado' ? Balanco.src : ''}>{title !== 'Sabado' && 'Funcional Hit 19:00 - 19:45'}</S.Lista>
-                </ul>
-                <ul>
-                    <S.Lista src={title !== 'Sabado' ? DanceMix2.src : DanceMix2.src}>{title !== 'Sabado' && 'Musculacion 10:45 - 12:00'}
-                        {title == 'Sabado' && 'Musculacion 11:45 - 13:00'}
-                    </S.Lista>
-                    <S.Lista src={title !== 'Sabado' ? DanceMix2.src : ''}>{title !== 'Sabado' && 'Musculacion 18:15 - 19:30'}</S.Lista>
-                    <S.Lista src={title !== 'Sabado' ? Balanco.src : ''}>{title !== 'Sabado' && 'Funcional Hit 13:15 - 14:00'}</S.Lista>
-                    <S.Lista src={title !== 'Sabado' ? Balanco.src : ''}>{title !== 'Sabado' && 'Funcional Hit 20:00 - 20:45'}</S.Lista>
-                </ul>
-                <ul>
-                    <S.Lista src={title !== 'Sabado' ? DanceMix2.src : ''}>{title !== 'Sabado' && 'Musculacion 12:00 - 13:15'}</S.Lista>
-                    <S.Lista src={title !== 'Sabado' ? DanceMix2.src : ''}>{title !== 'Sabado' && 'Musculacion 19:30 - 20:45'}</S.Lista>
-                    <S.Lista src={title !== 'Sabado' ? Balanco.src : ''}>{title !== 'Sabado' && 'Funcional Hit 16:00 - 16:45'}</S.Lista>
-                    <S.Lista src={title !== 'Sabado' ? Balanco.src : ''}>{title !== 'Sabado' && 'Funcional Hit 20:55 - 21:40'}</S.Lista>
-                </ul>
-                <ul>
-                    <S.Lista src={title !== 'Sabado' ? DanceMix2.src : ''}>{title !== 'Sabado' && 'Musculacion 13:15 - 14:30'}</S.Lista>
-                    <S.Lista src={title !== 'Sabado' ? DanceMix2.src : ''}>{title !== 'Sabado' && 'Musculacion 20:45 - 22:00'}</S.Lista>
-                    <S.Lista src={title !== 'Sabado' && title !== 'Viernes' ? Balance.src : ''}>
-                        {title == 'Lunes' && 'Balance  10:15 - 11:00' || title == 'Miercoles' && 'Balance  10:15 - 11:00'}
-                        {title == 'Martes' && 'Balance  18:00 - 18:45' || title == 'Jueves' && 'Balance  18:00 - 18:45'}
-                    </S.Lista>
-                    <S.Lista  src={title !== 'Sabado' && title !== 'Viernes' ? DanceMix.src : ''}>
-                        {title == 'Lunes' && 'Dance Mix 19:15 - 20:00' || title == 'Miercoles' && 'Dance Mix 19:15 - 20:00'}
-                        {title == 'Martes' && 'Dance Mix 09:15 - 10:00' || title == 'Jueves' && 'Dance Mix 09:15 - 10:00'}
-                    </S.Lista>
-                </ul>
+            <S.Content>
+                <div>
+                    <ul>
+                        <S.Lista src={DanceMix2.src} >
+                            {title !== 'Sabado' && 'Musculacion\n07:00 - 8:15'}
+                            {title == 'Sabado' && 'Musculacion\n8:00 - 9:15'}
+                        </S.Lista>
+                        <S.Lista src={title !== 'Sabado' ? DanceMix2.src : DanceMix2.src} >{title !== 'Sabado' ? 'Musculacion\n14:30 - 15:45' : 'Musculacion\n11:45 - 13:00'}
+                        </S.Lista>
+                        <S.Lista src={title !== 'Sabado' ? Balanco.src : ''}>{title !== 'Sabado' && 'Funcional Hit\n07:00 - 07:45'}</S.Lista>
+                        <S.Lista src={title !== 'Sabado' ? Balanco.src : ''}>{title !== 'Sabado' && 'Funcional Hit\n17:00 - 17:45'} </S.Lista>
+                    </ul>
+                    <ul>
+                        <S.Lista src={title !== 'Sabado' ? DanceMix2.src : DanceMix2.src}>{title !== 'Sabado' && 'Musculacion\n8:15 - 9:30'}
+                            {title == 'Sabado' && 'Musculacion\n9:15 - 10:30'}
+                        </S.Lista>
+                        <S.Lista src={title !== 'Sabado' ? DanceMix2.src : Balanco.src}>{title !== 'Sabado' && 'Musculacion\n15:45 - 17:00'}
+                            {title == 'Sabado' && 'Funcional Hit\n11:00 - 11:45'}
+                        </S.Lista>
+                        <S.Lista src={title !== 'Sabado' ? Balanco.src : ''}>{title !== 'Sabado' && 'Funcional Hit\n08:00 - 08:45'} </S.Lista>
+                        <S.Lista src={title !== 'Sabado' ? Balanco.src : ''}>{title !== 'Sabado' && 'Funcional Hit\n18:00 - 18:45'} </S.Lista>
+                    </ul>
+                    <ul>
+                        <S.Lista src={title !== 'Sabado' ? DanceMix2.src : DanceMix2.src}>{title !== 'Sabado' && 'Musculacion\n9:30 - 10:45'}
+                            {title == 'Sabado' && 'Musculacion\n10:30 - 11:45'}
+                        </S.Lista>
+                        <S.Lista src={title !== 'Sabado' ? DanceMix2.src : FuncionalHit.src}>{title !== 'Sabado' ? 'Musculacion\n17:00 - 18:15' : 'Funcional Hit\n10:00 - 10:45'}</S.Lista>
+                        <S.Lista src={title !== 'Sabado' ? Balanco.src : ''}>{title !== 'Sabado' && 'Funcional Hit\n09:00 - 09:45'}</S.Lista>
+                        <S.Lista src={title !== 'Sabado' ? Balanco.src : ''}>{title !== 'Sabado' && 'Funcional Hit\n19:00 - 19:45'}</S.Lista>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <S.Lista src={title !== 'Sabado' ? DanceMix2.src : ''}>{title !== 'Sabado' && 'Musculacion\n10:45 - 12:00'}
+                        </S.Lista>
+                        <S.Lista src={title !== 'Sabado' ? DanceMix2.src : ''}>{title !== 'Sabado' && 'Musculacion\n18:15 - 19:30'}</S.Lista>
+                        <S.Lista src={title !== 'Sabado' ? Balanco.src : ''}>{title !== 'Sabado' && 'Funcional Hit\n13:15 - 14:00'}</S.Lista>
+                        <S.Lista src={title !== 'Sabado' ? Balanco.src : ''}>{title !== 'Sabado' && 'Funcional Hit\n20:00 - 20:45'}</S.Lista>
+                    </ul>
+                    <ul>
+                        <S.Lista src={title !== 'Sabado' ? DanceMix2.src : ''}>{title !== 'Sabado' && 'Musculacion\n12:00 - 13:15'}</S.Lista>
+                        <S.Lista src={title !== 'Sabado' ? DanceMix2.src : ''}>{title !== 'Sabado' && 'Musculacion\n19:30 - 20:45'}</S.Lista>
+                        <S.Lista src={title !== 'Sabado' ? Balanco.src : ''}>{title !== 'Sabado' && 'Funcional Hit\n16:00 - 16:45'}</S.Lista>
+                        <S.Lista src={title !== 'Sabado' ? Balanco.src : ''}>{title !== 'Sabado' && 'Funcional Hit\n20:55 - 21:40'}</S.Lista>
+                    </ul>
+                    <ul>
+                        <S.Lista src={title !== 'Sabado' ? DanceMix2.src : ''}>{title !== 'Sabado' && 'Musculacion\n13:15 - 14:30'}</S.Lista>
+                        <S.Lista src={title !== 'Sabado' ? DanceMix2.src : ''}>{title !== 'Sabado' && 'Musculacion\n20:45 - 22:00'}</S.Lista>
+                        <S.Lista src={title !== 'Sabado' && title !== 'Viernes' ? Balance.src : ''}>
+                            {title == 'Lunes' && 'Balance\n10:15 - 11:00' || title == 'Miercoles' && 'Balance\n10:15 - 11:00'}
+                            {title == 'Martes' && 'Balance\n18:00 - 18:45' || title == 'Jueves' && 'Balance\n18:00 - 18:45'}
+                        </S.Lista>
+                        <S.Lista src={title !== 'Sabado' && title !== 'Viernes' ? DanceMix.src : ''}>
+                            {title == 'Lunes' && 'Dance Mix\n19:15 - 20:00' || title == 'Miercoles' && 'Dance Mix\n19:15 - 20:00'}
+                            {title == 'Martes' && 'Dance Mix\n09:15 - 10:00' || title == 'Jueves' && 'Dance Mix\n09:15 - 10:00'}
+                        </S.Lista>
+                    </ul>
+                </div>
             </S.Content>
         </S.Container>
     </S.Wrapper >)

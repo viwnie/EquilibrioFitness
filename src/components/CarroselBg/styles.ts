@@ -29,19 +29,7 @@ export const Slide = styled(SwiperSlide) <ImageProps>`
   flex-direction:column;
   align-items:center;
   justify-content:center;
-  
-  
- @keyframes typing {
-  from {
-    width: 0
-  }
-}
 
-@keyframes blink {
-  50% {
-    border-color: transparent
-  }
-}
 `;
 
 export const animatedText = styled.div <Land>`
@@ -60,6 +48,18 @@ ${({ groupTextSize }) =>
     font-size: 1.7rem;
     margin-bottom: 20rem;
   }
+  
+  @keyframes typing {
+  from {
+    width: 0
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
 `;
 
 export const Button = styled.button`

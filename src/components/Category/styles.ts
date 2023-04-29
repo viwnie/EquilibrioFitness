@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export const Wrapper = styled.div`
   .mySwiper {
-    width: 50%;
+    width: 90%;
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
@@ -12,15 +12,12 @@ export const Wrapper = styled.div`
   h2 {
     color: var(--title);
     font-family: var(--mont);
-    font-size: 3rem;
+    font-size: 2.6rem;
     font-weight: 700;
     line-height: 4rem;
     letter-spacing: 0em;
     text-align: center;
     margin-bottom: 45px;
-  }
-  @media (max-width: 500px) {
-    width: 100%;
   }
 `;
 

@@ -17,9 +17,8 @@ function Nav() {
     <>
       <S.Wrapper>
         <S.Desktop>
-          <li><Link href='/'>Precio</Link></li>
-          <li><Link href='/'>Modalides</Link></li>
-          <li><Link href='/'>Horarios</Link></li>
+          <li><Link href='#Price'>Precio</Link></li>
+          <li><Link href='#Category'>Modalides</Link></li>
           <li>
             <Image
               src={Logo}
@@ -28,8 +27,7 @@ function Nav() {
               height={100}
             />
           </li>
-          <li><Link href='/'>Gimnsaio</Link></li>
-          <li><Link href='/'>Horarios</Link></li>
+          <li><Link href='#Times'>Horarios</Link></li>
           <li>
             <S.BtnLogin href="https://easy.trainingym.com/equilibriofitness/login">
               Login
@@ -50,11 +48,9 @@ function Nav() {
         <S.MobileContent>
           <IoClose size={45} onClick={() => setVisible(false)} />
           <ul>
-            <li><Link href='/'>Precio</Link></li>
-            <li><Link href='/'>Modalides</Link></li>
-            <li><Link href='/'>Horarios</Link></li>
-            <li><Link href='/'>Gimnsaio</Link></li>
-            <li><Link href='/'>Horarios</Link></li>
+            <li><Link href='#Price' onClick={() => setVisible(false)} >Precio</Link></li>
+            <li><Link href='#Category' onClick={() => setVisible(false)} >Modalides</Link></li>
+            <li><Link href='#Times' onClick={() => setVisible(false)} >Horarios</Link></li>
             <li>
               <Link href="https://easy.trainingym.com/equilibriofitness/login">Login</Link>
             </li>

@@ -7,7 +7,6 @@ export const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   h2{
-
     font-size: 4rem;
   }
 `
@@ -24,11 +23,13 @@ export const Title = styled.h2`
 `
 
 export const DayList = styled.div`
-  min-width: 50%;
+  min-width: 70%;
   display: flex;
+  flex-wrap:wrap;
   justify-content: space-around;
   align-items: center;
   margin-bottom: 3rem;
+  
   button {
     all: unset;
     display:flex;
@@ -47,6 +48,12 @@ export const DayList = styled.div`
     color: #ffdbe1;
     background-color: #660000;
   }
+  @media (max-width: 550px) {
+    button{
+      width:8%;
+      font-size: 1.2rem;
+    }
+  }
 `
 interface ImageProps {
   src: string
@@ -55,27 +62,41 @@ interface ImageProps {
 export const Content = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap:wrap;
+  justify-content:center;
+  div{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width: 40%;
+    height: 70%;
+  }
+  @media (max-width: 970px) {
+    div{
+    width: 90%;
+    height: 70%;
+  }
+  }
   ul{
     list-style: none;
     border-collapse: collapse;
-    height: 98%;
     width: 100%;
-    background: transparent;
     color: #454545;
-    margin-top: 10px;
     font-family: Inter;
     font-size: 1.7rem;
     font-weight: 300;
     text-align: center;
   }
+  @media (max-width: 700px) {
+    ul{
+      width:100px;
+    }
+  }
 `
 
 
 export const Container = styled.div`
-  
-  max-width: 125rem;
   width: 90%;
-  height: 48rem;
   border-radius: 2rem;
   padding: 1rem 1rem;
   h1{
@@ -83,7 +104,8 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--title);
+    color: white;
+    margin-bottom: 5rem;
   }
 `
 
@@ -93,8 +115,10 @@ export const Lista = styled.li<ImageProps>`
       background-image: url(${src});
       background-blend-mode: overlay;
     `}
-  background-color: rgba(0, 0, 0, 0.5); /* adicione a cor cinza semi-transparente */
-  opacity: 1; /* ajuste a opacidade para permitir que a imagem de fundo seja vista */
+    min-width: 103px;
+  white-space: pre-line;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1; 
   color: #fff;
   background-position: 45% top;
   background-repeat: no-repeat;
@@ -102,11 +126,15 @@ export const Lista = styled.li<ImageProps>`
   background-size: cover;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content:center;
   height: 10rem;
   border-top: 1px solid #cacaca;
   border-right: 1px solid #cacaca;
   font-size: 1.5rem;
   padding-left: 5px;
+  :hover{
+    color:red;
+    cursor: pointer;
+  }
 `;
 

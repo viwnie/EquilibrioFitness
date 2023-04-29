@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Wapper = styled.div`
-  padding-top: 100px;
+  padding-top: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: center;

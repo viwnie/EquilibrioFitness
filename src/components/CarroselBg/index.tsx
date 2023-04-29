@@ -50,7 +50,7 @@ function CarrouselBG() {
         {land.map((group) => (
           <S.Slide key={group.id} src={group.image}>
             <S.animatedText groupTextSize={group.text.length}>{group.text}</S.animatedText>
-            <S.Button><Link href={'#'}>Empezar Hoy !</Link></S.Button>
+            <S.Button><Link href={'#Price'}>Empezar Hoy !</Link></S.Button>
           </S.Slide>
         ))}
       </Swiper>

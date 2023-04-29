@@ -7,7 +7,7 @@ import imgDocument from '../../../public/img/advantage/document.svg'
 const Advantage = () => (
   <S.Wapper>
     <h2>Solo aquí encontrarás estas ventajas</h2>
-    <S.Container>
+    <S.Container id='Price'>
       <div>
         <Image
           src={imgPeople}

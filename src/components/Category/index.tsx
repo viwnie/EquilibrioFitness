@@ -16,8 +16,7 @@ const cards = [Card1, Card2, Card3, Card4, Card5]
 
 function Category() {
   return (
-
-      <S.Wrapper>
+      <S.Wrapper id='Category'>
         <h2>Clases  Personalizadas</h2>
         <Swiper
           initialSlide={2}
