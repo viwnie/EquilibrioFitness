@@ -1,7 +1,10 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 import Link from 'next/link'
+import { motion } from "framer-motion";
 
-export const Wrapper = styled.nav`
+
+
+export const Wrapper = styled(motion.nav)`
   width: 90%;
   max-width:120rem;
   height: 8rem;
@@ -17,7 +20,7 @@ export const Wrapper = styled.nav`
   }
 `
 
-export const Desktop = styled.ul`
+export const Desktop = styled(motion.ul)`
   height: 8rem;
   display: flex;
   align-items: center;
@@ -49,6 +52,11 @@ export const BtnLogin = styled(Link)`
     color:var(--red);
   }
 `
+
+export const test = styled(motion.a)`
+
+`
+
 
 export const Mobile = styled.div`
   display: none;

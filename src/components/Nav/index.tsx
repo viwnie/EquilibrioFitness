@@ -15,7 +15,8 @@ function Nav() {
 
   return (
     <>
-      <S.Wrapper>
+      <S.Wrapper
+      >
         <S.Desktop>
           <li><Link href='#Price'>Precio</Link></li>
           <li><Link href='#Category'>Modalides</Link></li>
@@ -41,9 +42,9 @@ function Nav() {
             width={100}
             height={100}
           />
-          <AiOutlineMenu size={35} onClick={() => setVisible(true)}/>
+          <AiOutlineMenu size={35} onClick={() => setVisible(true)} />
         </S.Mobile>
-      </S.Wrapper>
+      </S.Wrapper >
       {visible && (
         <S.MobileContent>
           <IoClose size={45} onClick={() => setVisible(false)} />
@@ -56,7 +57,8 @@ function Nav() {
             </li>
           </ul>
         </S.MobileContent>
-      )}
+      )
+      }
     </>
   )
 }

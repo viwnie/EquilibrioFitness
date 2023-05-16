@@ -1,21 +1,19 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import { motion } from 'framer-motion'
+import Image from 'next/image'
 
-export const Wapper = styled.div`
+interface ImageProps {
+  src: string
+}
+
+export const Wapper = styled(motion.div)`
   padding-top: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  h2 {
-    color: var(--title);
-    font-family: var(--mont);
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 4rem;
-    letter-spacing: 0em;
-    text-align: center;
-    margin-bottom: 45px;
-  }
+  font-size: 16px;
+  
 `
 
 export const Container = styled.div`
@@ -25,31 +23,33 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-top: 4rem;
 
   @media (max-width: 550px) {
     flex-direction:column;
-}
-  div {
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    @media (max-width: 550px) {
-      width: 90%;
-      span{
-        margin-bottom:5rem;
-      }
-}
-    span {
-      text-align: center;
-      max-width:25rem;
-      margin-top: 1rem;
-      font-family: var(--inter);
-      font-size: 2rem;
-      font-weight: 400;
-      line-height: 2.5rem;
-      text-align: center;
-    }
+  }
+`
+
+
+export const imageMotion = styled(motion(Image)) <ImageProps>`
+${({ src }) =>
+    css`
+      src:${src};
+    `}
+  margin-bottom: 2rem;
+  @media (max-width: 550px) {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
+`
+
+export const advantage = styled.div`
+  width: 21%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 550px) {
+    width: 70%;
   }
 `

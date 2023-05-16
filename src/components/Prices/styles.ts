@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 interface CardProps {
   color: string,
@@ -10,7 +11,7 @@ interface LogoMobile {
   right: string
 }
 
-export const Wrapper = styled.div`
+export const Wrapper = styled(motion.div)`
   padding-top: 10rem;
   display: flex;
   flex-direction: column;
@@ -37,6 +38,7 @@ export const Title = styled.h2`
 `
 
 export const webPrices = styled.div`
+  margin-top: 4rem;
   background-color: white;
   max-width: 125rem;
   width: 55%;

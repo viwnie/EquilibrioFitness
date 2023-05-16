@@ -12,39 +12,41 @@ import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import { Autoplay, EffectCoverflow, Pagination } from "swiper";
 
+import TitleAnimation from '../textAnimation/AnimatedTitle'
+
 const cards = [Card1, Card2, Card3, Card4, Card5]
 
 function Category() {
   return (
-      <S.Wrapper id='Category'>
-        <h2>Clases  Personalizadas</h2>
-        <Swiper
-          initialSlide={2}
-          rewind={true}
-          autoplay={{
-            delay: 5500,
-            disableOnInteraction: false,
-          }}
-          effect={"coverflow"}
-          grabCursor={true}
-          centeredSlides={true}
-          slidesPerView={"auto"}
-          coverflowEffect={{
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
-          }}
-          pagination={true}
-          modules={[Autoplay, EffectCoverflow, Pagination]}
-          className="mySwiper"
-        >
-          {cards.map((card) => (
-            <S.Slide key={card.src}><S.image src={card} alt="Card 1" /> </S.Slide>
-          ))}
-        </Swiper>
-      </S.Wrapper>
+    <S.Wrapper id='Category'>
+      <TitleAnimation text='Clases Personalizadas' />
+      <Swiper
+        initialSlide={2}
+        rewind={true}
+        autoplay={{
+          delay: 5500,
+          disableOnInteraction: false,
+        }}
+        effect={"coverflow"}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={"auto"}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        pagination={true}
+        modules={[Autoplay, EffectCoverflow, Pagination]}
+        className="mySwiper"
+      >
+        {cards.map((card) => (
+          <S.Slide key={card.src} src={card.src}><h1>tst</h1></S.Slide>
+        ))}
+      </Swiper>
+    </S.Wrapper>
   );
 }
 export default Category;

@@ -2,9 +2,10 @@ import * as S from './styles'
 import Image01 from '../../../public/img/carrousel/Banner-01.jpg'
 import Image02 from '../../../public/img/carrousel/musculacion.jpg'
 import Image03 from '../../../public/img/carrousel/Banner-01.jpg'
+import TitleAnimation from '../textAnimation/AnimatedTitle'
 import Link from 'next/link'
-
 import { Swiper } from "swiper/react";
+
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -49,7 +50,7 @@ function CarrouselBG() {
       >
         {land.map((group) => (
           <S.Slide key={group.id} src={group.image}>
-            <S.animatedText groupTextSize={group.text.length}>{group.text}</S.animatedText>
+            <TitleAnimation background={true} text={group.text} />
             <S.Button><Link href={'#Price'}>Empezar Hoy !</Link></S.Button>
           </S.Slide>
         ))}

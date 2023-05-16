@@ -2,7 +2,8 @@ import * as S from './styles'
 import { FaCalendarWeek, FaPhone, FaMapMarkedAlt, FaArrowRight } from 'react-icons/fa'
 
 const Footer = () => (
-  <S.Wrapper>
+  <S.Wrapper
+  >
     <h2>Equilibro Fitness</h2>
     <S.Container>
       <S.Lista>

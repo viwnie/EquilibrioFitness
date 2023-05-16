@@ -1,7 +1,8 @@
 import styled, { css } from 'styled-components'
+import { motion } from 'framer-motion'
 
-export const Wrapper = styled.div`
-  padding-top: 10rem;
+export const Wrapper = styled(motion.div)`
+  padding-top: 6rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,7 +30,7 @@ export const DayList = styled.div`
   justify-content: space-around;
   align-items: center;
   margin-bottom: 3rem;
-  
+  margin-top: 3rem;
   button {
     all: unset;
     display:flex;
@@ -99,14 +100,6 @@ export const Container = styled.div`
   width: 90%;
   border-radius: 2rem;
   padding: 1rem 1rem;
-  h1{
-    font-size: 4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    margin-bottom: 5rem;
-  }
 `
 
 export const Lista = styled.li<ImageProps>`

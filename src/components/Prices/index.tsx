@@ -13,6 +13,7 @@ import mobileLogo02 from '../../../public/img/prices/mobilePrices/logo02.svg'
 
 import { FaCheck } from 'react-icons/fa'
 import { AiOutlineClose } from 'react-icons/ai'
+import TitleAnimation from '../textAnimation/AnimatedTitle'
 
 import Link from 'next/link'
 
@@ -42,8 +43,9 @@ const cards = [
 ];
 
 const Prices = () => (
-  <S.Wrapper>
-    <S.Title>Planes</S.Title>
+  <S.Wrapper
+  >
+    <TitleAnimation text='Planes' />
     <S.webPrices>
       <table>
         <thead>

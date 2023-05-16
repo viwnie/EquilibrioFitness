@@ -1,6 +1,10 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components'
 import { SwiperSlide } from "swiper/react";
 import Image from 'next/image';
+
+interface ImageProps {
+  src: string
+}
 
 export const Wrapper = styled.div`
   .mySwiper {
@@ -17,19 +21,25 @@ export const Wrapper = styled.div`
     line-height: 4rem;
     letter-spacing: 0em;
     text-align: center;
-    margin-bottom: 45px;
+    margin-bottom: 4.5rem;
   }
 `;
 
-export const Slide = styled(SwiperSlide)`
+export const Slide = styled(SwiperSlide) <ImageProps>`
+  ${({ src }) =>
+    css`
+      background-image: url(${src});
+      background-blend-mode: overlay;
+    `}
+  background-color: rgba(0, 0, 0, 0.5);
   background-position: center;
   background-size: cover;
-  max-width: 50rem;
-  max-height:50rem;
+  background-clip: padding-box;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width: clamp(20rem, 50%, 50rem);
+  height: clamp(30rem, 10rem, 50rem);
   border-radius:1.5rem;
 `;
-export const image = styled(Image)`
-    width:100%;
-    height:100%;
-    border-radius:1.5rem;
-`
