@@ -37,7 +37,7 @@ export const Title = styled.h2`
   margin-bottom: 4.5rem;
 `
 
-export const webPrices = styled.div`
+export const webPrices = styled(motion.div)`
   margin-top: 4rem;
   background-color: white;
   max-width: 125rem;
@@ -112,7 +112,7 @@ export const mobileWrap = styled.div`
     display:none;
   }
 `
-export const mobilePrices = styled.div <CardProps>`
+export const mobilePrices = styled(motion.div) <CardProps>`
   ${({ color, shadow }) =>
     css`
       box-shadow: 0px 4px 40px 21px ${shadow};
@@ -183,6 +183,33 @@ export const mobileBuy = styled.div`
     color: #00AA25;
     font-weight: 700;
     font-size: 2.5rem;
+  }
+`
+
+export const Button = styled.button`
+    all: unset;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color: rgba(222, 222, 222, 1);
+    font-weight: bold;
+    width: 20rem;
+    font-size: 1.7rem;
+    background: #CC0301;
+    padding: 1.2rem;
+    border-radius: 10px;
+    a {
+    color: white;
+    text-decoration: none;
+    
+    font-weight: 550;
+    font-size: 1.7rem;
+    font-family: 'Montserrat', sans-serif;
+    }
+    &:hover {
+    cursor: pointer;
+    color: #ffdbe1;
+    background-color: #000;
   }
 `
 

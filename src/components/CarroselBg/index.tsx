@@ -1,7 +1,7 @@
 import * as S from './styles'
 import Image01 from '../../../public/img/carrousel/Banner-01.jpg'
-import Image02 from '../../../public/img/carrousel/musculacion.jpg'
-import Image03 from '../../../public/img/carrousel/Banner-01.jpg'
+import Image02 from '../../../public/img/carrousel/Banner-03.jpg'
+import Image03 from '../../../public/img/carrousel/Banner-02.jpg'
 import TitleAnimation from '../textAnimation/AnimatedTitle'
 import Link from 'next/link'
 import { Swiper } from "swiper/react";
@@ -51,7 +51,7 @@ function CarrouselBG() {
         {land.map((group) => (
           <S.Slide key={group.id} src={group.image}>
             <TitleAnimation background={true} text={group.text} />
-            <S.Button><Link href={'#Price'}>Empezar Hoy !</Link></S.Button>
+            <S.Button><Link href='https://easy.trainingym.com/equilibriofitness'>Empezar Hoy !</Link></S.Button>
           </S.Slide>
         ))}
       </Swiper>

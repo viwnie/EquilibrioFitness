@@ -60,7 +60,7 @@ interface ImageProps {
   src: string
 }
 
-export const Content = styled.div`
+export const Content = styled(motion.div)`
   display: flex;
   flex-direction: row;
   flex-wrap:wrap;

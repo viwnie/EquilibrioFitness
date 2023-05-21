@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Nav from '../components/Nav'
 import CarroselBg from '../components/CarroselBg'
 import Advantage from '../components/Advantage'
@@ -13,7 +12,7 @@ export default function Home() {
       <Nav />
       <CarroselBg />
       <div className="globalBg">
-        <Advantage />
+      <Advantage />
         <Prices />
         <Category />
         <Schedules />

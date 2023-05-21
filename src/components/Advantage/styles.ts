@@ -7,13 +7,13 @@ interface ImageProps {
 }
 
 export const Wapper = styled(motion.div)`
-  padding-top: 10rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  
 `
 
 export const Container = styled.div`

@@ -2,13 +2,14 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
   :root {
+    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+    @import url("https://fonts.googleapis.com/css2?family=Pangolin&display=swap");
     --background: linear-gradient(180deg, #000000 -10.19%, #c00909 88.07%);
     --white: #eeeeee;
     --red: #CD141F;
     --title: #C4C4C4;;
-    --inter: 'Inter', sans-serif;
     --mont: 'Montserrat', sans-serif;
-
+    --inter: 'Source Sans Pro', sans-serif;
     --container: 100rem;
 
     --small: 1.5rem;

@@ -7,6 +7,7 @@ interface ImageProps {
 }
 
 export const Wrapper = styled.div`
+  padding-top:13rem;
   .mySwiper {
     width: 90%;
     padding-top: 5rem;

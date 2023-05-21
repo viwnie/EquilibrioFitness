@@ -9,7 +9,7 @@ const Advantage = () => {
   return (
     <S.Wapper>
       <TitleAnimation text='Solo aquí encontrarás estas ventajas' />
-      <S.Container id='Price'>
+      <S.Container>
         <S.advantage>
           <S.imageMotion
             src={imgPeople.src}

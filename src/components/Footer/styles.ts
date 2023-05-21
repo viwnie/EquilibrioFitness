@@ -37,7 +37,7 @@ justify-content: space-between;
 export const Lista = styled.ul`
   list-style-type: none;
   color: black;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   padding-top: 1rem;
   li {
     svg{

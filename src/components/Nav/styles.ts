@@ -1,10 +1,9 @@
-import styled, {css} from 'styled-components';
+import styled, { css } from 'styled-components';
 import Link from 'next/link'
 import { motion } from "framer-motion";
 
-
-
 export const Wrapper = styled(motion.nav)`
+  font-family:var(--inter);
   width: 90%;
   max-width:120rem;
   height: 8rem;
@@ -43,21 +42,19 @@ export const Desktop = styled(motion.ul)`
   }
 `
 export const BtnLogin = styled(Link)`
-  padding: 0.7rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   text-decoration: none;
   background-color: white;
   color:black;
+  width:8rem;
+  height: 3rem;
   border-radius: 2rem;
   :hover{
     color:var(--red);
   }
 `
-
-export const test = styled(motion.a)`
-
-`
-
-
 export const Mobile = styled.div`
   display: none;
   
@@ -86,7 +83,7 @@ export const MobileContent = styled.div`
     svg {
     position: absolute;
     top: 4.5rem;
-    right: 3rem;
+    right: 2rem;
    }
 
     ul{

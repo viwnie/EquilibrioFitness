@@ -12,8 +12,8 @@ import mobileLogo01 from '../../../public/img/prices/mobilePrices/logo01.svg'
 import mobileLogo02 from '../../../public/img/prices/mobilePrices/logo02.svg'
 
 import { FaCheck } from 'react-icons/fa'
-import { AiOutlineClose } from 'react-icons/ai'
 import TitleAnimation from '../textAnimation/AnimatedTitle'
+import { motion } from 'framer-motion'
 
 import Link from 'next/link'
 
@@ -43,10 +43,15 @@ const cards = [
 ];
 
 const Prices = () => (
-  <S.Wrapper
+  <S.Wrapper id='Price'
   >
     <TitleAnimation text='Planes' />
-    <S.webPrices>
+    <S.webPrices 
+    initial = {{opacity: 0, scale: 0}}
+    whileInView = {{opacity: 1, scale: 1}}
+    transition = {{duration: 1}}
+    viewport={{ once: true }}
+    >
       <table>
         <thead>
           <tr>
@@ -228,9 +233,15 @@ const Prices = () => (
         </tbody>
       </table>
     </S.webPrices>
-    <S.mobileWrap>
+    <S.mobileWrap 
+    >
       {cards.map((card) => (
-        <S.mobilePrices color={card.color} shadow={card.shadow} key={card.id}>
+        <S.mobilePrices 
+        initial = {{opacity: 0, scale: 0}}
+        whileInView = {{opacity: 1, scale: 1}}
+        transition = {{duration: 0.6}}
+        viewport={{ once: true }}
+        color={card.color} shadow={card.shadow} key={card.id}>
           <S.mobileTitle>
             <h2>{card.title}</h2>
           </S.mobileTitle>
@@ -252,7 +263,7 @@ const Prices = () => (
       ))}
     </S.mobileWrap>
 
-    <button>¡Elige tu plan ahora!</button>
+    <S.Button><Link href='https://easy.trainingym.com/equilibriofitness'>¡Elige tu plan ahora!</Link></S.Button>
   </S.Wrapper >
 )
 

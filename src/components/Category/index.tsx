@@ -14,7 +14,28 @@ import { Autoplay, EffectCoverflow, Pagination } from "swiper";
 
 import TitleAnimation from '../textAnimation/AnimatedTitle'
 
-const cards = [Card1, Card2, Card3, Card4, Card5]
+const cards = [
+  {
+    id: 'Card1',
+    image: Card1,
+    text: 'Funcional Hit'
+  },
+  {
+    id: 'Card2',
+    image: Card2,
+    text: 'Musculacion'
+  },
+  {
+    id: 'Card3',
+    image: Card3,
+    text: 'Balance'
+  },
+  {
+    id: 'Card4',
+    image: Card4,
+    text: 'Dance Mix'
+  }
+];
 
 function Category() {
   return (
@@ -43,7 +64,7 @@ function Category() {
         className="mySwiper"
       >
         {cards.map((card) => (
-          <S.Slide key={card.src} src={card.src}><h1>tst</h1></S.Slide>
+          <S.Slide key={card.id} src={card.image.src}><h1>{card.text}</h1></S.Slide>
         ))}
       </Swiper>
     </S.Wrapper>

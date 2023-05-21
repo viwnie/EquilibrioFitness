@@ -9,6 +9,7 @@ import DanceMix2 from '../../../public/Schedules/danceMix.png'
 import Balanco from '../../../public/Schedules/Balance.png'
 import TitleAnimation from '../textAnimation/AnimatedTitle'
 
+
 function Schedules() {
     const days = ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado']
     const [title, setTitle] = useState(days[0])
