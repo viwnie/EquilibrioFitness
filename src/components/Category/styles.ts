@@ -13,17 +13,6 @@ export const Wrapper = styled.div`
     padding-top: 5rem;
     padding-bottom: 5rem;
   }
-
-  h2 {
-    color: var(--title);
-    font-family: var(--mont);
-    font-size: 2.6rem;
-    font-weight: 700;
-    line-height: 4rem;
-    letter-spacing: 0em;
-    text-align: center;
-    margin-bottom: 4.5rem;
-  }
 `;
 
 export const Slide = styled(SwiperSlide) <ImageProps>`

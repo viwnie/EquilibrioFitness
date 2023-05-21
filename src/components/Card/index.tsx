@@ -1,6 +1,5 @@
 import * as S from './styles'
 
-
 interface CardProps {
   ancho: string
   largo: string

@@ -5,15 +5,16 @@ export const WrapperTitle = styled(motion.div)`
     display:flex;
     align-items:center;
     justify-content:center;
-    flex-direction:row;
-    flex-wrap:wrap;
-    font-size:3rem;
-    width:100%;
-    padding: 1rem;
-    color:var(--title);
-    @media (max-width: 800px) {
-        
-    }
+    text-align:center;
+`;
+export const Title = styled(motion.h2)`
+  font-family:var(--mont);
+  display: inline-block;
+  font-size: 5rem;
+  color: var(--title);
+  @media (max-width: 920px) {
+    font-size: 2.5rem;
+  }
 `
 
 export const WrapperText = styled(motion.div)`
@@ -21,14 +22,14 @@ export const WrapperText = styled(motion.div)`
     align-items:center;
     justify-content:center;
     flex-wrap:wrap;
-    font-size:2rem;
-    width:100%;
-`
-export const spanTitle = styled(motion.span)`
-    font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
 `
 
-export const spanText = styled(motion.span)`
 
+export const Text = styled(motion.span)`
+  font-family:var(--inter);
+  font-size: 2rem;
 `
+
+export const Letter = styled(motion.span)`
+  display: inline-block;
+`;

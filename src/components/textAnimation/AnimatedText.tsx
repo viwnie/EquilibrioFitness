@@ -40,9 +40,9 @@ const TextAnimation = ({ text }: { text: string }) => {
   return (
     <S.WrapperText ref={ref} variants={container} initial="hidden" animate={inView ? "visible" : "hidden"}>
       {words.map((word, index) => (
-        <S.spanText key={index} variants={child}>
+        <S.Text key={index} variants={child}>
           {word + "\u00A0"}
-        </S.spanText>
+        </S.Text>
       ))}
     </S.WrapperText>
   );

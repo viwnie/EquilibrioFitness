@@ -14,7 +14,7 @@ export default function Home() {
       <div className="globalBg">
       <Advantage />
         <Prices />
-        <Category />
+        {/* <Category /> */}
         <Schedules />
         <Footer />
       </div>

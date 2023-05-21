@@ -45,8 +45,8 @@ function Nav() {
 						<Image
 							src={Logo}
 							alt="Logo de  Equilibrio Fitness (es una imagen de un corazon con el nombre equilibrio fitness en el centro)"
-							width={100}
-							height={100}
+							width={120}
+							height={120}
 						/>
 					</li>
 					<li>

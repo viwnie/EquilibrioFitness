@@ -24,19 +24,10 @@ export const Wrapper = styled(motion.div)`
     align-items: center;
     justify-content: center;
     }
+    @media (max-width: 825px) {
+    margin-top:70rem;
+  }
 `
-
-export const Title = styled.h2`
-  color: var(--title);
-  font-family: 'Montserrat', sans-serif;
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 4rem;
-  letter-spacing: 0em;
-  text-align: center;
-  margin-bottom: 4.5rem;
-`
-
 export const webPrices = styled(motion.div)`
   margin-top: 4rem;
   background-color: white;

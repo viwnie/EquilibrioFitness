@@ -1,11 +1,8 @@
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { SwiperSlide } from "swiper/react";
 
 interface ImageProps {
   src: string
-}
-interface Land {
-  groupTextSize: number
 }
 
 export const Wrapper = styled.div`
@@ -18,7 +15,7 @@ export const Wrapper = styled.div`
 export const Slide = styled(SwiperSlide) <ImageProps>`
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 110vh;
 
   &::before {
     content: "";
@@ -33,7 +30,7 @@ export const Slide = styled(SwiperSlide) <ImageProps>`
     background-repeat: no-repeat;
     opacity: 0.7;
     background-blend-mode: overlay;
-    z-index: -1; /* Posiciona a camada extra atrás do conteúdo */
+    z-index: -1;
   }
 
   background: linear-gradient(to top, rgb(90, 0, 0),rgba(0, 0, 0, 1));
@@ -43,36 +40,6 @@ export const Slide = styled(SwiperSlide) <ImageProps>`
   justify-content:center;
 `;
 
-export const animatedText = styled.div <Land>`
-${({ groupTextSize }) =>
-    css`
-      animation: typing 2s steps(${groupTextSize}), blink .5s step-end infinite alternate;
-      width: ${groupTextSize}ch;
-    `}
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  font-family: monospace;
-  font-size: 2.5rem;
-  margin-bottom: 5rem;
-  @media (max-width: 550px) {
-    font-size: 1.7rem;
-    margin-bottom: 20rem;
-  }
-  
-  @keyframes typing {
-  from {
-    width: 0
-  }
-}
-
-@keyframes blink {
-  50% {
-    border-color: transparent
-  }
-}
-`;
-
 export const Button = styled.button`
   display:flex;
   align-items:center;
@@ -80,7 +47,7 @@ export const Button = styled.button`
 
   border-radius: 5rem;
   width:20rem;
-  margin-top:3rem;
+  margin-top:10rem;
 
   background-color: var(--red);
   font-family: var(--mont);

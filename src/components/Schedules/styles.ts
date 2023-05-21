@@ -7,22 +7,7 @@ export const Wrapper = styled(motion.div)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  h2{
-    font-size: 4rem;
-  }
 `
-
-export const Title = styled.h2`
-  color: var(--title);
-  font-family: 'Montserrat', sans-serif;
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 4rem;
-  letter-spacing: 0em;
-  text-align: center;
-  margin-bottom: 4.5rem;
-`
-
 export const DayList = styled.div`
   min-width: 70%;
   display: flex;

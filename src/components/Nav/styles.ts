@@ -33,7 +33,7 @@ export const Desktop = styled(motion.ul)`
     :hover {
     color: var(--red);
   }
-    font-size: 1.7rem;
+    font-size: 2rem;
     font-weight: bold;
     cursor: pointer;
   }
