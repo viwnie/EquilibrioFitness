@@ -3,8 +3,8 @@ import Image01 from '../../../public/img/carrousel/Banner-01.jpg'
 import Image02 from '../../../public/img/carrousel/Banner-03.jpg'
 import Image03 from '../../../public/img/carrousel/Banner-02.jpg'
 import TitleAnimation from '../textAnimation/AnimatedTitle'
-import Link from 'next/link'
 import { Swiper } from "swiper/react";
+import ButtonAnimated from '../ButtonAnimated'
 
 
 import "swiper/css";
@@ -33,29 +33,27 @@ const land = [
 
 function CarrouselBG() {
   return (
-    <>
-      <Swiper
-        loop={true}
-        navigation={true}
-        parallax={true}
-        pagination={{
-          clickable: true,
-        }}
-        autoplay={{
-          delay: 5500,
-          disableOnInteraction: false,
-        }}
-        modules={[Parallax, Autoplay, Pagination, Navigation]}
-        className="mySwiper"
-      >
-        {land.map((group) => (
-          <S.Slide key={group.id} src={group.image}>
-            <TitleAnimation background={true} text={group.text} />
-            <S.Button><Link href='https://easy.trainingym.com/equilibriofitness'>Empezar Hoy !</Link></S.Button>
-          </S.Slide>
-        ))}
-      </Swiper>
-    </>
+    // <>
+    //   <Swiper
+    //     loop={true}
+    //     autoplay={{
+    //       delay: 5500,
+    //       disableOnInteraction: false,
+    //     }}
+    //     modules={[Parallax, Autoplay, Pagination, Navigation]}
+    //     className="mySwiper"
+    //   >
+    //     {land.map((group) => (
+    //       <S.Slide key={group.id} src={group.image}>
+    //         {/* <TitleAnimation background={true} text={group.text} /> */}
+    //         <span>FIND YOUR ENERGY</span>
+    //         <h1>{group.text}</h1>
+    //         <ButtonAnimated text='Empezar Hoy !' link='https://easy.trainingym.com/equilibriofitness' />
+    //       </S.Slide>
+    //     ))}
+    //   </Swiper>
+    // </>
+    <S.test></S.test>
   )
 }
 

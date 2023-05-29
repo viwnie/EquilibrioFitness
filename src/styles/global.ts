@@ -1,26 +1,30 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
   :root {
-    @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
-    @import url("https://fonts.googleapis.com/css2?family=Pangolin&display=swap");
-    --background: linear-gradient(180deg, #000000 -10.19%, #c00909 88.07%);
     --white: #eeeeee;
     --red: #CD141F;
-    --title: #C4C4C4;;
-    --mont: 'Montserrat', sans-serif;
-    --inter: 'Source Sans Pro', sans-serif;
+    --title: #C4C4C4;
     --container: 100rem;
 
-    --small: 1.5rem;
-    --medium: 3rem;
-    --large: 5rem;
+    --mont: 'Montserrat', sans-serif;
+
+    --fs-small:1.4rem;
+    --fs-medium:1.6rem;
+    --fs-large:4rem;
+
+    --fw-small: 100;
+    --fw-medium: 500;
+    --fw-large: 700;
   }
 
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--mont);
+    font-size: 1.6rem;
+    scroll-behavior: smooth;
   }
 
   html {
@@ -28,44 +32,34 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-
     color: var(--white);
-    font-family: var(--inter);
-
-    background-size:500% 100%;
-    position:relative;
+    background-size: 500% 100%;
+    position: relative;
   }
-  .globalBg{
-    height:100%;
+
+  .globalBg {
+    height: 100%;
     background: var(--background);
   }
+
   .no-padding {
     padding: 0;
   }
 
-  p{
+  p {
     font-size: 2rem;
     line-height: var(--medium);
   }
 
-  a{
+  a {
     color: var(--highlight);
   }
-  button {
-    all: unset;
-    color: white;
-    font-weight: bold;
-    font-size: 2.7rem;
-    background: red;
-    padding: 1.2rem;
-    border-radius: 20px;
 
-  }
-  button:hover{
+  button:hover {
     cursor: pointer;
     color: #ffdbe1;
     background-color: #660000;
   }
-`
+`;
 
-export default GlobalStyles
+export default GlobalStyles;

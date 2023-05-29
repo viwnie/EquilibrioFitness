@@ -50,7 +50,6 @@ const Advantage = () => {
               }
             }}
             key={card.id}>
-            <TitleAnimation text={card.text} />
             <S.imageMotion
               src={card.image}
               width={100}

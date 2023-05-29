@@ -15,6 +15,8 @@ import { FaCheck } from 'react-icons/fa'
 import TitleAnimation from '../textAnimation/AnimatedTitle'
 import { motion } from 'framer-motion'
 
+import ButtonAnimated from '../ButtonAnimated'
+
 import Link from 'next/link'
 
 const cards = [
@@ -46,11 +48,7 @@ const Prices = () => (
   <S.Wrapper id='Price'
   >
     <TitleAnimation text='Planes' />
-    <S.webPrices 
-    initial = {{opacity: 0, scale: 0}}
-    whileInView = {{opacity: 1, scale: 1}}
-    transition = {{duration: 1}}
-    viewport={{ once: true }}
+    <S.webPrices
     >
       <table>
         <thead>
@@ -233,15 +231,15 @@ const Prices = () => (
         </tbody>
       </table>
     </S.webPrices>
-    <S.mobileWrap 
+    <S.mobileWrap
     >
       {cards.map((card) => (
-        <S.mobilePrices 
-        initial = {{opacity: 0, scale: 0}}
-        whileInView = {{opacity: 1, scale: 1}}
-        transition = {{duration: 0.6}}
-        viewport={{ once: true }}
-        color={card.color} shadow={card.shadow} key={card.id}>
+        <S.mobilePrices
+          initial={{ opacity: 0, scale: 0 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          color={card.color} shadow={card.shadow} key={card.id}>
           <S.mobileTitle>
             <h2>{card.title}</h2>
           </S.mobileTitle>
@@ -262,8 +260,7 @@ const Prices = () => (
         </S.mobilePrices>
       ))}
     </S.mobileWrap>
-
-    <S.Button><Link href='https://easy.trainingym.com/equilibriofitness'>¡Elige tu plan ahora!</Link></S.Button>
+    <S.HiddenButton><ButtonAnimated text='!Elige tu plan' link='/'></ButtonAnimated></S.HiddenButton>
   </S.Wrapper >
 )
 

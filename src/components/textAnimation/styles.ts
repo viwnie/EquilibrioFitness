@@ -11,7 +11,7 @@ export const Title = styled(motion.h2)`
   font-family:var(--mont);
   display: inline-block;
   font-size: 5rem;
-  color: var(--title);
+  color: #000;
   @media (max-width: 920px) {
     font-size: 2.5rem;
   }
@@ -26,8 +26,8 @@ export const WrapperText = styled(motion.div)`
 
 
 export const Text = styled(motion.span)`
-  font-family:var(--inter);
   font-size: 2rem;
+  color: black;
 `
 
 export const Letter = styled(motion.span)`

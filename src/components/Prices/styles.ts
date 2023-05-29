@@ -12,37 +12,36 @@ interface LogoMobile {
 }
 
 export const Wrapper = styled(motion.div)`
-  padding-top: 10rem;
+  background-color: whitesmoke;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-    button{
-    display: flex;
-    margin-top: 6.4rem;
-    margin-bottom: 10rem;
-    align-items: center;
-    justify-content: center;
-    }
-    @media (max-width: 825px) {
-    margin-top:70rem;
+  height: 80rem;
+  @media (max-width: 830px) {
+    height: 110rem;
   }
 `
+
+export const HiddenButton = styled.div`
+  @media (max-width: 830px) {
+   display:none;
+  }
+`
+
 export const webPrices = styled(motion.div)`
-  margin-top: 4rem;
   background-color: white;
+  margin: 4rem 0;
   max-width: 125rem;
-  width: 55%;
+  width: 75%;
   height: 50rem;
-  border-radius: 2rem;
   padding: 1rem 1rem;
   table {
     border-collapse: collapse;
     height: 98%;
     width: 100%;
-    background-color: white;
     color: #454545;
-    margin-top: 10px;
+    margin-top: 1rem;
     font-family: Inter;
     font-size: 1.7rem;
     font-weight: 300;
@@ -50,7 +49,7 @@ export const webPrices = styled(motion.div)`
     tbody {
       tr {
         td {
-          border-top: 1px solid rgba(202, 202, 202, 1);
+          border-top: 1px solid black;
         }
       }
     }
@@ -82,7 +81,6 @@ export const webPrices = styled(motion.div)`
       max-width: 14.5rem;
     }
   }
-  box-shadow: 0px 4px 40px 21px rgba(255, 0, 0, 0.26);
   @media (max-width: 830px) {
     display:none;
   }
@@ -92,6 +90,7 @@ export const Premium = styled.h3`
 `
 
 export const mobileWrap = styled.div`
+  margin-top: 3rem;
   height: 90rem;
   max-width: 100%;
   display:flex;
@@ -114,6 +113,7 @@ export const mobilePrices = styled(motion.div) <CardProps>`
       background-color: ${color};
     }
     `}
+  margin: 4rem 0;
   width: 30rem;
   padding-left: 2rem;
   height: 40rem;
@@ -144,9 +144,9 @@ export const mobileLogo = styled(Image) <LogoMobile>`
     css`
       top: ${top};
       right: ${right};
-    }
-    `}
-`
+      `
+  }`
+
 export const mobileBuy = styled.div`
   margin-top: 6rem;
   height: 3rem;
@@ -183,9 +183,7 @@ export const Button = styled.button`
     align-items:center;
     justify-content:center;
     color: rgba(222, 222, 222, 1);
-    font-weight: bold;
     width: 20rem;
-    font-size: 1.7rem;
     background: #CC0301;
     padding: 1.2rem;
     border-radius: 10px;

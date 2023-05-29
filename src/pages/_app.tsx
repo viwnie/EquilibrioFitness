@@ -1,6 +1,11 @@
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 import GlobalStyles from '../styles/global'
+import { Montserrat } from '@next/font/google'
+
+const montserrat = Montserrat({
+  subsets: ['latin']
+})
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -20,7 +25,9 @@ function App({ Component, pageProps }: AppProps) {
         />
       </Head>
       <GlobalStyles />
-      <Component {...pageProps} />
+      <main className={montserrat.className}>
+        <Component {...pageProps} />
+      </main>
     </>
   )
 }

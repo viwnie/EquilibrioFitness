@@ -1,5 +1,6 @@
 import { useInView } from "react-intersection-observer";
 import * as S from './styles'
+
 const TextAnimation = ({ text }: { text: string }) => {
   const [ref, inView] = useInView({ triggerOnce: true });
 
