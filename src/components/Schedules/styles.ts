@@ -33,7 +33,7 @@ export const Container = styled.ul`
       font-size: var(--fs-medium);
     }
   }
-  @media (max-width: 550px) {
+  @media (max-width: 850px) {
     height: 30rem;
     width: 90%;
     display: grid;
@@ -75,6 +75,11 @@ export const DayList = styled.div`
     background-color: red;
     transition: 0.3s;
   }
+  @media (max-width: 500px) {
+    width: 90%;
+    margin-bottom: 4rem;
+  }
+  
 `
 
 export const Button = styled.button`
@@ -137,3 +142,16 @@ export const GridBG = styled.div`
     background-repeat: no-repeat;
     filter: grayscale(100%) contrast(400%);
 `;
+
+export const Banner = styled.div`
+  height: 20rem;
+  width: 100%;
+  background-color: black;
+  margin-top: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h1{
+    color: white;
+  }
+`

@@ -12,7 +12,7 @@ interface LogoMobile {
 }
 
 export const Wrapper = styled(motion.div)`
-  background-color: whitesmoke;
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -30,12 +30,14 @@ export const HiddenButton = styled.div`
 `
 
 export const webPrices = styled(motion.div)`
+  border-radius: 1rem;
   background-color: white;
   margin: 4rem 0;
   max-width: 125rem;
-  width: 75%;
+  width: 65%;
   height: 50rem;
-  padding: 1rem 1rem;
+  padding: 1rem 4rem;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   table {
     border-collapse: collapse;
     height: 98%;
@@ -77,7 +79,7 @@ export const webPrices = styled(motion.div)`
       }
     }
     .tableTitle {
-      text-align: start;
+      text-align: center;
       max-width: 14.5rem;
     }
   }
@@ -105,7 +107,7 @@ export const mobileWrap = styled.div`
 export const mobilePrices = styled(motion.div) <CardProps>`
   ${({ color, shadow }) =>
     css`
-      box-shadow: 0px 4px 40px 21px ${shadow};
+      box-shadow: 0px 2px 40px 2px ${shadow};
       svg, h2{
       color: ${color};
     }

@@ -1,5 +1,5 @@
 import Nav from '../components/Nav'
-import CarroselBg from '../components/CarroselBg'
+import Hero from '../components/Hero'
 import Advantage from '../components/Advantage'
 import Prices from '../components/Prices'
 import Category from '../components/Category'
@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <Nav />
-      <CarroselBg />
+      <Hero />
       <Advantage />
         <Prices />
         <Category />

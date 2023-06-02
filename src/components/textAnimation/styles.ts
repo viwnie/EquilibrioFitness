@@ -26,7 +26,7 @@ export const WrapperText = styled(motion.div)`
 
 
 export const Text = styled(motion.span)`
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: black;
 `
 

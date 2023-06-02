@@ -9,12 +9,15 @@ const GlobalStyles = createGlobalStyle`
 
     --mont: 'Montserrat', sans-serif;
 
-    --fs-small:1.4rem;
-    --fs-medium:1.6rem;
+    --fs-small:1.6rem;
+    --fs-medium:2rem;
+    --fs-semi:3.5rem;
     --fs-large:4rem;
+    --fs-big: 2.5rem;
 
     --fw-small: 100;
     --fw-medium: 500;
+    --fw-semi: 600;
     --fw-large: 700;
   }
 

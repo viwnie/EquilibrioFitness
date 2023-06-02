@@ -7,11 +7,32 @@ const CalculatorIMC = () => {
   const [height, setHeight] = useState<string>('');
   const [weight, setWeight] = useState<string>('');
   const [imc, setIMC] = useState<string>('');
+  const [peso, setPeso] = useState<string>('')
+
 
   const calculateIMC = () => {
     const heightInMeters = parseFloat(height) / 100;
     const calculatedIMC = parseFloat(weight) / (heightInMeters * heightInMeters);
     setIMC(calculatedIMC.toFixed(2).toString());
+    if(isNaN(calculatedIMC)) {
+      return setIMC('')
+    }
+    if (calculatedIMC < 18.5) {
+      return setPeso('Abaixo do peso')
+    }
+    else if (calculatedIMC >= 18.5 && calculatedIMC <= 24.9) {
+      return setPeso('Saudável')
+    }
+    else if (calculatedIMC >= 25 && calculatedIMC <= 29.9) {
+      return setPeso('Acima do Peso')
+    }
+    else if(calculatedIMC > 30) {
+      return setPeso('Obesidade')
+    }
+   
+    else {
+      return ''
+    }
   };
   return (
     <S.Wrapper>
@@ -19,12 +40,18 @@ const CalculatorIMC = () => {
         <S.Column>
           <S.Title>Calculadora De <span>IMC</span></S.Title>
           <span>Esta calculadora realizará el cálculo de tu IMC (Índice de Masa Corporal) con el fin de brindarte una apreciación básica sobre si tu peso se encuentra dentro de parámetros saludables.</span>
-          <S.IMCDiv> <input type="text" placeholder="Altura/cm" value={height}
-            onChange={(e) => setHeight(e.target.value)} />  <input type="text" placeholder="Peso/kg" value={weight}
-              onChange={(e) => setWeight(e.target.value)} /> </S.IMCDiv>
-          <S.Row> <S.Text> Tu IMC es:  <span>{imc}</span></S.Text>
-            <S.Text> Tu peso es:  <span> </span></S.Text>
-          </S.Row>
+          <S.IMCDiv>
+            <div>
+              <input type="text" placeholder="Altura/cm" value={height}
+                onChange={(e) => setHeight(e.target.value)} />
+              <S.Text> Tu IMC es:  <span>{imc}</span></S.Text>
+            </div>
+            <div>
+              <input type="text" placeholder="Peso/kg" value={weight}
+                onChange={(e) => setWeight(e.target.value)} />
+              <S.Text> Tu peso es:  <span>{peso}</span></S.Text>
+            </div>
+          </S.IMCDiv>
           <S.Row> <S.Button onClick={calculateIMC} >Calcular IMC</S.Button></S.Row>
         </S.Column>
       </S.GridItem>

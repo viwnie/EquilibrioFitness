@@ -16,7 +16,8 @@ export const Wrapper = styled.div`
       align-items:center;
       justify-content:center;
       text-decoration: none;
-      background-color:white;
+      color: white;
+      background-color: #2c2c31;
       width:100%;
       height:100%;
     }
@@ -24,7 +25,7 @@ export const Wrapper = styled.div`
   :hover{
     div{
       color:black;
-      transform: translate(-6%, 17%);
+      transform: translate(-6.5%, 17%);
     }
   }
 `
@@ -34,7 +35,7 @@ export const Rectangle = styled.div`
   position:absolute;
   transition: transform 0.5s ease;
   background-color:transparent;
-  border:solid 1px red;
+  border:solid 1px grey;
   color:black;
   width:100%;
   height:100%;

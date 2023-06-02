@@ -19,7 +19,7 @@ export const GridItem = styled.div`
   padding-left: 5rem;
   width: 50%;
   @media (max-width: 1040px) {
-    width: 50vh;
+    width: 95%;
     padding: 0;
   }
 `;
@@ -59,15 +59,19 @@ export const Table = styled.table`
 export const Column = styled.div`
   display: flex;
   flex-direction: column;
+  padding-left: 9rem;
+  @media (max-width: 1040px) {
+    padding: 0;
+  }
 `;
 
 export const Row = styled.div`
   background-color: transparent;
+  
   width: 100%;
   height: 5rem;
   display: flex;
   align-items: center;
-  gap: 23rem;
   @media (max-width: 1040px) {
     gap: 12rem;
     padding-top: 3rem;
@@ -75,6 +79,8 @@ export const Row = styled.div`
 `;
 
 export const Title = styled.h1`
+  margin-top:2rem;
+  margin-bottom:2rem;
   font-size: var(--fs-large);
   color: white;
   span{
@@ -103,19 +109,28 @@ export const Button = styled.button`
 `
 
 export const IMCDiv = styled.div`
+  display:flex;
   margin-top:2rem;
   input {
     all:unset;
-    width:40%;
+    width:80%;
     color:white;
     border: solid 2px gray;
     background-color:transparent;
     padding: 1.2rem;
+    margin-bottom:1rem;
+  }
+  div{
+    display:flex;
+    flex-direction:column;
+    width:100%;
   }
 `
 
 export const Text = styled.h2`
+margin-bottom:3rem;
 span {
   color: red;
+  
 }
 `
