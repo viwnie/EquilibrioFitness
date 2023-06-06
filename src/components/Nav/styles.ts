@@ -81,7 +81,7 @@ export const UserBtn = styled(motion.button)`
   display:flex;
   align-items:center;
   justify-content:center;
-  width: 15rem;
+  width: 16rem;
   height:3.5rem;
   background-color:transparent;
   color:white;

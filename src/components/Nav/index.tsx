@@ -85,7 +85,7 @@ function Nav() {
           <AiOutlineMenu className="mobileMenu" size={35} onClick={() => setVisible(true)} />
           <div>
             <AiOutlineUser size={35} />
-            <S.UserBtn>Unite a Nosotros !</S.UserBtn>
+            <S.UserBtn>Unete a Nosotros !</S.UserBtn>
           </div>
         </S.User>
       </S.Wrapper>

@@ -3,6 +3,8 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import advg from '../../../public/img/advantage/backgroundADV.jpg'
 import mold from '../../../public/img/advantage/moldure.png'
+import brush from '../../../public/img/brushs/clipping.png'
+import test from '../../../public/img/Schedules/pequenito.jpg'
 
 interface ImageProps {
   src: string
@@ -43,7 +45,7 @@ export const WhoWeAre = styled.div`
   width:50%;
 
   h1{
-      color: red;
+      color: var(--red);
       font-size:var(--fs-large);
       font-weight:var(--fw-large);
   }
@@ -188,46 +190,23 @@ export const advantage = styled(motion.div)`
     width: 90%;
   }
 `
-
+ 
 export const Moldura = styled.div`
   position: relative;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width: 50%;
-  height: 46rem;
-  overflow: hidden;
+  width: 48%;
   margin-left: 5rem;
-  background-color: black;
-  z-index: 1;
-  div{
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    z-index: 0;
-   
-  }
+  background-size: cover;
+  background-position: 45% top;
+  background-repeat: no-repeat;
+  ${css`
+  -webkit-mask: url(${brush.src});
+  -webkit-mask-size: 100%;
+`}
   @media (max-width: 1240px) {
     display: none;
   }
-  
-  
 `
-
 export const Video = styled.video`
-  background-color:black;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  mask-image: url(${mold.src});
-  mask-repeat: no-repeat;
-  mask-size: cover;
-
-
-  @media (max-width:1240px) {
-    display:none;
-  }
+  width: 75rem;
+  height: 50rem;
 `

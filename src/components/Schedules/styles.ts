@@ -46,6 +46,34 @@ export const Container = styled.ul`
   }
 `
 
+export const WrapOptions = styled.div`
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background-color:black;
+  width:100%;
+  @media (max-width: 850px) {
+    width: 90%;
+    justify-content:center;
+  }
+`
+export const OptionsContent = styled.div`
+    display:flex;
+    background-color:red;
+    align-items:center;
+    justify-content:space-between;
+    width:80%;`
+
+export const CheckboxContainer = styled.div`
+`
+
+export const WrapButtons = styled.div`
+  button{
+      margin-left:1rem;
+      border-radius:1rem;
+    }
+`
+
 export const DayList = styled.div`
   height: 10rem;
   width: 65%;

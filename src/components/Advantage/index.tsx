@@ -88,7 +88,7 @@ const Advantage = () => {
         <S.WhoWeAre id='weAre'>
           <div>
             <h1>
-            ¿Quiénes somos?
+              ¿Quiénes somos?
             </h1>
             <h2>
               Tu salud y cuerpo a otro nivel!
@@ -129,9 +129,9 @@ const Advantage = () => {
           <ButtonAnimated link='/' text='NUESTRAS CLASES' />
         </S.WhoWeAre>
         <S.Moldura>
-          <div>
-        <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" title="Nuevo fitness personalizado en Murcia ❤️ Equilibrio Fitness" width="100%" height="100%" src="https://www.youtube.com/embed/akYX-cy0qt8?playlist=akYX-cy0qt8&amp;iv_load_policy=3&amp;enablejsapi=1&amp;disablekb=1&amp;autoplay=1&amp;controls=0&amp;showinfo=0&amp;rel=0&amp;loop=1&amp;wmode=transparent&amp;origin=https%3A%2F%2Fequilibriofitness.com&amp;widgetid=1&amp;mute=1"></iframe>
-        </div>
+          <S.Video autoPlay loop muted playsInline>
+            <source src='/videoplayback.mp4' />
+          </S.Video>
         </S.Moldura>
       </S.info>
     </S.Wapper >
