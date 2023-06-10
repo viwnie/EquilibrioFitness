@@ -18,9 +18,25 @@ export const Wrapper = styled(motion.div)`
   justify-content: center;
   align-items: center;
   height: 80rem;
+  h1{
+    font-size: var(--fs-big);
+    color: black;
+  }
+  h2{
+    font-size: var(--fs-hero);
+    color: var(--red);
+  }
+
   @media (max-width: 830px) {
     height: 110rem;
+    h1{
+      font-size: var(--fs-small);
+    }
+    h2{
+      font-size: var(--fs-big);
+    }
   }
+ 
 `
 
 export const HiddenButton = styled.div`

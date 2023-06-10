@@ -30,7 +30,7 @@ export const Desktop = styled(motion.ul)`
     list-style:none;
     display:flex;
     align-items:center;
-    justify-content:space-between;
+    justify-content: space-between;
   }
   
   a{
@@ -77,7 +77,7 @@ export const User = styled(motion.div)`
     justify-content:end;
   }
 `
-export const UserBtn = styled(motion.button)`
+export const UserBtn = styled.a`
   display:flex;
   align-items:center;
   justify-content:center;
@@ -89,6 +89,12 @@ export const UserBtn = styled(motion.button)`
   border-radius:0rem;
   font-size:var(--fs-small);
   font-weight:var(--fw-small);
+  text-decoration:none;
+    :hover{
+      cursor:pointer;
+      color:red;
+      transition:all 0.3s ease 0s;
+    }
 `
 export const Mobile = styled(motion.div)`
   position:fixed;
@@ -116,6 +122,9 @@ export const Mobile = styled(motion.div)`
     li{
       font-size:var(--fs-semi);
       font-weight:var(--fw-semi);
+      a{
+        text-decoration: none;
+      }
       :hover{
     color:red;
   }

@@ -11,9 +11,9 @@ const GlobalStyles = createGlobalStyle`
 
     --fs-small:1.6rem;
     --fs-medium:2rem;
+    --fs-big: 2.5rem;
     --fs-semi:3.5rem;
     --fs-large:4rem;
-    --fs-big: 2.5rem;
     --fs-hero:4.5rem;
 
     

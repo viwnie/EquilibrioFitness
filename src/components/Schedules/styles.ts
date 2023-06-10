@@ -1,5 +1,11 @@
-import styled, { css } from 'styled-components'
+import styled, { css, keyframes } from 'styled-components'
 import Card5 from '../../../public/img/banner/banner01.png'
+import { motion } from 'framer-motion'
+
+interface ImageProps {
+  src: string
+}
+
 
 
 export const Wrapper = styled.div`
@@ -9,7 +15,7 @@ export const Wrapper = styled.div`
   width: 100%;
 `
 
-export const Container = styled.ul`
+export const Container = styled(motion.ul)`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -50,8 +56,9 @@ export const WrapOptions = styled.div`
   display:flex;
   align-items:center;
   justify-content:center;
-  background-color:black;
   width:100%;
+
+  color:black;
   @media (max-width: 850px) {
     width: 90%;
     justify-content:center;
@@ -59,19 +66,34 @@ export const WrapOptions = styled.div`
 `
 export const OptionsContent = styled.div`
     display:flex;
-    background-color:red;
     align-items:center;
     justify-content:space-between;
-    width:80%;`
+    width:80%;
+    @media (max-width:850px) {
+      justify-content:center;
+}
+    `
 
 export const CheckboxContainer = styled.div`
+@media (max-width:850px) {
+  display:none;
+}
+
 `
 
 export const WrapButtons = styled.div`
+  display:flex;
+
+
   button{
       margin-left:1rem;
       border-radius:1rem;
     }
+
+  @media (max-width:850px) {
+    align-items:center;
+    justify-content:center;
+}
 `
 
 export const DayList = styled.div`
@@ -106,6 +128,7 @@ export const DayList = styled.div`
   @media (max-width: 500px) {
     width: 90%;
     margin-bottom: 4rem;
+    height: 15rem;
   }
   
 `
@@ -171,15 +194,47 @@ export const GridBG = styled.div`
     filter: grayscale(100%) contrast(400%);
 `;
 
-export const Banner = styled.div`
-  height: 20rem;
-  width: 100%;
-  background-color: black;
-  margin-top: 10rem;
+export const Banner = styled.div<ImageProps>`
   display: flex;
-  align-items: center;
+  flex-direction:column;
+  padding-left:20rem;
   justify-content: center;
+
+  height: 25rem;
+  width: 100%;
+
+  background-image: url(${({ src }) => src});
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  margin-top: 10rem;
+  color: white;
+
   h1{
-    color: white;
+    font-size: var(--fs-semi);
   }
+  h2{
+    margin-top:1rem;
+    margin-bottom:1rem;
+    font-size: var(--fs-big);
+    span{
+      color:red;
+      font-size: var(--fw-medium);
+  }
+  }
+
+  @media (max-width: 800px) {
+    padding-left:10%;
+    h1{
+    font-size: var(--fs-big);
+  }
+  h2{
+    font-size: var(--fs-medium);
+    span{
+      color:red;
+    font-size: var(--fw-small);
+  }
+  }
+  }
+
 `

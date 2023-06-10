@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div`
   position:relative;
+  cursor: pointer;
   width:17rem;
   height:5rem;
   color:black;

@@ -1,7 +1,11 @@
-
 import { useEffect, useState } from 'react';
 import * as S from './styles'
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
+import ButtonAnimated from '../ButtonAnimated';
+import Banner from '../../../public/img/Schedules/banner.png'
+
+import { RevealTitle } from '../utils/RevealTitle';
+import { RevealSubTitle } from '../utils/RevealSubTitle';
 
 function Schedules() {
     const days = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado']
@@ -158,7 +162,7 @@ function Schedules() {
         if (showFuncional && showMusculacion) {
             return true;
         } else if (showFuncional) {
-            return classData.className === 'Funcional'; 
+            return classData.className === 'Funcional';
         } else if (showMusculacion) {
             return classData.className === 'Musculación';
         }
@@ -167,8 +171,19 @@ function Schedules() {
 
     return (
         <S.Wrapper>
-            <S.Banner>
-                <h1>Banner Is Coming</h1>
+            <S.Banner src={Banner.src} id='Schedules'>
+                <div>
+                    <RevealTitle>
+                    <h1>Necesitas un Entrenador Personal?</h1>
+                    </RevealTitle>
+                    <RevealSubTitle>
+                    <h2>
+                        <span>Llame: </span>
+                        +34 613 413 279
+                    </h2>
+                    </RevealSubTitle>
+                    <ButtonAnimated text='Contactanos' link='https://wa.me/+34613413279'/>
+                </div>
             </S.Banner>
             <S.DayList>
                 {days.map((day) => (
@@ -183,7 +198,21 @@ function Schedules() {
             </S.DayList>
             {filteredClasses &&
                 filteredClasses.slice(startIndex, endIndex).map((classData, index) => (
-                    <S.Container key={index}>
+                    <S.Container key={index}
+                    initial={{ opacity: 0, scale: 0.75 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.8,
+            duration: 1,
+            ease: [0, 0.71, 0.2, 1.01],
+            scale: {
+              type: "spring",
+              damping: 5,
+              stiffness: 100,
+              restDelta: 0.001
+            }
+          }}>
                         <li>
                             <p>Classname</p>
                             <h2>{classData.className}</h2>
@@ -223,13 +252,13 @@ function Schedules() {
                     </S.CheckboxContainer>
                     <S.WrapButtons>
                         <S.Button onClick={handlePrevious} disabled={startIndex === 0}>
-                        <FaArrowLeft size={17}/>
+                            <FaArrowLeft size={17} />
                         </S.Button>
                         <S.Button
                             onClick={handleNext}
                             disabled={!selectedSchedule || endIndex >= selectedSchedule.classes.length}
                         >
-                            <FaArrowRight size={17}/>
+                            <FaArrowRight size={17} />
                         </S.Button>
                     </S.WrapButtons>
                 </S.OptionsContent>

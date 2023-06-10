@@ -12,8 +12,11 @@ import mobileLogo01 from '../../../public/img/prices/mobilePrices/logo01.svg'
 import mobileLogo02 from '../../../public/img/prices/mobilePrices/logo02.svg'
 
 import { FaCheck } from 'react-icons/fa'
-import TitleAnimation from '../textAnimation/AnimatedTitle'
 import { motion } from 'framer-motion'
+
+import { RevealTitle } from '../utils/RevealTitle';
+import { RevealSubTitle } from '../utils/RevealSubTitle';
+
 
 import ButtonAnimated from '../ButtonAnimated'
 
@@ -26,7 +29,7 @@ const cards = [
     logo: mobileLogo01.src,
     price: '55€',
     color: '#D00000',
-    shadow: 'rgba(255, 0, 0, 0.3)',
+    shadow: 'rgba(0, 0, 0, 0.2)',
     verified: { mobileVerified01 },
     top: '0',
     right: '0'
@@ -37,7 +40,7 @@ const cards = [
     logo: mobileLogo02.src,
     price: '45€',
     color: '#7F28ED',
-    shadow: 'rgba(255, 0, 157, 0.3)',
+    shadow: 'rgba(0, 0, 0, 0.2)',
     verified: { mobileVerified02 },
     top: '-1',
     right: '0'
@@ -47,8 +50,27 @@ const cards = [
 const Prices = () => (
   <S.Wrapper id='Price'
   >
-    <TitleAnimation text='Planes' />
+    <RevealSubTitle>
+    <h1>Nuestros</h1>
+    </RevealSubTitle>
+    <RevealTitle>
+    <h2>Planes</h2>
+    </RevealTitle>
     <S.webPrices
+    initial={{ opacity: 0, scale: 0.75 }}
+    whileInView={{ opacity: 1, scale: 1 }}
+    viewport={{ once: true }}
+    transition={{
+      delay: 0.8,
+      duration: 1,
+      ease: [0, 0.71, 0.2, 1.01],
+      scale: {
+        type: "spring",
+        damping: 5,
+        stiffness: 100,
+        restDelta: 0.001
+      }
+    }}
     >
       <table>
         <thead>
@@ -122,6 +144,25 @@ const Prices = () => (
           </tr>
           <tr>
             <td className="tableTitle">Programa Personalizado</td>
+            <td>
+              <Image
+                src={webVerified}
+                alt="icono de Activo ( V )"
+                width={30}
+                height={30}
+              />
+            </td>
+            <td>
+              <Image
+                src={webVerified}
+                alt="icono de Activo ( V )"
+                width={30}
+                height={30}
+              />
+            </td>
+          </tr>
+          <tr>
+            <td className="tableTitle">Parking Gratuito</td>
             <td>
               <Image
                 src={webVerified}
@@ -248,6 +289,7 @@ const Prices = () => (
             <li><FaCheck size={12} /> Valorazion Inicial</li>
             <li><FaCheck size={12} /> Plan Nutricional</li>
             <li><FaCheck size={12} /> Programa Personalizado</li>
+            <li><FaCheck size={12} /> Parking Gratuito</li>
             <li>{card.title === 'Economy' ? <Image src={mobileUnVerified.src} alt='X' width={12} height={12} /> : <FaCheck size={12} />} Musculacion/Cardio</li>
             <li>{card.title === 'Economy' ? <Image src={mobileUnVerified.src} alt='X' width={12} height={12} /> : <FaCheck size={12} />} Balance</li>
             <li>{card.title === 'Economy' ? <Image src={mobileUnVerified.src} alt='X' width={12} height={12} /> : <FaCheck size={12} />} Dance Mix</li>
@@ -260,7 +302,7 @@ const Prices = () => (
         </S.mobilePrices>
       ))}
     </S.mobileWrap>
-    <S.HiddenButton><ButtonAnimated text='!Elige tu plan' link='/'></ButtonAnimated></S.HiddenButton>
+    <S.HiddenButton><ButtonAnimated text='!Elige tu plan' link='https://easy.trainingym.com/equilibriofitness'></ButtonAnimated></S.HiddenButton>
   </S.Wrapper >
 )
 

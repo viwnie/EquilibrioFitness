@@ -1,21 +1,42 @@
 import * as S from './styles'
-import Card1 from '../../../public/img/cards/card-01.jpg';
-import Card2 from '../../../public/img/cards/cross-training.jpg';
+import Musculacion from '../../../public/img/cards/musculacion.jpg';
+import Funcional from '../../../public/img/cards/funcional.jpg';
+
+import { Reveal } from '../utils/Reveal';
+import { RevealTitle } from '../utils/RevealTitle';
+import { RevealSubTitle } from '../utils/RevealSubTitle';
 
 function Category() {
   return (
     <S.Wrapper id='Category'>
-      <h1>Nuevo Fitness</h1>
-      <h2>Personalizado Murcia</h2>
-      <S.Grid>
-      <S.Image src={Card2.src}>
-        <h1>Funcional</h1>
-      </S.Image>
-      <S.Image src={Card1.src}>
-        <h1>Musculacion</h1>
-      </S.Image>
+      <RevealSubTitle>
+        <h1>Nuevo Fitness</h1>
+      </RevealSubTitle>
+      <RevealTitle>
+        <h2>Personalizado Murcia</h2>
+      </RevealTitle>
+      <S.Grid initial={{ opacity: 0, scale: 0.75 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{
+            delay: 0.8,
+            duration: 1,
+            ease: [0, 0.71, 0.2, 1.01],
+            scale: {
+              type: "spring",
+              damping: 5,
+              stiffness: 100,
+              restDelta: 0.001
+            }
+          }}>
+        <S.Image src={Funcional.src}>
+            <h1>Funcional</h1>
+        </S.Image>
+        <S.Image src={Musculacion.src}>
+            <h1>Musculación</h1>
+        </S.Image>
       </S.Grid>
-    </S.Wrapper>
+    </S.Wrapper >
   );
 }
 export default Category;

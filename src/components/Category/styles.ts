@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import advg from '../../../public/img/advantage/backgroundADV.jpg'
+import { motion } from 'framer-motion'
 
 interface ImageProps {
   src: string
@@ -71,7 +72,7 @@ export const Image = styled.div<ImageProps>`
   }
 `
 
-export const Grid = styled.div`
+export const Grid = styled(motion.div)`
 width: 80%;
 display: flex;
 justify-content: space-between;

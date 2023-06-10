@@ -2,9 +2,7 @@ import styled, { css } from 'styled-components'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import advg from '../../../public/img/advantage/backgroundADV.jpg'
-import mold from '../../../public/img/advantage/moldure.png'
 import brush from '../../../public/img/brushs/clipping.png'
-import test from '../../../public/img/Schedules/pequenito.jpg'
 
 interface ImageProps {
   src: string
@@ -190,12 +188,12 @@ export const advantage = styled(motion.div)`
     width: 90%;
   }
 `
- 
-export const Moldura = styled.div`
+
+export const Moldura = styled(motion.div)`
   position: relative;
   width: 48%;
   margin-left: 5rem;
-  background-size: cover;
+  background-size: contain;
   background-position: 45% top;
   background-repeat: no-repeat;
   ${css`
@@ -207,6 +205,6 @@ export const Moldura = styled.div`
   }
 `
 export const Video = styled.video`
-  width: 75rem;
-  height: 50rem;
+  width: 100%;
+  height: 100%;
 `

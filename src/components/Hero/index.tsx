@@ -1,17 +1,26 @@
 import * as S from './styles'
 import heroImg from '../../../public/img/hero/Background.jpg'
-import TitleAnimation from '../textAnimation/AnimatedTitle'
 import ButtonAnimated from '../ButtonAnimated'
+
+import { Reveal } from '../utils/Reveal';
+import { RevealTitle } from '../utils/RevealTitle';
+import { RevealSubTitle } from '../utils/RevealSubTitle';
 
 function Hero() {
   return (
     <>
-      <S.Slide src={heroImg.src}>
+      <S.Slide id='Home' src={heroImg.src}>
         <S.Content>
-          <span>MAKE YOUR BODY</span>
-          <h1>FIT & PERFECT</h1>
-          <h2>FIND YOUR ENERGY</h2>
-          <ButtonAnimated text='Empezar Hoy !' link='https://easy.trainingym.com/equilibriofitness' />
+          <RevealTitle>
+            <span>ENCUENTRA TU EQUILIBRIO</span>
+          </RevealTitle>
+          <RevealSubTitle>
+            <h1>SUPERA TUS LÍMITES,</h1>
+          </RevealSubTitle>
+          <Reveal>
+            <h2>TRANSFÓRMATE</h2>
+          </Reveal>
+          <ButtonAnimated text='Empezar Hoy !' id='Price' />
         </S.Content>
       </S.Slide>
     </>

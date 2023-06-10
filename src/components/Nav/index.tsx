@@ -7,6 +7,8 @@ import { Link } from "react-scroll";
 import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 
+
+
 function Nav() {
   const [visible, setVisible] = useState(false);
 
@@ -29,7 +31,7 @@ function Nav() {
   return (
     <>
       <S.Wrapper>
-        <Link to="home" spy={true} smooth={true} offset={50} duration={500}>
+        <Link to="Home" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenu}>
           <Image
             src={Logo}
             alt="Logo de Equilibrio Fitness (es una imagen de un corazon con el nombre equilibrio fitness en el centro)"
@@ -40,43 +42,29 @@ function Nav() {
         <S.Desktop>
           <ul>
             <li>
-              <Link to="weAre" spy={true} smooth={true} offset={-200} duration={500} onClick={closeMenu}>
+              <Link to="weAre" spy={true} smooth={true} offset={-280} duration={500} onClick={closeMenu}>
                 Nosotros
               </Link>
             </li>
             <li>
-              <Link to="Category" spy={true} smooth={true} offset={20} duration={500} onClick={closeMenu}>
-                Modalides
-              </Link>
-            </li>
-            <li>
-              <Link to="Times" spy={true} smooth={true} offset={30} duration={500} onClick={closeMenu}>
-                Horarios
-              </Link>
-            </li>
-            <li>
-              <Link to="Price" spy={true} smooth={true} offset={30} duration={500} onClick={closeMenu}>
+              <Link to="Price" spy={true} smooth={true} offset={-80} duration={500} onClick={closeMenu}>
                 Precio
               </Link>
             </li>
             <li>
-              <Link to="Price" spy={true} smooth={true} offset={30} duration={500} onClick={closeMenu}>
-                Clases
+              <Link to="Category" spy={true} smooth={true} offset={-140} duration={500} onClick={closeMenu}>
+                Modalides
               </Link>
             </li>
             <li>
-              <Link to="Price" spy={true} smooth={true} offset={30} duration={500} onClick={closeMenu}>
+              <Link to="Schedules" spy={true} smooth={true} offset={-80} duration={500} onClick={closeMenu}>
+                Horarios
+              </Link>
+            </li>
+
+            <li>
+              <Link to="Contact" spy={true} smooth={true} offset={30} duration={500} onClick={closeMenu}>
                 Contactanos
-              </Link>
-            </li>
-            <li>
-              <Link to="Price" spy={true} smooth={true} offset={30} duration={500} onClick={closeMenu}>
-                Equipo
-              </Link>
-            </li>
-            <li>
-              <Link to="Price" spy={true} smooth={true} offset={30} duration={500} onClick={closeMenu}>
-                Personal Trainer
               </Link>
             </li>
           </ul>
@@ -84,8 +72,8 @@ function Nav() {
         <S.User>
           <AiOutlineMenu className="mobileMenu" size={35} onClick={() => setVisible(true)} />
           <div>
-            <AiOutlineUser size={35} />
-            <S.UserBtn>Unete a Nosotros !</S.UserBtn>
+            <a href="https://easy.trainingym.com/equilibriofitness/login"><AiOutlineUser size={35} /></a>
+            <S.UserBtn href="https://easy.trainingym.com/equilibriofitness/register">Unete a Nosotros !</S.UserBtn>
           </div>
         </S.User>
       </S.Wrapper>
@@ -103,43 +91,28 @@ function Nav() {
             <IoClose size={45} onClick={closeMenu} />
             <ul>
               <li>
-                <Link to="Price" spy={true} smooth={true} offset={-10} duration={500} onClick={closeMenu}>
+                <Link to="weAre" spy={true} smooth={true} offset={-150} duration={500} onClick={closeMenu}>
                   Nosotros
                 </Link>
               </li>
               <li>
-                <Link to="Category" spy={true} smooth={true} offset={10} duration={500} onClick={closeMenu}>
-                  Modalides
-                </Link>
-              </li>
-              <li>
-                <Link to="Times" spy={true} smooth={true} offset={20} duration={500} onClick={closeMenu}>
-                  Horarios
-                </Link>
-              </li>
-              <li>
-                <Link to="Price" spy={true} smooth={true} offset={-10} duration={500} onClick={closeMenu}>
+                <Link to="Price" spy={true} smooth={true} offset={-60} duration={500} onClick={closeMenu}>
                   Precio
                 </Link>
               </li>
               <li>
-                <Link to="Price" spy={true} smooth={true} offset={-10} duration={500} onClick={closeMenu}>
-                  Clases
+                <Link to="Category" spy={true} smooth={true} offset={-100} duration={500} onClick={closeMenu}>
+                  Modalides
                 </Link>
               </li>
               <li>
-                <Link to="Price" spy={true} smooth={true} offset={-10} duration={500} onClick={closeMenu}>
+                <Link to="Schedules" spy={true} smooth={true} offset={140} duration={500} onClick={closeMenu}>
+                  Horarios
+                </Link>
+              </li>
+              <li>
+                <Link to="Contact" spy={true} smooth={true} offset={-100} duration={500} onClick={closeMenu}>
                   Contactanos
-                </Link>
-              </li>
-              <li>
-                <Link to="Price" spy={true} smooth={true} offset={-10} duration={500} onClick={closeMenu}>
-                  Equipo
-                </Link>
-              </li>
-              <li>
-                <Link to="Price" spy={true} smooth={true} offset={-10} duration={500} onClick={closeMenu}>
-                  Personal Trainer
                 </Link>
               </li>
               <li>
@@ -148,7 +121,7 @@ function Nav() {
                 </a>
               </li>
               <li>
-                <a href="https://easy.trainingym.com/equilibriofitness/login">Uniete a Nosotros!</a>
+                <a href="https://easy.trainingym.com/equilibriofitness/register">Uniete a Nosotros!</a>
               </li>
             </ul>
           </S.Mobile>
