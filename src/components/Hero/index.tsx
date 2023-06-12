@@ -1,5 +1,5 @@
 import * as S from './styles'
-import heroImg from '../../../public/img/hero/Background.jpg'
+import heroImg from '../../../public/img/hero/Background.webp'
 import ButtonAnimated from '../ButtonAnimated'
 
 import { Reveal } from '../utils/Reveal';

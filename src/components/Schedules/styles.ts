@@ -1,5 +1,4 @@
 import styled, { css, keyframes } from 'styled-components'
-import Card5 from '../../../public/img/banner/banner01.png'
 import { motion } from 'framer-motion'
 
 interface ImageProps {
@@ -158,47 +157,6 @@ export const Button = styled.button`
     background-color: red;
   }
 `
-
-export const Content = styled.div`
-  width: 100%;
-  height: 30rem;
-  background-image: url(${Card5.src});
-    background-position: center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: grayscale(100%) contrast(200%);
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    h1 {
-      font-size: 4rem;
-      color: red;
-      padding-bottom: 3rem;
-    }
-
-`
-
-export const GridItem = styled.div`
-   display: flex;
-  justify-content: flex-end;
-  align-items: end;
-  background-color: #000;
-  padding: 1rem;
-  font-size: 1.7rem;
-  h1{
-    font-size: var(--fw-medium);
-  }
-`;
-
-export const GridBG = styled.div`
-    background-image: url(${Card5.src});
-    background-position: center;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: grayscale(100%) contrast(400%);
-`;
 
 export const Banner = styled.div<ImageProps>`
   display: flex;

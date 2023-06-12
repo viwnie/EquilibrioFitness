@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import advg from '../../../public/img/advantage/backgroundADV.jpg'
+import advg from '../../../public/img/advantage/backgroundADV.webp'
 import { motion } from 'framer-motion'
 
 interface ImageProps {

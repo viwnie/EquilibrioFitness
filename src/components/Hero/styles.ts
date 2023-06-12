@@ -1,6 +1,4 @@
 import styled from 'styled-components'
-import motion from 'framer-motion'
-import brush from '../../../public/img/brushs/brushwhite.png'
 
 interface ImageProps {
   src: string

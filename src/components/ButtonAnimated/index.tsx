@@ -2,7 +2,7 @@ import * as S from './styles'
 import Link from 'next/link';
 import { Link as ScrollLink } from 'react-scroll';
 
-const ButtonAnimated = ({ text, link, id }: { text: string, id?: string, link?: string, href?: string}) => {
+const ButtonAnimated = ({ text, link, id }: { text: string, id?: string, link?: string, href?: string }) => {
   if (link) {
     return (
       <S.Wrapper>
@@ -16,7 +16,7 @@ const ButtonAnimated = ({ text, link, id }: { text: string, id?: string, link?: 
     return (
       <S.Wrapper>
         <S.Rectangle />
-        <ScrollLink to={id ? id : 'none'} spy={true} smooth={true} offset={-80} duration={500}>
+        <ScrollLink href='none' to={id ? id : 'none'} spy={true} smooth={true} offset={-80} duration={500}>
           {text}
         </ScrollLink>
       </S.Wrapper>

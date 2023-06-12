@@ -49,3 +49,20 @@ export const Lista = styled.ul`
     margin-bottom: 5rem;
     }
 `
+export const Dev = styled.div`
+display: flex;
+align-items: center;
+justify-content: center;
+height: 2.5rem;
+background-color: #000;
+width: 100%;
+span{
+  font-size: 1.3rem;
+  color: #fff;
+  a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: var(--red);
+  }
+}
+`

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import * as S from './styles'
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 import ButtonAnimated from '../ButtonAnimated';
-import Banner from '../../../public/img/Schedules/banner.png'
+import Banner from '../../../public/img/Schedules/banner.webp'
 
 import { RevealTitle } from '../utils/RevealTitle';
 import { RevealSubTitle } from '../utils/RevealSubTitle';
@@ -174,15 +174,15 @@ function Schedules() {
             <S.Banner src={Banner.src} id='Schedules'>
                 <div>
                     <RevealTitle>
-                    <h1>Necesitas un Entrenador Personal?</h1>
+                        <h1>Necesitas un Entrenador Personal?</h1>
                     </RevealTitle>
                     <RevealSubTitle>
-                    <h2>
-                        <span>Llame: </span>
-                        +34 613 413 279
-                    </h2>
+                        <h2>
+                            <span>Llame: </span>
+                            +34 613 413 279
+                        </h2>
                     </RevealSubTitle>
-                    <ButtonAnimated text='Contactanos' link='https://wa.me/+34613413279'/>
+                    <ButtonAnimated text='Contactanos' link='https://wa.me/+34613413279' />
                 </div>
             </S.Banner>
             <S.DayList>
@@ -199,13 +199,13 @@ function Schedules() {
             {filteredClasses &&
                 filteredClasses.slice(startIndex, endIndex).map((classData, index) => (
                     <S.Container key={index}
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                   viewport={{ once: true }}
-                   transition={{
-                     delay: 0.2,
-                     duration: 1,
-                   }}
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            delay: 0.2,
+                            duration: 1,
+                        }}
                     >
                         <li>
                             <p>Classname</p>
@@ -245,10 +245,11 @@ function Schedules() {
                         </label>
                     </S.CheckboxContainer>
                     <S.WrapButtons>
-                        <S.Button onClick={handlePrevious} disabled={startIndex === 0}>
+                        <S.Button aria-label='Prev' onClick={handlePrevious} disabled={startIndex === 0}>
                             <FaArrowLeft size={17} />
                         </S.Button>
                         <S.Button
+                            aria-label='Next'
                             onClick={handleNext}
                             disabled={!selectedSchedule || endIndex >= selectedSchedule.classes.length}
                         >

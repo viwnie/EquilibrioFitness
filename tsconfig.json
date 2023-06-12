@@ -29,7 +29,7 @@
     "**/*.ts",
     "**/*.tsx",
     "src/components/textAnimation/AnimatedText"
-  ],
+, "next-seo.config.js"  ],
   "exclude": [
     "node_modules"
   ]

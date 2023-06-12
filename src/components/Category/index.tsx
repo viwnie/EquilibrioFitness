@@ -1,6 +1,6 @@
 import * as S from './styles'
-import Musculacion from '../../../public/img/cards/musculacion.jpg';
-import Funcional from '../../../public/img/cards/funcional.jpg';
+import Musculacion from '../../../public/img/cards/musculacion.webp';
+import Funcional from '../../../public/img/cards/funcional.webp';
 
 import { Reveal } from '../utils/Reveal';
 import { RevealTitle } from '../utils/RevealTitle';

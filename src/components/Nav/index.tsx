@@ -3,10 +3,12 @@ import Image from "next/image";
 import Logo from "/public/img/icon-512.png";
 import { AiOutlineMenu, AiOutlineUser } from "react-icons/ai";
 import { IoClose } from "react-icons/io5";
-import { Link } from "react-scroll";
+
+import Link from 'next/link';
+import { Link as ScrollLink } from 'react-scroll';
+
 import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
-
 
 
 function Nav() {
@@ -31,48 +33,48 @@ function Nav() {
   return (
     <>
       <S.Wrapper>
-        <Link href='#Home' to="Home" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenu}>
+        <ScrollLink href='#Home' to="Home" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenu}>
           <Image
             src={Logo}
             alt="Logo de Equilibrio Fitness (es una imagen de un corazon con el nombre equilibrio fitness en el centro)"
             width={120}
             height={120}
           />
-        </Link>
+        </ScrollLink>
         <S.Desktop>
           <ul>
             <li>
-              <Link href='#weAre'to="weAre" spy={true} smooth={true} offset={-280} duration={500} onClick={closeMenu}>
+              <ScrollLink href='#weAre' to="weAre" spy={true} smooth={true} offset={-280} duration={500} onClick={closeMenu}>
                 Nosotros
-              </Link>
+              </ScrollLink>
             </li>
             <li>
-              <Link href='#Price' to="Price" spy={true} smooth={true} offset={-80} duration={500} onClick={closeMenu}>
+              <ScrollLink href='#Price' to="Price" spy={true} smooth={true} offset={-80} duration={500} onClick={closeMenu}>
                 Precio
-              </Link>
+              </ScrollLink>
             </li>
             <li>
-              <Link href='#Category' to="Category" spy={true} smooth={true} offset={-140} duration={500} onClick={closeMenu}>
+              <ScrollLink href='#Category' to="Category" spy={true} smooth={true} offset={-140} duration={500} onClick={closeMenu}>
                 Modalides
-              </Link>
+              </ScrollLink>
             </li>
             <li>
-              <Link href='#Schedules' to="Schedules" spy={true} smooth={true} offset={-80} duration={500} onClick={closeMenu}>
+              <ScrollLink href='#Schedules' to="Schedules" spy={true} smooth={true} offset={-80} duration={500} onClick={closeMenu}>
                 Horarios
-              </Link>
+              </ScrollLink>
             </li>
 
             <li>
-              <Link href='#Contact' to="Contact" spy={true} smooth={true} offset={30} duration={500} onClick={closeMenu}>
+              <ScrollLink href='#Contact' to="Contact" spy={true} smooth={true} offset={30} duration={500} onClick={closeMenu}>
                 Contactanos
-              </Link>
+              </ScrollLink>
             </li>
           </ul>
         </S.Desktop>
         <S.User>
           <AiOutlineMenu className="mobileMenu" size={35} onClick={() => setVisible(true)} />
           <div>
-            <a href="https://easy.trainingym.com/equilibriofitness/login"><AiOutlineUser size={35} /></a>
+            <Link aria-label='Usuario Login' href="https://easy.trainingym.com/equilibriofitness/login"><AiOutlineUser size={35} /></Link>
             <S.UserBtn href="https://easy.trainingym.com/equilibriofitness/register">Unete a Nosotros !</S.UserBtn>
           </div>
         </S.User>
@@ -91,34 +93,34 @@ function Nav() {
             <IoClose size={45} onClick={closeMenu} />
             <ul>
               <li>
-                <Link href='#weAre' to="weAre" spy={true} smooth={true} offset={-150} duration={500} onClick={closeMenu}>
+                <ScrollLink href='#weAre' to="weAre" spy={true} smooth={true} offset={-150} duration={500} onClick={closeMenu}>
                   Nosotros
-                </Link>
+                </ScrollLink>
               </li>
               <li>
-                <Link href='#Price' to="Price" spy={true} smooth={true} offset={-60} duration={500} onClick={closeMenu}>
+                <ScrollLink href='#Price' to="Price" spy={true} smooth={true} offset={-60} duration={500} onClick={closeMenu}>
                   Precio
-                </Link>
+                </ScrollLink>
               </li>
               <li>
-                <Link href='#Category' to="Category" spy={true} smooth={true} offset={-100} duration={500} onClick={closeMenu}>
+                <ScrollLink href='#Category' to="Category" spy={true} smooth={true} offset={-100} duration={500} onClick={closeMenu}>
                   Modalides
-                </Link>
+                </ScrollLink>
               </li>
               <li>
-                <Link href='#Schedules' to="Schedules" spy={true} smooth={true} offset={140} duration={500} onClick={closeMenu}>
+                <ScrollLink href='#Schedules' to="Schedules" spy={true} smooth={true} offset={140} duration={500} onClick={closeMenu}>
                   Horarios
-                </Link>
+                </ScrollLink>
               </li>
               <li>
-                <Link href='#Contact' to="Contact" spy={true} smooth={true} offset={-100} duration={500} onClick={closeMenu}>
+                <ScrollLink href='#Contact' to="Contact" spy={true} smooth={true} offset={-100} duration={500} onClick={closeMenu}>
                   Contactanos
-                </Link>
+                </ScrollLink>
               </li>
               <li>
-                <a href="https://easy.trainingym.com/equilibriofitness/login" onClick={closeMenu}>
+                <Link href="https://easy.trainingym.com/equilibriofitness/login" onClick={closeMenu}>
                   Login
-                </a>
+                </Link>
               </li>
               <li>
                 <a href="https://easy.trainingym.com/equilibriofitness/register">Uniete a Nosotros!</a>

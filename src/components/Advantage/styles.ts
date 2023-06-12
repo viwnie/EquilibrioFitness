@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import advg from '../../../public/img/advantage/backgroundADV.jpg'
+import advg from '../../../public/img/advantage/backgroundADV.webp'
 import brush from '../../../public/img/brushs/clipping.png'
 
 interface ImageProps {
