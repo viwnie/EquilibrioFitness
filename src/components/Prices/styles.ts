@@ -49,7 +49,7 @@ export const webPrices = styled(motion.div)`
   border-radius: 1rem;
   background-color: white;
   margin: 4rem 0;
-  max-width: 125rem;
+  max-width: 110rem;
   width: 65%;
   height: 50rem;
   padding: 1rem 4rem;
@@ -204,7 +204,7 @@ export const Button = styled.button`
     width: 20rem;
     background: #CC0301;
     padding: 1.2rem;
-    border-radius: 10px;
+    border-radius: 1rem;
     a {
     color: white;
     text-decoration: none;

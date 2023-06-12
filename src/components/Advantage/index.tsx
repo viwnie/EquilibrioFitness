@@ -9,7 +9,6 @@ import machine from '../../../public/img/advantage/machine.png'
 import help from '../../../public/img/advantage/help.png'
 import equipament from '../../../public/img/advantage/equipament.png'
 
-import TextAnimation from '../textAnimation/AnimatedText'
 import ButtonAnimated from '../ButtonAnimated'
 
 import { Reveal } from '../utils/Reveal';
@@ -82,7 +81,7 @@ const Advantage = () => {
 
             />
             <h2>{card.title}</h2>
-            <TextAnimation text={card.text} />
+            <span>{card.text}</span>
           </S.advantage>
         ))}
       </S.Container>
@@ -136,7 +135,7 @@ const Advantage = () => {
               </li>
             </ul>
           </Reveal>
-          <ButtonAnimated id='Schedules' text='NUESTRAS CLASES' />
+          <ButtonAnimated href='#Schedules' id='Schedules' text='NUESTRAS CLASES' />
         </S.WhoWeAre>
         <S.Moldura
           initial={{ opacity: 0, scale: 0.75 }}

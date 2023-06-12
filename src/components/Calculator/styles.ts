@@ -130,7 +130,6 @@ export const IMCDiv = styled.div`
 export const Text = styled.h2`
 margin-bottom:3rem;
 span {
-  color: red;
-  
+  color: red; 
 }
 `

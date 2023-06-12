@@ -6,8 +6,6 @@ interface ImageProps {
   src: string
 }
 
-
-
 export const Wrapper = styled.div`
   min-height: 65rem;
   display: grid;
@@ -75,6 +73,14 @@ export const OptionsContent = styled.div`
     `
 
 export const CheckboxContainer = styled.div`
+
+label{
+  min-width:25rem;
+  margin-left:0.5rem;
+  input{
+    margin-right:0.5rem;
+  }
+}
 @media (max-width:850px) {
   display:none;
 }
@@ -178,7 +184,7 @@ export const GridItem = styled.div`
   justify-content: flex-end;
   align-items: end;
   background-color: #000;
-  padding: 10px;
+  padding: 1rem;
   font-size: 1.7rem;
   h1{
     font-size: var(--fw-medium);

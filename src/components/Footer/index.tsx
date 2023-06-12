@@ -39,7 +39,7 @@ const Footer = () => (
           <FaArrowRight size={15} /> Política de Cookies
           </li>
       </S.Lista>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5305553.660152199!2d-5.845958224747449!3d37.51063742214424!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd647fce14430b1b%3A0x3dab54319c257111!2sEquil%C3%ADbrio%20Fitness!5e0!3m2!1spt-BR!2sbr!4v1681323634337!5m2!1spt-BR!2sbr"></iframe>
+      <iframe title='Local' src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d5305553.660152199!2d-5.845958224747449!3d37.51063742214424!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd647fce14430b1b%3A0x3dab54319c257111!2sEquil%C3%ADbrio%20Fitness!5e0!3m2!1spt-BR!2sbr!4v1681323634337!5m2!1spt-BR!2sbr"></iframe>
     </S.Container>
   </S.Wrapper>
 )

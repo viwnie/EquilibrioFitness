@@ -31,7 +31,7 @@ function Nav() {
   return (
     <>
       <S.Wrapper>
-        <Link to="Home" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenu}>
+        <Link href='#Home' to="Home" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenu}>
           <Image
             src={Logo}
             alt="Logo de Equilibrio Fitness (es una imagen de un corazon con el nombre equilibrio fitness en el centro)"
@@ -42,28 +42,28 @@ function Nav() {
         <S.Desktop>
           <ul>
             <li>
-              <Link to="weAre" spy={true} smooth={true} offset={-280} duration={500} onClick={closeMenu}>
+              <Link href='#weAre'to="weAre" spy={true} smooth={true} offset={-280} duration={500} onClick={closeMenu}>
                 Nosotros
               </Link>
             </li>
             <li>
-              <Link to="Price" spy={true} smooth={true} offset={-80} duration={500} onClick={closeMenu}>
+              <Link href='#Price' to="Price" spy={true} smooth={true} offset={-80} duration={500} onClick={closeMenu}>
                 Precio
               </Link>
             </li>
             <li>
-              <Link to="Category" spy={true} smooth={true} offset={-140} duration={500} onClick={closeMenu}>
+              <Link href='#Category' to="Category" spy={true} smooth={true} offset={-140} duration={500} onClick={closeMenu}>
                 Modalides
               </Link>
             </li>
             <li>
-              <Link to="Schedules" spy={true} smooth={true} offset={-80} duration={500} onClick={closeMenu}>
+              <Link href='#Schedules' to="Schedules" spy={true} smooth={true} offset={-80} duration={500} onClick={closeMenu}>
                 Horarios
               </Link>
             </li>
 
             <li>
-              <Link to="Contact" spy={true} smooth={true} offset={30} duration={500} onClick={closeMenu}>
+              <Link href='#Contact' to="Contact" spy={true} smooth={true} offset={30} duration={500} onClick={closeMenu}>
                 Contactanos
               </Link>
             </li>
@@ -91,27 +91,27 @@ function Nav() {
             <IoClose size={45} onClick={closeMenu} />
             <ul>
               <li>
-                <Link to="weAre" spy={true} smooth={true} offset={-150} duration={500} onClick={closeMenu}>
+                <Link href='#weAre' to="weAre" spy={true} smooth={true} offset={-150} duration={500} onClick={closeMenu}>
                   Nosotros
                 </Link>
               </li>
               <li>
-                <Link to="Price" spy={true} smooth={true} offset={-60} duration={500} onClick={closeMenu}>
+                <Link href='#Price' to="Price" spy={true} smooth={true} offset={-60} duration={500} onClick={closeMenu}>
                   Precio
                 </Link>
               </li>
               <li>
-                <Link to="Category" spy={true} smooth={true} offset={-100} duration={500} onClick={closeMenu}>
+                <Link href='#Category' to="Category" spy={true} smooth={true} offset={-100} duration={500} onClick={closeMenu}>
                   Modalides
                 </Link>
               </li>
               <li>
-                <Link to="Schedules" spy={true} smooth={true} offset={140} duration={500} onClick={closeMenu}>
+                <Link href='#Schedules' to="Schedules" spy={true} smooth={true} offset={140} duration={500} onClick={closeMenu}>
                   Horarios
                 </Link>
               </li>
               <li>
-                <Link to="Contact" spy={true} smooth={true} offset={-100} duration={500} onClick={closeMenu}>
+                <Link href='#Contact' to="Contact" spy={true} smooth={true} offset={-100} duration={500} onClick={closeMenu}>
                   Contactanos
                 </Link>
               </li>

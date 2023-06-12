@@ -38,7 +38,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="pt-BR">
+      <Html lang="es">
         <Head />
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
         <link

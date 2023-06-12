@@ -160,6 +160,8 @@ export const advantage = styled(motion.div)`
   font-size: 0.5rem;
   box-shadow: 0px 0px 20px 10px rgba(150, 150, 150, 0.5);
   span{
+    text-align: center;
+    color: black;
     font-weight: var(--fw-semi);
   }
   :hover {

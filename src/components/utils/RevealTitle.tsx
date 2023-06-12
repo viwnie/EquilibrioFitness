@@ -51,7 +51,7 @@ export const RevealTitle = ({ children, width = "fit-content" }: Props) => {
           left: 0,
           right: 0,
           background: "var(--red)",
-          zIndex: 20,
+          zIndex: 2,
         }}
       />
     </div>

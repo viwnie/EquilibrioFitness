@@ -14,7 +14,7 @@ export const Wrapper = styled(motion.nav)`
   padding: 2rem 3rem;
 
   position:fixed;
-  z-index:2;
+  z-index: 3;
 `
 
 export const Desktop = styled(motion.ul)`

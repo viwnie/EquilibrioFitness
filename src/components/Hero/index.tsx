@@ -20,7 +20,7 @@ function Hero() {
           <Reveal>
             <h2>TRANSFÓRMATE</h2>
           </Reveal>
-          <ButtonAnimated text='Empezar Hoy !' id='Price' />
+          <ButtonAnimated href='#Price' text='Empezar Hoy !' id='Price' />
         </S.Content>
       </S.Slide>
     </>

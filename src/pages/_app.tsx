@@ -20,8 +20,8 @@ function App({ Component, pageProps }: AppProps) {
           content="linear-gradient(180deg, #000000 -10.19%, #C00909 88.07%)"
         />
         <meta
-          name="description"
-          content="A simple project to show my favorites spot in the world."
+          name="descripcion"
+          content=""
         />
       </Head>
       <GlobalStyles />

@@ -15,20 +15,13 @@ function Category() {
       <RevealTitle>
         <h2>Personalizado Murcia</h2>
       </RevealTitle>
-      <S.Grid initial={{ opacity: 0, scale: 0.75 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          transition={{
-            delay: 0.8,
-            duration: 1,
-            ease: [0, 0.71, 0.2, 1.01],
-            scale: {
-              type: "spring",
-              damping: 5,
-              stiffness: 100,
-              restDelta: 0.001
-            }
-          }}>
+      <S.Grid  initial={{ opacity: 0 }}
+       whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{
+        delay: 0.2,
+        duration: 1,
+      }}>
         <S.Image src={Funcional.src}>
             <h1>Funcional</h1>
         </S.Image>
