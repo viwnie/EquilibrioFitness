@@ -38,7 +38,7 @@ function Nav() {
             </li>
             <li>
               <ScrollLink href='#Price' to="Price" spy={true} smooth={true} offset={-80} duration={500} onClick={closeMenu}>
-                Precio
+                Planes
               </ScrollLink>
             </li>
             <li>
@@ -54,7 +54,7 @@ function Nav() {
 
             <li>
               <ScrollLink href='#Contact' to="Contact" spy={true} smooth={true} offset={30} duration={500} onClick={closeMenu}>
-                Contactanos
+                Contáctanos
               </ScrollLink>
             </li>
           </ul>
@@ -63,7 +63,7 @@ function Nav() {
           <AiOutlineMenu className="mobileMenu" size={35} onClick={() => setVisible(true)} />
           <div>
             <Link aria-label='Usuario Login' href="https://easy.trainingym.com/equilibriofitness/login"><AiOutlineUser size={35} /></Link>
-            <S.UserBtn href="https://easy.trainingym.com/equilibriofitness/register">Unete a Nosotros !</S.UserBtn>
+            <S.UserBtn href="https://easy.trainingym.com/equilibriofitness/register">Únete a nosotros !</S.UserBtn>
           </div>
         </S.User>
       </S.Wrapper>
@@ -87,7 +87,7 @@ function Nav() {
               </li>
               <li>
                 <ScrollLink href='#Price' to="Price" spy={true} smooth={true} offset={-60} duration={500} onClick={closeMenu}>
-                  Precio
+                  Planes
                 </ScrollLink>
               </li>
               <li>
@@ -102,7 +102,7 @@ function Nav() {
               </li>
               <li>
                 <ScrollLink href='#Contact' to="Contact" spy={true} smooth={true} offset={-100} duration={500} onClick={closeMenu}>
-                  Contactanos
+                  Contáctanos
                 </ScrollLink>
               </li>
               <li>

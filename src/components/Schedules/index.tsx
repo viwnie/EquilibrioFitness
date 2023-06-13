@@ -182,7 +182,7 @@ function Schedules() {
                             +34 613 413 279
                         </h2>
                     </RevealSubTitle>
-                    <ButtonAnimated text='Contactános' link='https://wa.me/+34613413279' />
+                    <ButtonAnimated text='Contáctanos' link='https://wa.me/+34613413279' />
                 </div>
             </S.Banner>
             <S.DayList>
