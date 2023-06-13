@@ -36,7 +36,7 @@ const cards = [
   },
   {
     id: 'card2',
-    title: 'Economy',
+    title: 'Standard',
     logo: mobileLogo02.src,
     price: '45€',
     color: '#7F28ED',
@@ -70,7 +70,7 @@ const Prices = () => (
           <tr>
             <th></th>
             <th>
-              <h3>Economy</h3>
+              <h3>Standard</h3>
             </th>
             <th>
               <S.Premium>Premium</S.Premium>
@@ -212,44 +212,6 @@ const Prices = () => (
             </td>
           </tr>
           <tr>
-            <td className="tableTitle">Dance Mix</td>
-            <td>
-              <Image
-                src={webUnVerified}
-                alt="Icono de inactivo ( X )"
-                width={22}
-                height={22}
-              />
-            </td>
-            <td>
-              <Image
-                src={webVerified}
-                alt="icono de Activo ( V )"
-                width={30}
-                height={30}
-              />
-            </td>
-          </tr>
-          <tr>
-            <td className="tableTitle">Funcional / Hit</td>
-            <td>
-              <Image
-                src={webUnVerified}
-                alt="Icono de inactivo ( X )"
-                width={22}
-                height={22}
-              />
-            </td>
-            <td>
-              <Image
-                src={webVerified}
-                alt="icono de Activo ( V )"
-                width={30}
-                height={30}
-              />
-            </td>
-          </tr>
-          <tr>
             <td></td>
             <td>
               <h2>
@@ -283,10 +245,8 @@ const Prices = () => (
             <li><FaCheck size={12} /> Plan Nutricional</li>
             <li><FaCheck size={12} /> Programa Personalizado</li>
             <li><FaCheck size={12} /> Parking Gratuito</li>
-            <li>{card.title === 'Economy' ? <Image src={mobileUnVerified.src} alt='X' width={12} height={12} /> : <FaCheck size={12} />} Musculacion/Cardio</li>
-            <li>{card.title === 'Economy' ? <Image src={mobileUnVerified.src} alt='X' width={12} height={12} /> : <FaCheck size={12} />} Balance</li>
-            <li>{card.title === 'Economy' ? <Image src={mobileUnVerified.src} alt='X' width={12} height={12} /> : <FaCheck size={12} />} Dance Mix</li>
-            <li>{card.title === 'Economy' ? <Image src={mobileUnVerified.src} alt='X' width={12} height={12} /> : <FaCheck size={12} />} Funcional/HIIT</li>
+            <li>{card.title === 'Standard' ? <Image src={mobileUnVerified.src} alt='X' width={12} height={12} /> : <FaCheck size={12} />} Musculacion/Cardio</li>
+            <li>{card.title === 'Standard' ? <Image src={mobileUnVerified.src} alt='X' width={12} height={12} /> : <FaCheck size={12} />} Balance</li>
           </ul>
           <S.mobileBuy>
             <span>{card.price}</span>
