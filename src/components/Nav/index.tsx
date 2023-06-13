@@ -33,9 +33,9 @@ function Nav() {
   return (
     <>
       <S.Wrapper>
-        <ScrollLink href='#Home' to="Home" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenu}>
+        <ScrollLink style={{ cursor: "pointer" }} to="Home" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenu}>
           <Image
-            src={Logo}
+            src={Logo.src}
             alt="Logo de Equilibrio Fitness (es una imagen de un corazon con el nombre equilibrio fitness en el centro)"
             width={120}
             height={120}
