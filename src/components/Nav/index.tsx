@@ -1,5 +1,6 @@
 import * as S from "./styles";
 import Image from "next/image";
+
 import Logo from "../../../public/img/icon-512.png";
 import { AiOutlineMenu, AiOutlineUser } from "react-icons/ai";
 import { IoClose } from "react-icons/io5";
@@ -33,14 +34,12 @@ function Nav() {
   return (
     <>
       <S.Wrapper>
-        <ScrollLink style={{ cursor: "pointer" }} to="Home" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenu}>
           <Image
             src={Logo}
             alt="Logo de Equilibrio Fitness (es una imagen de un corazon con el nombre equilibrio fitness en el centro)"
             width={120}
             height={120}
           />
-        </ScrollLink>
         <S.Desktop>
           <ul>
             <li>
