@@ -1,15 +1,15 @@
-import * as S from "./styles";
-import Image from "next/image";
+import * as S from './styles'
+import Image from 'next/image';
 
-import Logo from "../../../public/img/icon-512.png";
-import { AiOutlineMenu, AiOutlineUser } from "react-icons/ai";
-import { IoClose } from "react-icons/io5";
+import Logo from '../../../public/img/nav/icon-512.png';
+import { AiOutlineMenu, AiOutlineUser } from 'react-icons/ai';
+import { IoClose } from 'react-icons/io5';
 
 import Link from 'next/link';
 import { Link as ScrollLink } from 'react-scroll';
 
-import { useState, useEffect } from "react";
-import { AnimatePresence } from "framer-motion";
+import { useState, useEffect } from 'react';
+import { AnimatePresence } from 'framer-motion';
 
 
 function Nav() {
@@ -23,23 +23,17 @@ function Nav() {
     setVisible(false);
   };
 
-  const scrollToSection = (section: string) => {
-    closeMenu();
-    const element = document.getElementById(section);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <>
       <S.Wrapper>
+        <ScrollLink style={{ cursor: "pointer" }} to="Home" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenu}>
           <Image
             src={Logo}
             alt="Logo de Equilibrio Fitness (es una imagen de un corazon con el nombre equilibrio fitness en el centro)"
             width={120}
             height={120}
           />
+        </ScrollLink>
         <S.Desktop>
           <ul>
             <li>
