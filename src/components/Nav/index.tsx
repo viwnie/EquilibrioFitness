@@ -1,6 +1,6 @@
 import * as S from "./styles";
 import Image from "next/image";
-import Logo from "/public/img/icon-512.png";
+import Logo from "../../../public/img/icon-512.png";
 import { AiOutlineMenu, AiOutlineUser } from "react-icons/ai";
 import { IoClose } from "react-icons/io5";
 
