@@ -99,7 +99,7 @@ const Advantage = () => {
             </RevealSubTitle>
             <Reveal>
               <p>
-                Con nuestros professionales te aseguramos una expreiencia increible para cambiar tu mente,cuerpo y salud.
+                Con nuestros professionales te aseguramos una expreiencia increible para cambiar tu mente, cuerpo y salud.
               </p>
             </Reveal>
           </div>

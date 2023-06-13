@@ -43,7 +43,7 @@ function Nav() {
             </li>
             <li>
               <ScrollLink href='#Category' to="Category" spy={true} smooth={true} offset={-140} duration={500} onClick={closeMenu}>
-                Modalides
+                Modalidades
               </ScrollLink>
             </li>
             <li>

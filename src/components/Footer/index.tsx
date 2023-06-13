@@ -45,7 +45,7 @@ const Footer = () => (
       </S.Container>
     </S.Wrapper>
     <S.Dev>
-      <span>Devoloped by: <Link href="https://www.linkedin.com/in/viniciodev/">Vinicio</Link> and <Link href="https://www.linkedin.com/in/reendev/">Renan</Link></span>
+      <span>Developed by: <Link href="https://www.linkedin.com/in/viniciodev/">Vinicio</Link> and <Link href="https://www.linkedin.com/in/reendev/">Renan</Link></span>
     </S.Dev>
   </>
 )
