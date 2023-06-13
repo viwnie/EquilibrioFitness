@@ -15,14 +15,14 @@ function App({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Equilibrio Fitness</title>
-        <link rel="shortcut icon" href="/img/icon-512.png" />
+        <link rel="shortcut icon" href="/img/icon-192.png" />
         <link rel="apple-touch-icon" href="/img/icon-512.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta
           name="theme-color"
-          content="#C00909"
+          content="black"
         />
-        <meta name="description" content="Equilibro Fitness gimnasio en Molina De Segura Murcia"/>
+        <meta name="description" content="Equilibro Fitness El Mejor Gimnasio De Molina De Segura, Murcia."/>
       </Head>
       <DefaultSeo {...defaultOpenGraph} />
       <GlobalStyles />
