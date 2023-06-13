@@ -27,12 +27,7 @@ function Nav() {
     <>
       <S.Wrapper>
         <ScrollLink style={{ cursor: "pointer" }} to="Home" spy={true} smooth={true} offset={50} duration={500} onClick={closeMenu}>
-          <Image
-            src={Logo}
-            alt="Logo de Equilibrio Fitness (es una imagen de un corazon con el nombre equilibrio fitness en el centro)"
-            width={120}
-            height={120}
-          />
+          <img style={{ width: '120px' }} src={Logo.src} alt="Logo de Equilibrio Fitness (es una imagen de un corazon con el nombre equilibrio fitness en el centro)" />
         </ScrollLink>
         <S.Desktop>
           <ul>

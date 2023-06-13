@@ -1,5 +1,4 @@
 import * as S from './styles'
-import Image from 'next/image';
 
 import imgPeople from '../../../public/img/advantage/people.svg'
 import imgFeelings from '../../../public/img/advantage/feelings.svg'
@@ -107,30 +106,15 @@ const Advantage = () => {
           <Reveal>
             <ul>
               <li>
-                <Image
-                  src={help}
-                  width={80}
-                  height={80}
-                  alt="Picture of the author"
-                />
+                <img style={{ width: '80px' }} src={help.src} alt="Ayuda" />
                 <h3>MEJORES PROFESSIONALES DEL MERCADO</h3>
               </li>
               <li>
-                <Image
-                  src={equipament}
-                  width={80}
-                  height={80}
-                  alt="Picture of the author"
-                />
+                <img style={{ width: '80px' }} src={equipament.src} alt="Equipamento deportivo" />
                 <h3>EQUIPOS MODERNOS</h3>
               </li>
               <li>
-                <Image
-                  src={machine}
-                  width={80}
-                  height={80}
-                  alt="Picture of the author"
-                />
+                <img style={{ width: '80px' }} src={machine.src} alt="Maquinaria" />
                 <h3>GIMNASIO CON MÁQUINAS NUEVAS</h3>
               </li>
             </ul>
