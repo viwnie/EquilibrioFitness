@@ -74,6 +74,7 @@ function Schedules() {
             classes: [
                 { time: '07:00 - 07:45', className: 'Funcional' },
                 { time: '07:00 - 08:15', className: 'Musculación' },
+                { time: '08:00 - 08:45', className: 'Funcional' },
                 { time: '08:15 - 09:30', className: 'Musculación' },
                 { time: '09:15 - 10:00', className: 'Funcional' },
                 { time: '09:30 - 10:45', className: 'Musculación' },
@@ -101,6 +102,7 @@ function Schedules() {
             classes: [
                 { time: '07:00 - 07:45', className: 'Funcional' },
                 { time: '07:00 - 08:15', className: 'Musculación' },
+                { time: '08:00 - 08:45', className: 'Funcional' },
                 { time: '08:15 - 09:30', className: 'Musculación' },
                 { time: '09:15 - 10:00', className: 'Funcional' },
                 { time: '09:30 - 10:45', className: 'Musculación' },
@@ -155,7 +157,7 @@ function Schedules() {
             id: '06',
             day: 'Sábado',
             classes: [
-                { time: '08:45 - 09:15', className: 'Musculación' },
+                { time: '08:00 - 09:15', className: 'Musculación' },
                 { time: '09:15 - 10:30', className: 'Musculación' },
                 { time: '10:00 - 10:45', className: 'Funcional' },
                 { time: '10:30 - 11:45', className: 'Musculación' },
