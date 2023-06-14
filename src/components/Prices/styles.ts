@@ -134,7 +134,7 @@ export const mobilePrices = styled(motion.div) <CardProps>`
   margin: 4rem 0;
   width: 30rem;
   padding-left: 2rem;
-  height: 40rem;
+  height: 44rem;
   background-color:white;
   border-radius: 2rem;
   color:black;

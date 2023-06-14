@@ -22,7 +22,7 @@ function App({ Component, pageProps }: AppProps) {
           name="theme-color"
           content="black"
         />
-        <meta name="description" content="Equilibro Fitness El Mejor Gimnasio De Molina De Segura, Murcia."/>
+        <meta name="description" content="Nuevo Fitness Personalizado Molina de Segura (Murcia)."/>
       </Head>
       <DefaultSeo {...defaultOpenGraph} />
       <GlobalStyles />

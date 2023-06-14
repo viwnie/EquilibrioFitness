@@ -99,7 +99,7 @@ const Advantage = () => {
             </RevealSubTitle>
             <Reveal>
               <p>
-                Con nuestros professionales te aseguramos una expreiencia increible para cambiar tu mente, cuerpo y salud.
+                Mejores profesionales del mercado, te aseguramos una expreiencia increible para cambiar tu mente, cuerpo y salud.
               </p>
             </Reveal>
           </div>
@@ -107,15 +107,15 @@ const Advantage = () => {
             <ul>
               <li>
                 <img style={{ width: '80px' }} src={help.src} alt="Ayuda" />
-                <h3>MEJORES PROFESSIONALES DEL MERCADO</h3>
+                <h3>Profesionales cualificados y con experiencia en el sector.</h3>
               </li>
               <li>
                 <img style={{ width: '80px' }} src={equipament.src} alt="Equipamento deportivo" />
-                <h3>EQUIPOS MODERNOS</h3>
+                <h3>Entrenamientos personalizados.</h3>
               </li>
               <li>
                 <img style={{ width: '80px' }} src={machine.src} alt="Maquinaria" />
-                <h3>GIMNASIO CON MÁQUINAS NUEVAS</h3>
+                <h3>: Instalaciones y maquinaria nuevas.</h3>
               </li>
             </ul>
           </Reveal>

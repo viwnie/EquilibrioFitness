@@ -14,19 +14,19 @@ const Footer = () => (
       <S.Container>
         <S.Lista>
           <li>
-            <FaCalendarWeek size={15} /> Luenes a Viernes de 7:00 a 22:200
+            <FaCalendarWeek size={15} /> Lunes a Viernes de 7:00 a 22:00
           </li>
           <li>
-            <FaCalendarWeek size={15} /> Sábado de 8:00 a 13:00
+            <FaCalendarWeek size={15} /> Sábados de 8:00 a 13:00
           </li>
           <li>
-            <FaPhone size={15} /> Teléfono +34 613 413 279
+            <FaPhone size={15} /> Teléfono: +34 613 413 279
           </li>
           <li>
-            <FaMapMarkedAlt size={15} /> Dirección: C/ Estacion, 27 (Molina de Segura)
+            <FaMapMarkedAlt size={15} /> Dirección: C/Estación, 27, CP 30500 Molina de Segura (Murcia)
           </li>
           <li>
-            <FaArrowRight size={15} /> @equilibriofitness.com
+            <FaArrowRight size={15} /> clientes@equilibriofitness.com
           </li>
           <li>
             <FaArrowRight size={15} /> Aviso Legal

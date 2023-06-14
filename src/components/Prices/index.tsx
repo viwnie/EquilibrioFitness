@@ -51,14 +51,14 @@ const Prices = () => (
   <S.Wrapper id='Price'
   >
     <RevealSubTitle>
-    <h1>Nuestros</h1>
+      <h1>Nuestros</h1>
     </RevealSubTitle>
     <RevealTitle>
-    <h2>Planes</h2>
+      <h2>Planes</h2>
     </RevealTitle>
     <S.webPrices
-       initial={{ opacity: 0 }}
-       whileInView={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{
         delay: 0.2,
@@ -98,26 +98,7 @@ const Prices = () => (
             </td>
           </tr>
           <tr>
-            <td className="tableTitle">Valorazion Inicial</td>
-            <td>
-              <Image
-                src={webVerified}
-                alt="icono de Activo ( V )"
-                width={30}
-                height={30}
-              />
-            </td>
-            <td>
-              <Image
-                src={webVerified}
-                alt="icono de Activo ( V )"
-                width={30}
-                height={30}
-              />
-            </td>
-          </tr>
-          <tr>
-            <td className="tableTitle">Plan Nutricional</td>
+            <td className="tableTitle">Valoración capacidades físicas</td>
             <td>
               <Image
                 src={webVerified}
@@ -155,6 +136,25 @@ const Prices = () => (
             </td>
           </tr>
           <tr>
+            <td className="tableTitle">Plan Nutricional</td>
+            <td>
+              <Image
+                src={webVerified}
+                alt="icono de Activo ( V )"
+                width={30}
+                height={30}
+              />
+            </td>
+            <td>
+              <Image
+                src={webVerified}
+                alt="icono de Activo ( V )"
+                width={30}
+                height={30}
+              />
+            </td>
+          </tr>
+          <tr>
             <td className="tableTitle">Parking Gratuito</td>
             <td>
               <Image
@@ -174,7 +174,26 @@ const Prices = () => (
             </td>
           </tr>
           <tr>
-            <td className="tableTitle">Musculacion / Cardio</td>
+            <td className="tableTitle">Musculación/cardio</td>
+            <td>
+              <Image
+                src={webVerified}
+                alt="Icono de inactivo ( V )"
+                width={22}
+                height={22}
+              />
+            </td>
+            <td>
+              <Image
+                src={webVerified}
+                alt="icono de Activo ( V )"
+                width={30}
+                height={30}
+              />
+            </td>
+          </tr>
+          <tr>
+            <td className="tableTitle">Funcional/HIIT</td>
             <td>
               <Image
                 src={webUnVerified}
@@ -193,7 +212,26 @@ const Prices = () => (
             </td>
           </tr>
           <tr>
-            <td className="tableTitle">Balance</td>
+            <td className="tableTitle">Entrenamiento semanal por objetivo</td>
+            <td>
+              <Image
+                src={webUnVerified}
+                alt="Icono de inactivo ( X )"
+                width={22}
+                height={22}
+              />
+            </td>
+            <td>
+              <Image
+                src={webVerified}
+                alt="icono de Activo ( V )"
+                width={30}
+                height={30}
+              />
+            </td>
+          </tr>
+          <tr>
+            <td className="tableTitle">Sesiones ilimitadas funcional/HIIT</td>
             <td>
               <Image
                 src={webUnVerified}
@@ -241,12 +279,14 @@ const Prices = () => (
           </S.mobileTitle>
           <ul>
             <li><FaCheck size={12} /> Acesso ilimitado</li>
-            <li><FaCheck size={12} /> Valorazion Inicial</li>
+            <li><FaCheck size={12} /> Valoración capacidades físicas</li>
+            <li><FaCheck size={12} /> Programa personalizado</li>
             <li><FaCheck size={12} /> Plan Nutricional</li>
-            <li><FaCheck size={12} /> Programa Personalizado</li>
             <li><FaCheck size={12} /> Parking Gratuito</li>
-            <li>{card.title === 'Standard' ? <Image src={mobileUnVerified.src} alt='X' width={12} height={12} /> : <FaCheck size={12} />} Musculacion/Cardio</li>
-            <li>{card.title === 'Standard' ? <Image src={mobileUnVerified.src} alt='X' width={12} height={12} /> : <FaCheck size={12} />} Balance</li>
+            <li><FaCheck size={12} /> Musculación/cardio</li>
+            <li>{card.title === 'Standard' ? <Image src={mobileUnVerified.src} alt='X' width={12} height={12} /> : <FaCheck size={12} />} Funcional/HIIT</li>
+            <li>{card.title === 'Standard' ? <Image src={mobileUnVerified.src} alt='X' width={12} height={12} /> : <FaCheck size={12} />} Entrenamiento semanal por objetivo</li>
+            <li>{card.title === 'Standard' ? <Image src={mobileUnVerified.src} alt='X' width={12} height={12} /> : <FaCheck size={12} />} Sesiones ilimitadas funcional/HIIT</li>
           </ul>
           <S.mobileBuy>
             <span>{card.price}</span>
