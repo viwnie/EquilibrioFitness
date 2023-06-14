@@ -69,7 +69,7 @@ export const WhoWeAre = styled.div`
   }
   }
   li{
-    height: 21rem;
+    height: 25rem;
     display:flex;
     flex-direction:column;
     flex-wrap: wrap;

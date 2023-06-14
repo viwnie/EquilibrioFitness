@@ -115,7 +115,7 @@ const Advantage = () => {
               </li>
               <li>
                 <img style={{ width: '80px' }} src={machine.src} alt="Maquinaria" />
-                <h3>: Instalaciones y maquinaria nuevas.</h3>
+                <h3>Instalaciones y maquinaria nuevas.</h3>
               </li>
             </ul>
           </Reveal>
