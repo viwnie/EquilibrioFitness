@@ -49,6 +49,6 @@ Linkedin: https://www.linkedin.com/in/viwnie/
 
 Email: viniciosalazar133@gmail.com
 
-site: http://vinicio.me/
+Website: http://vinicio.me/
 
 Discord: viwnie
