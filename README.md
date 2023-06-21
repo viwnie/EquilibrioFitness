@@ -45,10 +45,14 @@ Este projeto foi realizado em colaboração com o talentoso dev junior Renan (ht
 ## Contate-me
 Caso queira realizar um projeto comigo :
 
-Linkedin: https://www.linkedin.com/in/viwnie/
+📧 Email: viniciosalazar133@gmail.com
 
-Email: viniciosalazar133@gmail.com
+🔗 Website: http://vinicio.me/
 
-Website: http://vinicio.me/
+<a href="https://discordapp.com/users/351516905116532736">
+    <img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white">
+</a>
 
-Discord: viwnie
+<a href="https://www.linkedin.com/in/viniciodev">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
+</a>
