@@ -22,7 +22,7 @@ Para o desenvolvimento do site da Equilibrio Fitness, utilizamos as seguintes te
 
 O principal objetivo do site é atrair novos clientes interessados em fazer exercícios físicos. Queremos transmitir a mensagem de que a Equilibrio Fitness é o lugar perfeito para alcançar seus objetivos de saúde e fitness.
 
-##🌟 Destaques do Projeto 🌟
+🌟 Destaques do Projeto 🌟
 
 Design moderno e atrativo.
 Informações detalhadas sobre os programas de treinamento oferecidos.
