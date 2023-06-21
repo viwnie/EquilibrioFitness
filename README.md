@@ -40,7 +40,7 @@ Seção de cálculo do IMC (Índice de Massa Corporal) para ajudar os usuários 
 📱 App da Academia: Desenvolver um aplicativo móvel para a Equilibrio Fitness, oferecendo aos clientes uma experiência conveniente e acessível para gerenciar seus treinamentos e acompanhar seu progresso.
 
 ## Colaborador
-Este projeto foi realizado em colaboração com o talentoso dev Junior Renan (https://github.com/nanerseasac). Trabalhamos juntos para trazer a visão da Equilibrio Fitness e garantir que cada detalhe do site refletisse a qualidade e os valores da academia.
+Este projeto foi realizado em colaboração com o talentoso dev junior Renan (https://github.com/nanerseasac). Trabalhamos juntos para trazer a visão da Equilibrio Fitness e garantir que cada detalhe do site refletisse a qualidade e os valores da academia.
 
 ## Contate-me
 Caso queira realizar um projeto comigo :
