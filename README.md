@@ -1,38 +1,44 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Equilibrio Fitness 🏋️‍♂️
+Bem-vindo ao repositório do projeto Equilibrio Fitness! Este é o meu primeiro trabalho como desenvolvedor junior, e estou empolgado em compartilhar com vocês os detalhes deste projeto incrível. 💪
 
-## Getting Started
+Sobre a Academia ✨
 
-First, run the development server:
+A Equilibrio Fitness é uma academia que se preocupa com o bem-estar e a saúde de seus clientes. Com uma equipe dedicada de profissionais e uma variedade de programas de treinamento, estamos prontos para ajudar nossos clientes a atingirem seus objetivos fitness.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+🌐 WebSite: https://www.equilibriofitness.com/
+🌍 Idioma: Castellano (Espanhol)
+👥 Público-alvo: Pessoas interessadas em realizar exercícios físicos em um ambiente amigável e acolhedor.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Tecnologias Utilizadas
+Para o desenvolvimento do site da Equilibrio Fitness, utilizamos as seguintes tecnologias:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+🚀 NextJS: Um framework React de alto desempenho, que nos permite criar aplicações web modernas e escaláveis.
+💅 StyledComponent: Uma biblioteca para estilização de componentes React, que nos ajuda a criar uma interface bonita e personalizada.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Objetivo do Site:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+O principal objetivo do site é atrair novos clientes interessados em fazer exercícios físicos. Queremos transmitir a mensagem de que a Equilibrio Fitness é o lugar perfeito para alcançar seus objetivos de saúde e fitness.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+🌟 Destaques do Projeto 🌟
 
-## Learn More
+Design moderno e atrativo.
+Informações detalhadas sobre os programas de treinamento oferecidos.
+Vantagens que so a Equilibrio tem.
+Seção de cálculo do IMC (Índice de Massa Corporal) para ajudar os usuários a monitorarem sua saúde.
 
-To learn more about Next.js, take a look at the following resources:
+Provaveis Objetivos Futuros:
+(Esta em fase de negociacao com a empresa)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🔒 Login/Register de Usuários: Implementar uma área de login e registro de usuários, permitindo que os clientes tenham acesso a recursos exclusivos e personalizados.
+📱 App da Academia: Desenvolver um aplicativo móvel para a Equilibrio Fitness, oferecendo aos clientes uma experiência conveniente e acessível para gerenciar seus treinamentos e acompanhar seu progresso.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Colaborador
+Este projeto foi realizado em colaboração com o talentoso dev Junior Renan (https://github.com/nanerseasac). Trabalhamos juntos para trazer a visão da Equilibrio Fitness e garantir que cada detalhe do site refletisse a qualidade e os valores da academia.
 
-## Deploy on Vercel
+Contate-me
+Caso queira realizar um projeto comigo :
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Linkedin: https://www.linkedin.com/in/viwnie/
+Email: viniciosalazar133@gmail.com
+site: http://vinicio.me/
+Discord: viwnie
