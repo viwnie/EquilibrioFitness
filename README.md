@@ -15,7 +15,7 @@ Para o desenvolvimento do site da Equilibrio Fitness, utilizamos as seguintes te
 🚀 NextJS: Um framework React de alto desempenho, que nos permite criar aplicações web modernas e escaláveis.
 💅 StyledComponent: Uma biblioteca para estilização de componentes React, que nos ajuda a criar uma interface bonita e personalizada.
 
-## Objetivo do Site:
+## Objetivo do Site
 
 O principal objetivo do site é atrair novos clientes interessados em fazer exercícios físicos. Queremos transmitir a mensagem de que a Equilibrio Fitness é o lugar perfeito para alcançar seus objetivos de saúde e fitness.
 
@@ -26,7 +26,7 @@ Informações detalhadas sobre os programas de treinamento oferecidos.
 Vantagens que so a Equilibrio tem.
 Seção de cálculo do IMC (Índice de Massa Corporal) para ajudar os usuários a monitorarem sua saúde.
 
-## Provaveis Objetivos Futuros:
+## Provaveis Objetivos Futuros
 (Esta em fase de negociacao com a empresa)
 
 🔒 Login/Register de Usuários: Implementar uma área de login e registro de usuários, permitindo que os clientes tenham acesso a recursos exclusivos e personalizados.
