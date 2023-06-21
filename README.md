@@ -46,6 +46,9 @@ Este projeto foi realizado em colaboração com o talentoso dev Junior Renan (ht
 Caso queira realizar um projeto comigo :
 
 Linkedin: https://www.linkedin.com/in/viwnie/
+
 Email: viniciosalazar133@gmail.com
+
 site: http://vinicio.me/
+
 Discord: viwnie
