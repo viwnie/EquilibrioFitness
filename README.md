@@ -1,4 +1,8 @@
 # Equilibrio Fitness 🏋️‍♂️
+
+![image](https://github.com/viwnie/EquilibrioFitness/assets/72995088/cb027b2b-a7c6-4ff8-ba04-db526cd379ca)
+
+
 Bem-vindo ao repositório do projeto Equilibrio Fitness! Este é o meu primeiro trabalho como desenvolvedor junior, e estou empolgado em compartilhar com vocês os detalhes deste projeto incrível. 💪
 
 ## Sobre a Academia ✨
