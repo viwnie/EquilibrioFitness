@@ -6,13 +6,16 @@ Bem-vindo ao repositório do projeto Equilibrio Fitness! Este é o meu primeiro 
 A Equilibrio Fitness é uma academia que se preocupa com o bem-estar e a saúde de seus clientes. Com uma equipe dedicada de profissionais e uma variedade de programas de treinamento, estamos prontos para ajudar nossos clientes a atingirem seus objetivos fitness.
 
 🌐 WebSite: https://www.equilibriofitness.com/
+
 🌍 Idioma: Castellano (Espanhol)
+
 👥 Público-alvo: Pessoas interessadas em realizar exercícios físicos em um ambiente amigável e acolhedor.
 
 ## Tecnologias Utilizadas
 Para o desenvolvimento do site da Equilibrio Fitness, utilizamos as seguintes tecnologias:
 
 🚀 NextJS: Um framework React de alto desempenho, que nos permite criar aplicações web modernas e escaláveis.
+
 💅 StyledComponent: Uma biblioteca para estilização de componentes React, que nos ajuda a criar uma interface bonita e personalizada.
 
 ## Objetivo do Site
