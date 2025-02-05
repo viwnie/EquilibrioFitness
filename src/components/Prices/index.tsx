@@ -27,7 +27,7 @@ const cards = [
     id: 'card1',
     title: 'Premium',
     logo: mobileLogo01.src,
-    price: '55€',
+    price: '65€',
     color: '#D00000',
     shadow: 'rgba(0, 0, 0, 0.2)',
     verified: { mobileVerified01 },
@@ -38,7 +38,18 @@ const cards = [
     id: 'card2',
     title: 'Standard',
     logo: mobileLogo02.src,
-    price: '45€',
+    price: '50€',
+    color: '#7F28ED',
+    shadow: 'rgba(0, 0, 0, 0.2)',
+    verified: { mobileVerified02 },
+    top: '-1',
+    right: '0'
+  },
+  {
+    id: 'card3',
+    title: 'Reducida',
+    logo: mobileLogo02.src,
+    price: '40€',
     color: '#7F28ED',
     shadow: 'rgba(0, 0, 0, 0.2)',
     verified: { mobileVerified02 },
@@ -70,6 +81,9 @@ const Prices = () => (
           <tr>
             <th></th>
             <th>
+              <h3>Reducida</h3>
+            </th>
+            <th>
               <h3>Standard</h3>
             </th>
             <th>
@@ -81,24 +95,13 @@ const Prices = () => (
           <tr>
             <td className="tableTitle">Acesso ilimitado</td>
             <td>
-              <Image
-                src={webVerified}
-                alt="icono de Activo ( V )"
-                width={30}
-                height={30}
+            <Image
+                src={webUnVerified}
+                alt="Icono de inactivo ( X )"
+                width={22}
+                height={22}
               />
             </td>
-            <td>
-              <Image
-                src={webVerified}
-                alt="icono de Activo ( V )"
-                width={30}
-                height={30}
-              />
-            </td>
-          </tr>
-          <tr>
-            <td className="tableTitle">Valoración capacidades físicas</td>
             <td>
               <Image
                 src={webVerified}
@@ -134,9 +137,25 @@ const Prices = () => (
                 height={30}
               />
             </td>
+            <td>
+              <Image
+                src={webVerified}
+                alt="icono de Activo ( V )"
+                width={30}
+                height={30}
+              />
+            </td>
           </tr>
           <tr>
             <td className="tableTitle">Plan Nutricional</td>
+            <td>
+              <Image
+                src={webVerified}
+                alt="icono de Activo ( V )"
+                width={30}
+                height={30}
+              />
+            </td>
             <td>
               <Image
                 src={webVerified}
@@ -172,15 +191,31 @@ const Prices = () => (
                 height={30}
               />
             </td>
+            <td>
+              <Image
+                src={webVerified}
+                alt="icono de Activo ( V )"
+                width={30}
+                height={30}
+              />
+            </td>
           </tr>
           <tr>
             <td className="tableTitle">Musculación/cardio</td>
             <td>
               <Image
                 src={webVerified}
-                alt="Icono de inactivo ( V )"
-                width={22}
-                height={22}
+                alt="icono de Activo ( V )"
+                width={30}
+                height={30}
+              />
+            </td>
+            <td>
+              <Image
+                src={webVerified}
+                alt="icono de Activo ( V )"
+                width={30}
+                height={30}
               />
             </td>
             <td>
@@ -204,36 +239,6 @@ const Prices = () => (
             </td>
             <td>
               <Image
-                src={webVerified}
-                alt="icono de Activo ( V )"
-                width={30}
-                height={30}
-              />
-            </td>
-          </tr>
-          <tr>
-            <td className="tableTitle">Entrenamiento semanal por objetivo</td>
-            <td>
-              <Image
-                src={webUnVerified}
-                alt="Icono de inactivo ( X )"
-                width={22}
-                height={22}
-              />
-            </td>
-            <td>
-              <Image
-                src={webVerified}
-                alt="icono de Activo ( V )"
-                width={30}
-                height={30}
-              />
-            </td>
-          </tr>
-          <tr>
-            <td className="tableTitle">Sesiones ilimitadas funcional/HIIT</td>
-            <td>
-              <Image
                 src={webUnVerified}
                 alt="Icono de inactivo ( X )"
                 width={22}
@@ -253,12 +258,17 @@ const Prices = () => (
             <td></td>
             <td>
               <h2>
-                45€ <span>/ mes</span>
+                40€ <span>/ mes</span>
               </h2>
             </td>
             <td>
               <h2>
-                55€<span>/ mes</span>
+                50€<span>/ mes</span>
+              </h2>
+            </td>
+            <td>
+              <h2>
+                65€<span>/ mes</span>
               </h2>
             </td>
           </tr>
@@ -278,15 +288,12 @@ const Prices = () => (
             <h2>{card.title}</h2>
           </S.mobileTitle>
           <ul>
-            <li><FaCheck size={12} /> Acesso ilimitado</li>
-            <li><FaCheck size={12} /> Valoración capacidades físicas</li>
+            <li>{ card.title === 'Reducida' ? <Image src={mobileUnVerified.src} alt='X' width={12} height={12} /> : <FaCheck size={12} />} Acesso ilimitado</li>
             <li><FaCheck size={12} /> Programa personalizado</li>
             <li><FaCheck size={12} /> Plan Nutricional</li>
             <li><FaCheck size={12} /> Parking Gratuito</li>
             <li><FaCheck size={12} /> Musculación/cardio</li>
-            <li>{card.title === 'Standard' ? <Image src={mobileUnVerified.src} alt='X' width={12} height={12} /> : <FaCheck size={12} />} Funcional/HIIT</li>
-            <li>{card.title === 'Standard' ? <Image src={mobileUnVerified.src} alt='X' width={12} height={12} /> : <FaCheck size={12} />} Entrenamiento semanal por objetivo</li>
-            <li>{card.title === 'Standard' ? <Image src={mobileUnVerified.src} alt='X' width={12} height={12} /> : <FaCheck size={12} />} Sesiones ilimitadas funcional/HIIT</li>
+            <li>{card.title === 'Standard' || card.title === 'Reducida' ? <Image src={mobileUnVerified.src} alt='X' width={12} height={12} /> : <FaCheck size={12} />} Funcional/HIIT</li>
           </ul>
           <S.mobileBuy>
             <span>{card.price}</span>

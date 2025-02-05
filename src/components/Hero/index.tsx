@@ -2,6 +2,9 @@ import * as S from './styles'
 import heroImg from '../../../public/img/hero/Background.webp'
 import ButtonAnimated from '../ButtonAnimated'
 
+import gifMario from '../../../public/img/hero/mario-gif.gif'
+
+
 import { Reveal } from '../utils/Reveal';
 import { RevealTitle } from '../utils/RevealTitle';
 import { RevealSubTitle } from '../utils/RevealSubTitle';

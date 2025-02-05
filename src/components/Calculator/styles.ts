@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.section`
   display: flex;
-  padding: 3.4rem;
+  padding: 4rem 14rem;
   margin-top: 10rem;
   width: 100%;
   min-height: 37rem;
@@ -12,11 +12,11 @@ export const Wrapper = styled.section`
     flex-direction:column;
     justify-content:center;
     align-items:center;
+    padding: 6rem 2rem;
   }
 `;
 
 export const GridItem = styled.div`
-  padding-left: 5rem;
   width: 50%;
   @media (max-width: 1040px) {
     width: 95%;
@@ -59,7 +59,6 @@ export const Table = styled.table`
 export const Column = styled.div`
   display: flex;
   flex-direction: column;
-  padding-left: 9rem;
   @media (max-width: 1040px) {
     padding: 0;
   }

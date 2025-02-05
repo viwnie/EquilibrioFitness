@@ -35,6 +35,7 @@ export const info = styled.div`
   @media (max-width: 1240px) {
     margin-top: 10rem;
     width: 90%;
+    display: contents;
   }
   
 `
@@ -43,7 +44,7 @@ export const WhoWeAre = styled.div`
   width:50%;
 
   h1{
-      color: var(--red);
+      color: #ec240f;
       font-size:var(--fs-large);
       font-weight:var(--fw-large);
   }
@@ -63,6 +64,7 @@ export const WhoWeAre = styled.div`
     align-items:center;
     justify-content:center;
     margin: 5rem 0rem 5rem 0rem;
+  
     @media (max-width: 800px) {
     display: flex;
     flex-direction: column;
@@ -93,7 +95,6 @@ export const WhoWeAre = styled.div`
 
 
   @media (max-width:1240px) {
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -161,19 +162,18 @@ export const advantage = styled(motion.div)`
   box-shadow: 0px 0px 20px 10px rgba(150, 150, 150, 0.5);
   span{
     text-align: center;
-    color: black;
+    color: #000000;
     font-weight: var(--fw-semi);
   }
   :hover {
-    background: black;
+    background: #e5e5e5;
     transition: 0.4s;
-    cursor: pointer;
     span{
       cursor: pointer;
-      color: white;
+      color: #000000;
     }
     h2{
-      color: white;
+      color: #000000;
     }
   }
 
@@ -203,7 +203,18 @@ export const Moldura = styled(motion.div)`
   -webkit-mask-size: 100%;
 `}
   @media (max-width: 1240px) {
-    display: none;
+  margin-left: 0;
+  }
+
+  @media (min-width: 581px) and (max-width: 780px) {
+  width: 90%;
+  margin-left: 0;
+  }
+
+  @media (max-width: 580px) {
+  margin-left: 0;
+  width: 100%;
+  margin-top: 2rem;
   }
 `
 export const Video = styled.video`
