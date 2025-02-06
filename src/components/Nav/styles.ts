@@ -40,8 +40,9 @@ export const Desktop = styled(motion.ul)`
     font-weight:lighter;
     :hover{
       cursor:pointer;
-      color:red;
-      transition:all 0.3s ease 0s;
+      color: #ec240f;
+      transition: color 0.3s ease, font-size 0.3s ease;
+      font-size: 17px;
     }
   }
   @media (max-width: 1110px) {
@@ -63,7 +64,6 @@ export const User = styled(motion.div)`
     display:flex;
     align-items:center;
     justify-content:space-between;
-    width: 20rem;
   }
   @media (max-width: 1110px) {
     .mobileMenu{
@@ -81,20 +81,28 @@ export const UserBtn = styled.a`
   display:flex;
   align-items:center;
   justify-content:center;
-  width: 16rem;
-  height:3.5rem;
-  background-color:transparent;
-  color:white;
-  border: 2px solid gray;
-  border-radius:0rem;
+  min-height:3.5rem;
+  background-color:rgba(236, 37, 15, 0.25);  
+  color: #ffffff;
+  border: 1px solid #ec240f;
+  border-radius: 0.5rem;
   font-size:var(--fs-small);
   font-weight:var(--fw-small);
   text-decoration:none;
-    :hover{
+  padding: 1rem;
+  margin-left: 5px;
+    &:hover{
       cursor:pointer;
-      color:red;
-      transition:all 0.3s ease 0s;
+      color: #ffffff;
+      background-color: #ec240f; 
+      transition: color 0.3s ease, padding 0.3s ease;
+      padding: 1.1rem;
     }
+    &:focus {
+    background: blue;
+    padding: 1.2rem;
+    background-color: #000000;
+    }    
 `
 export const Mobile = styled(motion.div)`
   position:fixed;
@@ -114,7 +122,7 @@ export const Mobile = styled(motion.div)`
     top:3rem;
     right:2.5rem;
     :hover{
-    color:red;
+    color: #ec240f;
   }
   }
   ul{
@@ -126,7 +134,7 @@ export const Mobile = styled(motion.div)`
         text-decoration: none;
       }
       :hover{
-    color:red;
+    color: #ec240f;
   }
     }
   }

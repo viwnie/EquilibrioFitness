@@ -17,7 +17,6 @@ export const Wrapper = styled(motion.div)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80rem;
   h1{
     font-size: var(--fs-big);
     color: black;
@@ -28,7 +27,6 @@ export const Wrapper = styled(motion.div)`
   }
 
   @media (max-width: 830px) {
-    height: 110rem;
     h1{
       font-size: var(--fs-small);
     }
@@ -50,9 +48,9 @@ export const webPrices = styled(motion.div)`
   background-color: white;
   margin: 4rem 0;
   max-width: 110rem;
-  width: 65%;
-  height: 50rem;
-  padding: 1rem 4rem;
+  width: 80%;
+  height: 48rem;
+  padding: 2rem 4rem;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
   table {
     border-collapse: collapse;
@@ -67,7 +65,7 @@ export const webPrices = styled(motion.div)`
     tbody {
       tr {
         td {
-          border-top: 1px solid black;
+          border-top: 1px solid #cccccc;
         }
       }
     }
@@ -83,7 +81,6 @@ export const webPrices = styled(motion.div)`
       text-align: center;
       h2 {
         text-align: center;
-        margin: 2rem;
         font-size: 2.7rem;
         color: rgba(0, 170, 37, 1);
 
@@ -109,9 +106,7 @@ export const Premium = styled.h3`
 
 export const mobileWrap = styled.div`
   margin-top: 3rem;
-  height: 90rem;
   max-width: 100%;
-  display:flex;
   align-items:center;
   justify-content:center;
   display: grid;
@@ -120,6 +115,7 @@ export const mobileWrap = styled.div`
     display:none;
   }
 `
+/*card mobile*/ 
 export const mobilePrices = styled(motion.div) <CardProps>`
   ${({ color, shadow }) =>
     css`
@@ -132,9 +128,8 @@ export const mobilePrices = styled(motion.div) <CardProps>`
     }
     `}
   margin: 4rem 0rem 0rem 0rem;
-  width: 30rem;
-  padding-left: 2rem;
-  height: 47rem;
+  padding: 3rem;
+  min-height: 35rem;
   background-color:white;
   border-radius: 2rem;
   color:black;
@@ -178,15 +173,14 @@ export const mobileBuy = styled.div`
     color: white;
     height: 100%;
     text-decoration: none;
-    height: 2.8rem;
-    width: 10rem;
     font-weight: 550;
     font-size: 1.7rem;
     font-family: 'Montserrat', sans-serif;
-    border-radius: 1.5rem;
+    border-radius: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
   }
   span{
     color: #00AA25;
@@ -202,7 +196,7 @@ export const Button = styled.button`
     justify-content:center;
     color: rgba(222, 222, 222, 1);
     width: 20rem;
-    background: #CC0301;
+    background-color: #CC0301;
     padding: 1.2rem;
     border-radius: 1rem;
     a {

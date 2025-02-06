@@ -62,7 +62,7 @@ function Nav() {
         <S.User>
           <AiOutlineMenu className="mobileMenu" size={35} onClick={() => setVisible(true)} />
           <div>
-            <Link aria-label='Usuario Login' href="https://easy.trainingym.com/equilibriofitness/login"><AiOutlineUser size={35} /></Link>
+            <Link aria-label='Usuario Login' href="https://easy.trainingym.com/equilibriofitness/login"><AiOutlineUser size={33} /></Link>
             <S.UserBtn href="https://easy.trainingym.com/equilibriofitness/register">Únete a nosotros !</S.UserBtn>
           </div>
         </S.User>

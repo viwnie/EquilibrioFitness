@@ -19,6 +19,7 @@ export const Wrapper = styled.div`
       text-decoration: none;
       color: white;
       background-color: #2c2c31;
+      border-radius: 1rem;
       width:100%;
       height:100%;
     }
@@ -37,7 +38,8 @@ export const Rectangle = styled.div`
   transition: transform 0.5s ease;
   background-color:transparent;
   border:solid 1px grey;
-  color:black;
+  color: black;
+  border-radius: 1rem;
   width:100%;
   height:100%;
 `;
