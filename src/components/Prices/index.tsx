@@ -12,7 +12,6 @@ import mobileLogo01 from '../../../public/img/prices/mobilePrices/logo01.svg'
 import mobileLogo02 from '../../../public/img/prices/mobilePrices/logo02.svg'
 
 import { FaCheck } from 'react-icons/fa'
-import { motion } from 'framer-motion'
 
 import { RevealTitle } from '../utils/RevealTitle';
 import { RevealSubTitle } from '../utils/RevealSubTitle';
