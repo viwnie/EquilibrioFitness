@@ -35,7 +35,7 @@ export const Container = styled(motion.ul)`
 
     p{
       font-size: var(--fs-small);
-      color: #A0A0A0;
+      color:  #666666;
     }
     h2{
       font-size: var(--fs-medium);
