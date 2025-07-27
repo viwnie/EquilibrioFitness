@@ -146,7 +146,7 @@ button {
     border-radius: 3rem;
   }
 
-  &:focus {
+  &.active {
     background-color: #D90E15;
     border: 1px solid #D90E15;
     border-radius: 3rem;
