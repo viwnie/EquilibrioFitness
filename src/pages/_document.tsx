@@ -36,25 +36,39 @@ export default class MyDocument extends Document {
     }
   }
 
-  render() {
-    return (
-      <Html lang="es">
-        <Head />
-        <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+render() {
+  return (
+    <Html lang="es">
+      <Head>
+        {/* Google Analytics */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3DVG5E7W8"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-Q3DVG5E7W8');
+            `,
+          }}
+        />
+        {/* Google Fonts */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
           crossOrigin="anonymous"
-        ></link>
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Montserrat:wght@400;700&display=swap"
           rel="stylesheet"
-        ></link>
-        <body>
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    )
-  }
+        />
+      </Head>
+      <body>
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
+  );
+}
 }
