@@ -31,7 +31,6 @@ function Schedules() {
 
 const [selectedDay, setSelectedDay] = useState(getCurrentDay());
 
-console.log('Selected Day:', selectedDay);
     const scheduleData = [
         {
             id: '01',
@@ -118,7 +117,7 @@ console.log('Selected Day:', selectedDay);
         }
     ];
     const selectedSchedule = scheduleData.find((schedule) => schedule.day === selectedDay);
-    console.log('Selected Schedule:', selectedSchedule);
+
     const handleNext = () => {
         if (
             selectedSchedule &&
