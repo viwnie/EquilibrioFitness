@@ -10,152 +10,115 @@ import { motion } from "framer-motion";
 
 
 function Schedules() {
-    const days = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado']
+    const days = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes']
+    const categorys = ['Funcional', 'HIIT', 'ABS', 'Mobility'];
+    const [startIndex, setStartIndex] = useState(0);
+    const endIndex = startIndex + 3;
+    const [selectCategory, setSelectCategory] = useState(categorys);
 
+    const getCurrentDay = () => {
+    const jsDayToSpanish = [   
+        'Lunes',
+        'Martes',
+        'Miércoles', 
+        'Jueves',
+        'Viernes',   
+    ];
+    const today = new Date().getDay();
+    const todaySpanish = jsDayToSpanish[today];
+    return days.includes(todaySpanish) ? todaySpanish : 'Lunes';
+};
+
+const [selectedDay, setSelectedDay] = useState(getCurrentDay());
+
+console.log('Selected Day:', selectedDay);
     const scheduleData = [
         {
             id: '01',
-            day: 'Lunes',
+            day: days[0],
             classes: [
-                { time: '07:00 - 07:45', className: 'Funcional' },
-                { time: '07:00 - 08:15', className: 'Musculación' },
-                { time: '08:00 - 08:45', className: 'Funcional' },
-                { time: '08:15 - 09:30', className: 'Musculación' },
-                { time: '09:15 - 10:00', className: 'Funcional' },
-                { time: '09:30 - 10:45', className: 'Musculación' },
-                { time: '10:45 - 12:00', className: 'Musculación' },
-                { time: '12:00 - 13:15', className: 'Musculación' },
-                { time: '13:15 - 14:30', className: 'Musculación' },
-                { time: '14:30 - 15:45', className: 'Musculación' },
-                { time: '15:45 - 17:00', className: 'Musculación' },
-                { time: '17:00 - 17:45', className: 'Funcional' },
-                { time: '17:00 - 18:15', className: 'Musculación' },
-                { time: '18:15 - 19:30', className: 'Musculación' },
-                { time: '19:00 - 19:45', className: 'Funcional' },
-                { time: '19:30 - 20:45', className: 'Musculación' },
-                { time: '20:00 - 20:45', className: 'Funcional' },
-                { time: '20:45 - 22:00', className: 'Musculación' },
-                { time: '21:00 - 21:45', className: 'Funcional' }
+                { time: '07:00 - 07:45', className: categorys[0] },
+                { time: '07:45 - 08:15', className: categorys[1] },
+                { time: '08:15 - 09:15', className: categorys[0] },
+                { time: '09:15 - 09:10', className: categorys[0] },
+                { time: '10:00 - 10:30', className: categorys[2] },
+                { time: '17:00 - 18:00', className: categorys[0] },
+                { time: '18:00 - 18:30', className: categorys[3] },
+                { time: '18:30 - 19:00', className: categorys[1] },
+                { time: '19:00 - 19:30', className: categorys[0] },
+                { time: '19:45 - 20:00', className: categorys[0] },
+                { time: '20:30', className: categorys[2] },
             ]
         },
         {
             id: '02',
-            day: 'Martes',
+            day: days[1],
             classes: [
-                { time: '07:00 - 07:45', className: 'Funcional' },
-                { time: '07:00 - 08:15', className: 'Musculación' },
-                { time: '08:00 - 08:45', className: 'Funcional' },
-                { time: '08:15 - 09:30', className: 'Musculación' },
-                { time: '09:15 - 10:00', className: 'Funcional' },
-                { time: '09:30 - 10:45', className: 'Musculación' },
-                { time: '10:45 - 12:00', className: 'Musculación' },
-                { time: '12:00 - 13:15', className: 'Musculación' },
-                { time: '13:15 - 14:00', className: 'Funcional' },
-                { time: '13:15 - 14:30', className: 'Musculación' },
-                { time: '14:30 - 15:45', className: 'Musculación' },
-                { time: '15:45 - 17:00', className: 'Musculación' },
-                { time: '17:00 - 18:15', className: 'Musculación' },
-                { time: '18:00 - 18:45', className: 'Funcional' },
-                { time: '18:15 - 19:30', className: 'Musculación' },
-                { time: '19:00 - 19:45', className: 'Funcional' },
-                { time: '19:30 - 20:45', className: 'Musculación' },
-                { time: '20:00 - 20:45', className: 'Funcional' },
-                { time: '20:45 - 22:00', className: 'Musculación' }
+                { time: '07:00 - 07:45', className: categorys[0] },
+                { time: '07:45 - 08:15', className: categorys[2] },
+                { time: '08:15 - 09:15', className: categorys[0] },
+                { time: '09:15 - 09:10', className: categorys[0] },
+                { time: '10:00 - 10:30', className: categorys[1] },
+                { time: '17:00 - 18:00', className: categorys[0] },
+                { time: '18:00 - 18:30', className: categorys[1] },
+                { time: '18:30 - 19:00', className: categorys[0] },
+                { time: '19:30 - 19:45', className: categorys[2] },
+                { time: '20:00 - 20:30', className: categorys[0] },
             ]
         },
         {
             id: '03',
-            day: 'Miércoles',
+            day: days[2],
             classes: [
-                { time: '07:00 - 07:45', className: 'Funcional' },
-                { time: '07:00 - 08:15', className: 'Musculación' },
-                { time: '08:00 - 08:45', className: 'Funcional' },
-                { time: '08:15 - 09:30', className: 'Musculación' },
-                { time: '09:15 - 10:00', className: 'Funcional' },
-                { time: '09:30 - 10:45', className: 'Musculación' },
-                { time: '10:45 - 12:00', className: 'Musculación' },
-                { time: '12:00 - 13:15', className: 'Musculación' },
-                { time: '13:15 - 14:30', className: 'Musculación' },
-                { time: '14:30 - 15:45', className: 'Musculación' },
-                { time: '15:45 - 17:00', className: 'Musculación' },
-                { time: '17:00 - 17:45', className: 'Funcional' },
-                { time: '17:00 - 18:15', className: 'Musculación' },
-                { time: '18:15 - 19:30', className: 'Musculación' },
-                { time: '19:00 - 19:45', className: 'Funcional' },
-                { time: '19:30 - 20:45', className: 'Musculación' },
-                { time: '20:00 - 20:45', className: 'Funcional' },
-                { time: '20:45 - 22:00', className: 'Musculación' },
-                { time: '21:00 - 21:45', className: 'Funcional' }
+                { time: '07:00 - 07:45', className: categorys[0] },
+                { time: '07:45 - 08:15', className: categorys[1] },
+                { time: '08:15 - 09:15', className: categorys[0] },
+                { time: '09:15 - 09:10', className: categorys[0] },
+                { time: '10:00 - 10:30', className: categorys[3] },
+                { time: '17:00 - 18:00', className: categorys[0] },
+                { time: '18:00 - 18:30', className: categorys[2] },
+                { time: '18:30 - 19:00', className: categorys[1] },
+                { time: '19:00 - 19:30', className: categorys[0] },
+                { time: '19:45 - 20:00', className: categorys[0] },
+                { time: '20:30', className: categorys[3] },
             ]
         },
         {
             id: '04',
-            day: 'Jueves',
+            day: days[3],
             classes: [
-                { time: '07:00 - 07:45', className: 'Funcional' },
-                { time: '07:00 - 08:15', className: 'Musculación' },
-                { time: '08:00 - 08:45', className: 'Funcional' },
-                { time: '08:15 - 09:30', className: 'Musculación' },
-                { time: '09:15 - 10:00', className: 'Funcional' },
-                { time: '09:30 - 10:45', className: 'Musculación' },
-                { time: '10:45 - 12:00', className: 'Musculación' },
-                { time: '12:00 - 13:15', className: 'Musculación' },
-                { time: '13:15 - 14:00', className: 'Funcional' },
-                { time: '13:15 - 14:30', className: 'Musculación' },
-                { time: '14:30 - 15:45', className: 'Musculación' },
-                { time: '15:45 - 17:00', className: 'Musculación' },
-                { time: '17:00 - 18:15', className: 'Musculación' },
-                { time: '18:00 - 18:45', className: 'Funcional' },
-                { time: '18:15 - 19:30', className: 'Musculación' },
-                { time: '19:00 - 19:45', className: 'Funcional' },
-                { time: '19:30 - 20:45', className: 'Musculación' },
-                { time: '20:00 - 20:45', className: 'Funcional' },
-                { time: '20:45 - 22:00', className: 'Musculación' }
+                { time: '07:00 - 07:45', className: categorys[0] },
+                { time: '07:45 - 08:15', className: categorys[3] },
+                { time: '08:15 - 09:15', className: categorys[0] },
+                { time: '09:15 - 09:10', className: categorys[0] },
+                { time: '10:00 - 10:30', className: categorys[1] },
+                { time: '17:00 - 18:00', className: categorys[0] },
+                { time: '18:00 - 18:30', className: categorys[1] },
+                { time: '18:30 - 19:00', className: categorys[0] },
+                { time: '19:30 - 19:45', className: categorys[3] },
+                { time: '20:00 - 20:30', className: categorys[0] },
             ]
         },
         {
             id: '05',
-            day: 'Viernes',
+            day: days[4],
             classes: [
-                { time: '07:00 - 07:45', className: 'Funcional' },
-                { time: '07:00 - 08:15', className: 'Musculación' },
-                { time: '08:00 - 08:45', className: 'Funcional' },
-                { time: '08:15 - 09:30', className: 'Musculación' },
-                { time: '09:15 - 10:00', className: 'Funcional' },
-                { time: '09:30 - 10:45', className: 'Musculación' },
-                { time: '10:45 - 12:00', className: 'Musculación' },
-                { time: '12:00 - 13:15', className: 'Musculación' },
-                { time: '13:15 - 14:30', className: 'Musculación' },
-                { time: '14:30 - 15:45', className: 'Musculación' },
-                { time: '15:45 - 17:00', className: 'Musculación' },
-                { time: '17:00 - 18:15', className: 'Musculación' },
-                { time: '18:00 - 18:45', className: 'Funcional' },
-                { time: '18:15 - 19:30', className: 'Musculación' },
-                { time: '19:00 - 19:45', className: 'Funcional' },
-                { time: '19:30 - 20:45', className: 'Musculación' },
-                { time: '20:00 - 20:45', className: 'Funcional' },
-                { time: '20:45 - 22:00', className: 'Musculación' }
-            ]
-        },
-        {
-            id: '06',
-            day: 'Sábado',
-            classes: [
-                { time: '08:00 - 09:15', className: 'Musculación' },
-                { time: '09:15 - 10:30', className: 'Musculación' },
-                { time: '10:30 - 11:45', className: 'Musculación' },
-                { time: '11:45 - 13:00', className: 'Musculación' }
+                { time: '07:00 - 07:45', className: categorys[0] },
+                { time: '07:45 - 08:15', className: categorys[1] },
+                { time: '08:15 - 09:15', className: categorys[0] },
+                { time: '09:15 - 09:10', className: categorys[0] },
+                { time: '10:00 - 10:30', className: 'ABS' },
+                { time: '17:00 - 18:00', className: categorys[0] },
+                { time: '18:00 - 18:30', className: categorys[3] },
+                { time: '18:30 - 19:00', className: categorys[1] },
+                { time: '19:00 - 19:30', className: categorys[0] },
+                { time: '19:45 - 20:00', className: categorys[0] },
+                { time: '20:30', className: 'ABS' },
             ]
         }
     ];
-
-    const [selectedDay, setSelectedDay] = useState('Lunes');
     const selectedSchedule = scheduleData.find((schedule) => schedule.day === selectedDay);
-    const [startIndex, setStartIndex] = useState(0);
-    const endIndex = startIndex + 3;
-    const [showFuncional, setShowFuncional] = useState(true);
-    const [showMusculacion, setShowMusculacion] = useState(true);
-
+    console.log('Selected Schedule:', selectedSchedule);
     const handleNext = () => {
         if (
             selectedSchedule &&
@@ -175,17 +138,10 @@ function Schedules() {
     useEffect(() => {
         setStartIndex(0);
     }, [selectedDay]);
-
-    const filteredClasses = selectedSchedule?.classes?.filter((classData) => {
-        if (showFuncional && showMusculacion) {
-            return true;
-        } else if (showFuncional) {
-            return classData.className === 'Funcional';
-        } else if (showMusculacion) {
-            return classData.className === 'Musculación';
-        }
-        return false;
-    });
+    
+    const filteredClasses = selectedSchedule?.classes.filter((classData) =>
+        selectCategory.includes(classData.className)
+    );
 
     return (
         <S.Wrapper>
@@ -221,8 +177,8 @@ function Schedules() {
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
-                    delay: 0.2 * index, // Incrementa o atraso para cada item
-                    duration: 0.6,
+                    delay: 0.02 * index,
+                    duration: 0.4,
                     ease: "easeIn",
                 }}
             >
@@ -256,26 +212,9 @@ function Schedules() {
         </S.Container>
     ))}
 
-
             <S.WrapOptions>
                 <S.OptionsContent>
                     <S.CheckboxContainer>
-                        <label>
-                            <input
-                                type="checkbox"
-                                checked={showFuncional}
-                                onChange={() => setShowFuncional(!showFuncional)}
-                            />
-                            Funcional
-                        </label>
-                        <label>
-                            <input
-                                type="checkbox"
-                                checked={showMusculacion}
-                                onChange={() => setShowMusculacion(!showMusculacion)}
-                            />
-                            Musculación
-                        </label>
                     </S.CheckboxContainer>
                     <S.WrapButtons>
                         <S.Button
