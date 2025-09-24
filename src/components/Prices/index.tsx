@@ -1,8 +1,39 @@
 import * as S from './styles'
 import { FaCheck, FaUsers, FaDumbbell, FaBolt } from 'react-icons/fa'
+import { motion } from 'framer-motion'
+
 import { RevealTitle } from '../utils/RevealTitle'
 import { RevealSubTitle } from '../utils/RevealSubTitle'
 import ButtonAnimated from '../ButtonAnimated'
+
+// Função para destacar preços em negrito e cor verde
+const formatFeature = (feature: string) => {
+  // Primeiro separa por quebras de linha
+  const lines = feature.split('\n');
+  
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column' }}>
+      {lines.map((line, lineIndex) => {
+        // Procura por valores monetários em cada linha (ex: 80€, 110€, etc.)
+        const priceRegex = /(\d+€)/g;
+        const parts = line.split(priceRegex);
+        
+        const formattedParts = parts.map((part, partIndex) => {
+          if (part.match(priceRegex)) {
+            return <span key={partIndex} style={{ color: 'rgb(0, 170, 37)', fontWeight: 'bold', marginLeft: '0.2rem' }}>{part}</span>;
+          }
+          return part;
+        });
+        
+        return (
+          <span key={lineIndex} style={{ lineHeight: '1.4' }}>
+            {formattedParts}
+          </span>
+        );
+      })}
+    </div>
+  );
+};
 
 const Prices = () => {
   const plans = [
@@ -13,8 +44,8 @@ const Prices = () => {
       icon: <FaUsers />,
       color: '#4ECDC4',
       features: [
-        '2 días/semana + 1 Sprint Session: 80€',
-        '3 días/semana + 1 Sprint Session: 110€',
+        '2 días x semana \n + 1 Sprint Session: 80€',
+        '3 días x semana \n + 1 Sprint Session: 110€',
         'Máximo 5 personas por grupo',
         'Atención personalizada',
         'Parking gratuito (2 horas)'
@@ -93,7 +124,7 @@ const Prices = () => {
               {plan.features.map((feature, featureIndex) => (
                 <S.FeatureItem key={featureIndex}>
                   <FaCheck />
-                  {feature}
+                  {formatFeature(feature)}
                 </S.FeatureItem>
               ))}
             </S.FeaturesList>

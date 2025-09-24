@@ -151,6 +151,7 @@ export const FeaturesList = styled.ul`
   padding: 0;
   margin: 3rem 0;
   text-align: left;
+  width: 100%;
 `
 
 export const FeatureItem = styled.li`
@@ -160,6 +161,8 @@ export const FeatureItem = styled.li`
   font-size: var(--fs-small);
   color: #555;
   line-height: 1.5;
+  width: 100%;
+  justify-content: flex-start;
 
   svg {
     color: var(--red);
