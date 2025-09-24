@@ -1,7 +1,6 @@
 import * as S from './styles'
-import { FaCheck, FaUsers, FaDumbbell, FaBolt } from 'react-icons/fa'
-import { motion } from 'framer-motion'
-
+import Image from 'next/image';
+import { FaCheck } from 'react-icons/fa'
 import { RevealTitle } from '../utils/RevealTitle'
 import { RevealSubTitle } from '../utils/RevealSubTitle'
 import ButtonAnimated from '../ButtonAnimated'
@@ -10,21 +9,21 @@ import ButtonAnimated from '../ButtonAnimated'
 const formatFeature = (feature: string) => {
   // Primeiro separa por quebras de linha
   const lines = feature.split('\n');
-  
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
       {lines.map((line, lineIndex) => {
         // Procura por valores monetários em cada linha (ex: 80€, 110€, etc.)
         const priceRegex = /(\d+€)/g;
         const parts = line.split(priceRegex);
-        
+
         const formattedParts = parts.map((part, partIndex) => {
           if (part.match(priceRegex)) {
             return <span key={partIndex} style={{ color: 'rgb(0, 170, 37)', fontWeight: 'bold', marginLeft: '0.2rem' }}>{part}</span>;
           }
           return part;
         });
-        
+
         return (
           <span key={lineIndex} style={{ lineHeight: '1.4' }}>
             {formattedParts}
@@ -36,12 +35,23 @@ const formatFeature = (feature: string) => {
 };
 
 const Prices = () => {
+  // Importando o logo do header
+  const logoSrc = '/img/nav/icon-512.png';
+
   const plans = [
     {
       id: 'reducidos',
       title: 'Grupos Reducidos',
       subtitle: '(2-5 pers.)',
-      icon: <FaUsers />,
+      icon: (
+        <Image
+          src={logoSrc}
+          width={60}
+          height={60}
+          alt="Logo Equilibrio Fitness"
+          style={{ filter: 'brightness(0) invert(1)' }}
+        />
+      ),
       color: '#4ECDC4',
       features: [
         '2 días x semana \n + 1 Sprint Session: 80€',
@@ -56,7 +66,13 @@ const Prices = () => {
       id: 'funcional',
       title: 'Funcional',
       subtitle: '(Máx. 12 pers.)',
-      icon: <FaDumbbell />,
+      icon: (
+        <img
+          src={logoSrc}
+          alt="Logo Equilibrio Fitness"
+          style={{ width: '60px', height: '60px', filter: 'brightness(0) invert(1)' }}
+        />
+      ),
       color: '#FF6B6B',
       features: [
         '2 días/semana: 55€',
@@ -71,7 +87,13 @@ const Prices = () => {
       id: 'sprint',
       title: 'Sprint Sessions',
       subtitle: '(ABS-HIIT-MOBILITY)',
-      icon: <FaBolt />,
+      icon: (
+        <img
+          src={logoSrc}
+          alt="Logo Equilibrio Fitness"
+          style={{ width: '60px', height: '60px', filter: 'brightness(0) invert(1)' }}
+        />
+      ),
       color: '#FFE66D',
       features: [
         '3 sesiones: 40€',
@@ -110,11 +132,11 @@ const Prices = () => {
             highlight={plan.highlight}
           >
             {plan.highlight && <S.PopularBadge>¡Más Popular!</S.PopularBadge>}
-            
+
             <S.PlanIcon color={plan.color}>
               {plan.icon}
             </S.PlanIcon>
-            
+
             <S.PlanTitle>
               {plan.title}
               <span>{plan.subtitle}</span>
@@ -123,8 +145,10 @@ const Prices = () => {
             <S.FeaturesList>
               {plan.features.map((feature, featureIndex) => (
                 <S.FeatureItem key={featureIndex}>
+                  <S.FeatureItemDiv>
                   <FaCheck />
                   {formatFeature(feature)}
+                  </S.FeatureItemDiv>
                 </S.FeatureItem>
               ))}
             </S.FeaturesList>

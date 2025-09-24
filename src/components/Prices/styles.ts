@@ -68,7 +68,7 @@ export const PlansContainer = styled.div`
 export const PlanCard = styled(motion.div)<{ color: string; highlight: boolean }>`
   background: white;
   border-radius: 2rem;
-  padding: 4rem 3rem;
+  padding: 2.4rem 3rem;
   text-align: center;
   position: relative;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
@@ -157,12 +157,12 @@ export const FeaturesList = styled.ul`
 export const FeatureItem = styled.li`
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-bottom: 1.5rem;
   font-size: var(--fs-small);
   color: #555;
   line-height: 1.5;
   width: 100%;
-  justify-content: flex-start;
 
   svg {
     color: var(--red);
@@ -176,11 +176,13 @@ export const FeatureItem = styled.li`
   }
 `
 
+export const FeatureItemDiv = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+`
+
 export const HiddenButton = styled.div`
   margin-top: 4rem;
-  
-  @media (max-width: 830px) {
-    display: none;
-  }
 `
 
