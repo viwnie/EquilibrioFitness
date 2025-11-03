@@ -139,7 +139,9 @@ const [selectedDay, setSelectedDay] = useState(getCurrentDay());
     }, [selectedDay]);
     
     const filteredClasses = selectedSchedule?.classes.filter((classData) =>
-        selectCategory.includes(classData.className)
+        selectCategory.some(
+            (cat) => cat.toLowerCase() === classData.className.toLowerCase()
+        )
     );
 
     return (
