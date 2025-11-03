@@ -5,15 +5,12 @@ import { RevealTitle } from '../utils/RevealTitle'
 import { RevealSubTitle } from '../utils/RevealSubTitle'
 import ButtonAnimated from '../ButtonAnimated'
 
-// Função para destacar preços em negrito e cor verde
 const formatFeature = (feature: string) => {
-  // Primeiro separa por quebras de linha
   const lines = feature.split('\n');
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column' }}>
       {lines.map((line, lineIndex) => {
-        // Procura por valores monetários em cada linha (ex: 80€, 110€, etc.)
         const priceRegex = /(\d+€)/g;
         const parts = line.split(priceRegex);
 
@@ -35,7 +32,6 @@ const formatFeature = (feature: string) => {
 };
 
 const Prices = () => {
-  // Importando o logo do header
   const logoSrc = '/img/nav/icon-512.png';
 
   const plans = [
@@ -54,8 +50,8 @@ const Prices = () => {
       ),
       color: '#4ECDC4',
       features: [
-        '2 días x semana \n + 1 Sprint Session: 80€',
-        '3 días x semana \n + 1 Sprint Session: 110€',
+        '2 días x semana \n + 1 Sprint Session',
+        '3 días x semana \n + 1 Sprint Session',
         'Máximo 5 personas por grupo',
         'Atención personalizada',
         'Parking gratuito (2 horas)'
@@ -75,9 +71,9 @@ const Prices = () => {
       ),
       color: '#FF6B6B',
       features: [
-        '2 días/semana: 55€',
-        '3 días/semana: 65€',
-        'Ilimitado + Sprint Sessions: 75€',
+        '2 días/semana',
+        '3 días/semana',
+        'Ilimitado + Sprint Sessions',
         'Clases dinámicas y variadas',
         'Parking gratuito (2 horas)'
       ],
@@ -96,8 +92,8 @@ const Prices = () => {
       ),
       color: '#FFE66D',
       features: [
-        '3 sesiones: 40€',
-        '5 sesiones: 55€',
+        '3 sesiones',
+        '5 sesiones',
         'Sesiones independientes',
         'Entrenamiento de alta intensidad',
         'Parking gratuito (2 horas)'

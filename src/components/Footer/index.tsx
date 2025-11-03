@@ -14,10 +14,7 @@ const Footer = () => (
       <S.Container>
         <S.Lista>
           <li>
-            <FaCalendarWeek size={15} /> Lunes a Viernes de 7:00 a 22:00
-          </li>
-          <li>
-            <FaCalendarWeek size={15} /> Sábados de 8:00 a 13:00
+            <FaCalendarWeek size={15} /> Lunes a Viernes de 7:00 a 11:00 y de 17:00 a 21:00
           </li>
           <li>
             <a href="https://wa.me/+34613413279">
